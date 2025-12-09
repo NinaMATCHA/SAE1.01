@@ -1,0 +1,194 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+const unsigned KMaxTimes (5);
+const unsigned KnbCandies(4);
+
+typedef vector <unsigned> line; // un type représentant une ligne de la grille
+typedef vector <line> mat; // un type représentant la grille
+struct maPosition {
+    unsigned abs;
+    unsigned ord;
+}; // une position dans la grille
+
+void clearScreen () {
+    cout << "\033[H\033[2J";
+}
+
+// const unsigned KReset   (0);
+// const unsigned KNoir    (30);
+const unsigned KRouge   (31);
+const unsigned KVert    (32);
+// const unsigned KJaune   (33);
+const unsigned KBleu    (34);
+const unsigned KMAgenta (35);
+// const unsigned KCyan    (36);
+const unsigned KImpossible(0);
+
+void couleur (const unsigned & coul) {
+    cout << "\033[" << coul <<"m";
+}
+
+void initGrid (mat & grid, const size_t & matSize){
+    grid.resize(matSize);
+    for (size_t i(0); i<matSize; ++i){
+        grid[i].resize(matSize);
+        for (size_t j(0); j<matSize; j++){
+
+            grid[i][j] = (rand()%KnbCandies)+1;
+        }
+    }
+}
+
+void  displayGrid (const mat & grid){
+    clearScreen();
+    const vector<unsigned> color = {KRouge,KVert,KMAgenta,KBleu};
+    for(const vector<unsigned> & line: grid ){// afficher cases
+        for(unsigned candy : line){
+            if( candy <1 || candy>4 ){
+                cout << " ";
+            }
+            else{
+                couleur(color[candy-1]);
+                cout << candy << " ";
+                couleur(0);
+            }
+        }
+        cout << endl;
+    }
+}
+
+void makeAMove (mat & grid, const maPosition & pos, const char & direction){
+    // selon la direction, j'échange
+    maPosition newPos = pos;
+    switch (direction) {
+    case 'z':
+        if (pos.ord > 0) {
+            newPos.ord = pos.ord - 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 's':
+        if (pos.ord < grid.size() - 1) {
+            newPos.ord = pos.ord + 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 'q':
+        if (pos.abs > 0) {
+            newPos.abs = pos.abs - 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 'd':
+        if (pos.abs < grid.size() - 1) {
+            newPos.abs = pos.abs + 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    }
+}
+
+bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany, unsigned & begin){
+    bool verif(false);
+    unsigned nbCandy = grid[pos.ord][pos.abs];
+    unsigned line = pos.ord;
+    while (verif == true || line > 0){
+        line = line - 1;
+        if(grid[line][pos.abs] == nbCandy){
+            howMany += 1;
+        }
+        else(verif = false);
+    }
+    begin = line;
+    line = pos.ord;
+    while (verif == true || line < grid[0].size()){
+        line = line + 1;
+        if(grid[line][pos.abs] == nbCandy){
+            howMany += 1;
+        }
+        else(verif = false);
+    }
+    return verif;
+}
+
+bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany, unsigned & begin){
+    bool verif(false);
+    unsigned nbCandy = grid[pos.ord][pos.abs];
+    unsigned column = pos.abs;
+    while (verif == true || column > 0){
+        column = column - 1;
+        if(grid[pos.ord][column] == nbCandy){
+            howMany += 1;
+        }
+        else(verif = false);
+    }
+    begin = column;
+    column = pos.abs;
+    while (verif == true || column < grid[0].size()){
+        column = column + 1;
+        if(grid[pos.ord][column] == nbCandy){
+            howMany += 1;
+        }
+        else(verif = false);
+    }
+    return verif;
+}
+
+void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){ // on enleve de la colonne pos.abs les nb identiques
+    for(unsigned i(begin); i<grid.size(); ++i){
+        if((howMany-1)+i<grid.size()-1)
+            grid[i][pos.abs]=grid[(howMany-1)+i][pos.abs];
+        else(grid[i][pos.abs] = KImpossible);
+    }
+}
+
+void removalInRow (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){ // on enleve de la colonne pos.abs les nb identiques
+    for(unsigned i(begin); i<grid.size(); ++i){
+        if((howMany-1)+i<grid[0].size()-1)
+            grid[pos.ord][i]=grid[pos.ord][(howMany-1)+i];
+        else(grid[pos.ord][i] = KImpossible);
+    }
+}
+
+int main(){
+    //--------------TEST ------------
+    mat matrice;
+    initGrid(matrice,6);
+
+    // on initialise la grille du jeu ainsi que le nombre de coup maximal;
+    cout << "Nombres de coup max : " << KMaxTimes;
+    unsigned coups = 0;
+    char direction;
+    unsigned howMany, begin, nbPos;
+    unsigned score = 0;
+    // affiche un petit menu donnant les consignes de déplacement;
+    cout << "Voici vos déplacements :" << endl << "Z : haut" << endl << "S : bas" << endl << "A : gauche" << endl << "E : droite" << endl;
+    // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
+    while(coups <= KMaxTimes){
+        displayGrid(matrice); // affiche la grille;
+        // saisit les coordonnées du nombre à deplacer ainsi que le déplacement souhaité;
+        maPosition pos;
+        cout << "Entrez les coordonnées du nombre à déplacer :" << endl << "Colonne :";
+        cin >> pos.abs;
+        cout << "Ligne :";
+        cin >> pos.ord;
+        nbPos = matrice[pos.ord][pos.abs];
+        cout << "Ou voulez vous aller ? ( Utilisez les commandes de déplacement )" << endl;
+        cin >> direction;
+        // fait les tests de suppression en ligne / colonne et fait les supp si besoin;
+        if(atLeastThreeInAColumn(matrice, pos, howMany, begin)){
+            removalInColumn(matrice, pos, howMany, begin);
+            score += nbPos * howMany;
+        }
+        if(atLeastThreeInARow(matrice, pos, howMany, begin)){
+            removalInRow(matrice, pos, howMany, begin);
+            score += nbPos * howMany;
+        }
+        cout << "Score actuel : " << score << endl;  //affiche le score actuel
+    }
+    // affiche le score final
+    cout << "Votre score final est : " << score;
+}
