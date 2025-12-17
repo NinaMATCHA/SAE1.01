@@ -36,7 +36,6 @@ void initGrid (mat & grid, const size_t & matSize){
     for (size_t i(0); i<matSize; ++i){
         grid[i].resize(matSize);
         for (size_t j(0); j<matSize; j++){
-
             grid[i][j] = (rand()%KnbCandies)+1;
         }
     }
@@ -76,13 +75,13 @@ void makeAMove (mat & grid, const maPosition & pos, const char & direction){
         }
         swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
         break;
-    case 'q':
+    case 'a':
         if (pos.abs > 0) {
             newPos.abs = pos.abs - 1;
         }
         swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
         break;
-    case 'd':
+    case 'e':
         if (pos.abs < grid.size() - 1) {
             newPos.abs = pos.abs + 1;
         }
@@ -92,64 +91,62 @@ void makeAMove (mat & grid, const maPosition & pos, const char & direction){
 }
 
 bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany, unsigned & begin){
-    bool verif(false);
+    howMany = 1; //on compte le bonbon présent
     unsigned nbCandy = grid[pos.ord][pos.abs];
-    unsigned line = pos.ord;
-    while (verif == true || line > 0){
-        line = line - 1;
-        if(grid[line][pos.abs] == nbCandy){
-            howMany += 1;
-        }
-        else(verif = false);
+    unsigned line = pos.ord -1;
+    while (line > 0 && grid[line-1][pos.abs] == nbCandy ){
+        ++howMany;
+        --line;
+        begin=line;
     }
-    begin = line;
+
     line = pos.ord;
-    while (verif == true || line < grid[0].size()){
-        line = line + 1;
-        if(grid[line][pos.abs] == nbCandy){
-            howMany += 1;
-        }
-        else(verif = false);
+    while (grid[line+1][pos.abs] == nbCandy && line+1 < grid[0].size()){
+        ++howMany;
+        ++line;
     }
-    return verif;
+    return (howMany>=3);
 }
 
 bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany, unsigned & begin){
-    bool verif(false);
+    howMany=1;
     unsigned nbCandy = grid[pos.ord][pos.abs];
-    unsigned column = pos.abs;
-    while (verif == true || column > 0){
-        column = column - 1;
-        if(grid[pos.ord][column] == nbCandy){
-            howMany += 1;
-        }
-        else(verif = false);
+    unsigned col = pos.abs -1;
+    while (col > 0 && grid[pos.ord][col-1] == nbCandy){
+        ++howMany;
+        --col;
+        begin=col;
     }
-    begin = column;
-    column = pos.abs;
-    while (verif == true || column < grid[0].size()){
-        column = column + 1;
-        if(grid[pos.ord][column] == nbCandy){
-            howMany += 1;
-        }
-        else(verif = false);
+
+    col = pos.abs;
+    while (grid[pos.ord][col+1] == nbCandy && col+1 < grid[0].size()){
+        ++col;
+        ++howMany;
     }
-    return verif;
+    return (howMany>=3);
 }
 
-void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){ // on enleve de la colonne pos.abs les nb identiques
-    for(unsigned i(begin); i<grid.size(); ++i){
-        if((howMany-1)+i<grid.size()-1)
-            grid[i][pos.abs]=grid[(howMany-1)+i][pos.abs];
-        else(grid[i][pos.abs] = KImpossible);
+void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){    // on enleve de la colonne pos.abs les nb identiques
+    if(begin>0){ //begin est un unsigned donc on vérfie qu'il ne crée pas d'erreurs
+        for(unsigned i(begin-1); i>0; --i){//on fait tomber a partir du debut de la ligne a effacer
+            grid[i + howMany-1][pos.abs]=grid[i-1][pos.abs];
+        }
     }
+
+    //Mode infini ?
+     for(unsigned i(0); i < howMany; ++i){ //remet des bonbons
+         grid[i][pos.abs] = (rand() % KnbCandies) + 1;
+     }
 }
 
 void removalInRow (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){ // on enleve de la colonne pos.abs les nb identiques
-    for(unsigned i(begin); i<grid.size(); ++i){
-        if((howMany-1)+i<grid[0].size()-1)
-            grid[pos.ord][i]=grid[pos.ord][(howMany-1)+i];
-        else(grid[pos.ord][i] = KImpossible);
+    for (unsigned j = begin; j < begin + howMany; ++j) {
+        // On fait descendre tous les bonbons au-dessus
+        for (unsigned i = pos.ord; i > 0; --i) {
+            grid[i][j] = grid[i - 1][j];
+        }
+
+        grid[0][j] = (rand() % KnbCandies) + 1;
     }
 }
 
@@ -165,9 +162,10 @@ int main(){
     unsigned howMany, begin, nbPos;
     unsigned score = 0;
     // affiche un petit menu donnant les consignes de déplacement;
-    cout << "Voici vos déplacements :" << endl << "Z : haut" << endl << "S : bas" << endl << "A : gauche" << endl << "E : droite" << endl;
+    cout << "Voici vos déplacements :" << endl << "z : haut" << endl << "s : bas" << endl << "a : gauche" << endl << "e : droite" << endl;
     // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
     while(coups <= KMaxTimes){
+        ++coups;
         displayGrid(matrice); // affiche la grille;
         // saisit les coordonnées du nombre à deplacer ainsi que le déplacement souhaité;
         maPosition pos;
@@ -178,7 +176,9 @@ int main(){
         nbPos = matrice[pos.ord][pos.abs];
         cout << "Ou voulez vous aller ? ( Utilisez les commandes de déplacement )" << endl;
         cin >> direction;
+
         // fait les tests de suppression en ligne / colonne et fait les supp si besoin;
+        makeAMove(matrice,pos,direction);
         if(atLeastThreeInAColumn(matrice, pos, howMany, begin)){
             removalInColumn(matrice, pos, howMany, begin);
             score += nbPos * howMany;
