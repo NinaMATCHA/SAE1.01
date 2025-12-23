@@ -4,16 +4,22 @@
 #include <cstdlib>
 #include <ctime>
 #include <algorithm>
+#include <fstream>
 
 using namespace std;
 
 typedef vector <unsigned> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
 
-struct maPosition { 
+struct maPosition {
     unsigned abs; // une position dans la girlle
     unsigned ord; // une position dans la grille
-}; 
+};
+
+struct infoMatch {
+    bool trouvee;
+    maPosition pos;
+};
 
 // variables globales
 
@@ -25,8 +31,8 @@ const unsigned KJaune   (33);
 const unsigned KBleu    (34);
 const unsigned KMAgenta (35);
 const unsigned KCyan    (36);
-     
-const unsigned KNbCandies = 10;
+
+const unsigned KNbCandies = 5;
 
 void couleur (const unsigned & coul) {
     cout << "\033[" << coul <<"m";
@@ -58,118 +64,354 @@ void  displayGrid (const mat & grid) {
     }
 }
 
-void makeAMove (mat & grid, const maPosition & pos, const char & direction) {
+void Joueur1 (mat & grid, const maPosition & pos, const char & direction) {
     maPosition newPos = pos;
     switch (direction) {
-        case 'z':
-            if (pos.ord > 0) {
-                newPos.ord = pos.ord - 1;
-            }
-            std::swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-            break;
-        case 's':
-            if (pos.ord < grid.size() - 1) {
-                newPos.ord = pos.ord + 1;
-            }
-            swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-            break;
-        case 'q':
-            if (pos.abs > 0) {
-                newPos.abs = pos.abs - 1;
-            }
-            swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-            break;
-        case 'd':
-            if (pos.abs < grid.size() - 1) {
-                newPos.abs = pos.abs + 1;
-            }
-            swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-            break;
+    case 'z':
+        if (pos.ord > 0) {
+            newPos.ord = pos.ord - 1;
+        }
+        std::swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 's':
+        if (pos.ord < grid.size() - 1) {
+            newPos.ord = pos.ord + 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 'q':
+        if (pos.abs > 0) {
+            newPos.abs = pos.abs - 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 'd':
+        if (pos.abs < grid.size() - 1) {
+            newPos.abs = pos.abs + 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
     }
 }
 
+void Joueur2 (mat & grid, const maPosition & pos, const char & direction) {
+    maPosition newPos = pos;
+    switch (direction) {
+    case 'i':
+        if (pos.ord > 0) {
+            newPos.ord = pos.ord - 1;
+        }
+        std::swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 'k':
+        if (pos.ord < grid.size() - 1) {
+            newPos.ord = pos.ord + 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 'j':
+        if (pos.abs > 0) {
+            newPos.abs = pos.abs - 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    case 'l':
+        if (pos.abs < grid.size() - 1) {
+            newPos.abs = pos.abs + 1;
+        }
+        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+        break;
+    }
+}
+
+/*
+// Cette fonction verifie s'il y a au moins 3 nombres identiques dans une colonne
 bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany) {
     const size_t matSize = grid.size();
-    unsigned count = 1;
-    unsigned val = grid[pos.ord][pos.abs];
-
-    // On verif si il y a au moins 3 nombres identiques sur la même colonne. 
-    // ont renvoie vrai si on trouve bien 3 nombres identiques, sinon on renvoie faux.
-    // Si on renvoie vrai, on a une suite de howMany tous égaux à partir des coordonnées pos.
-    for (size_t i = pos.ord + 1; i < matSize; i = i + 1) {
-        if (grid[i][pos.abs] == val) {
-            count = count + 1;
-        } else {
-            break;
-        }
-    }
-    howMany = count;
-    
-    if  (howMany >= 3) {
-        return true;
-    } else {
-        return false;
-    }
+    // TODO DURING VACANCE
 }
+
 
 bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany) {
     const size_t matSize = grid.size();
-    unsigned count = 1;
-    unsigned val = grid[pos.ord][pos.abs];
-
-    // On verif si il y a au moins 3 nombres identiques sur la même ligne. 
-    // ont renvoie vrai si on trouve bien 3 nombres identiques, sinon on renvoie faux.
-    // Si on renvoie vrai, on a une suite de howMany tous égaux à partir des coordonnées pos.
-    for (size_t j = pos.abs + 1; j < matSize; j = j + 1) {
-        if (grid[pos.ord][j] == val) {
-            count = count + 1;
-        } else {
-            break;
-        }
-    }
-    howMany = count;
-    
-    if  (howMany >= 3) {
-        return true;
-    } else {
-        return false;
-    }
+    // TODO DURING VACANCE
 }
 
 void removalInRow (mat & grid, const maPosition & pos, unsigned  howMany) {
-    // On veut supprimer howMany elements dans la ligne pos.ord
-    for (size_t i = pos.abs; i < pos.abs + howMany; i = i + 1) {
-        grid[pos.ord][i] = 'x'; // on remplace par x pour symboliser la suppression
+    const size_t matSize = grid.size();
+    // TODO DURING VACANCE
+}
+
+// supprimer des elements dans une colonne
+void removalInColumn (mat & grid, const maPosition & pos, unsigned  howMany) {
+    // On veut supprimer howMany elements dans la colonne pos.abs
+    for (size_t i = pos.ord; i < pos.ord + howMany; i = i + 1) {
+        grid[i][pos.abs] = 0; // on remplace par 0 pour symboliser la suppression
     }
+
+}
+*/
+
+// Choisir une position
+void ChoisirPosition(maPosition & pos, const size_t & matSize) {
+    cout << "Choisir un abscisse (0-" << matSize - 1 << "): ";
+    cin >> pos.abs;
+    cout << "Choisir une ordonnee (0-" << matSize - 1 << "): ";
+    cin >> pos.ord;
+}
+
+// ===================================================================
+//           FONCTIONS POUR LES DIFFERENTS MENU DU JEU
+//                          ET LES MODES
+// ===================================================================
+
+
+void menu() {
+    clearScreen();
+    ifstream menu("../../menu.txt");
+
+    string ligne;
+    while (getline(menu, ligne)) {
+        cout << ligne << endl;
+    }
+    menu.close();
+}
+
+void menuHistoire() {
+    clearScreen();
+    ifstream mHISTOIRE("../../mHISTOIRE.txt");
+
+    string ligne;
+    while (getline(mHISTOIRE, ligne)) {
+        cout << ligne << endl;
+    }
+    mHISTOIRE.close();
+}
+
+void HISTOIRE() {
+    clearScreen();
+    ifstream HISTOIRE("../../HISTOIRE.txt");
+
+    string ligne;
+    while (getline(HISTOIRE, ligne)) {
+        cout << ligne << endl;
+    }
+    HISTOIRE.close();
+}
+
+void menuPVP() {
+    // TODO ; lance le mode PVP
+    // On change juste makeAMove par "joueur1"
+    // On fait donc un deuxième makeAMove qu'on nomme "joueur2" avec des touches differentes
+    // On rajoute un truc random pour savoir qui joue en premier
+    // Une fois qu'un joueur a fait un coup, il a son propre score
+    // le joueur qui fait le plus de score a la fin gagne
+    clearScreen();
+    ifstream mPVP("../../mPVP.txt");
+
+    if (!mPVP) {
+        cerr << "ERROR" << endl;
+        exit (1);
+    }
+    string ligne;
+    while (getline(mPVP, ligne)) {
+        cout << ligne << endl;
+    }
+}
+
+void menuINFINI() {
+    // TODO ; lance le mode infini
+    // Comme le mode HISTOIRE sauf que lorsqu'une ligne/colonne est
+    // supprimé, on génere de nouveau nombre
+    // ou on fait monter les nombres en dessous
+    // Au choix ^^
+    clearScreen();
+    ifstream mINFINI("../../mINFINI.txt");
+
+    string ligne;
+    while (getline(mINFINI, ligne)) {
+        cout << ligne << endl;
+    }
+}
+
+void OPTIONS() {
+    /*
+    TODO ; lance les options
+    ==========================================
+           /!\ SI TROP DUR ON FAIT PAS /!\
+    ==========================================
+    */
+    clearScreen();
+    ifstream options("../../mOPTIONS.txt");
+
+    if (!options) {
+        cerr << "ERROR" << endl;
+        exit (1);
+    }
+    string ligne;
+    while (getline(options, ligne)) {
+        cout << ligne << endl;
+    }
+}
+
+void changeDifficulte() {
+    // TODO Fonction qui change la difficulte de chaque mode de jeu
+    // que ce soit dans le mode pvp, histoire ou infini
+    clearScreen();
+    ifstream cDifficulte("../../changeDifficulte.txt");
+
+    string ligne;
+    while (getline(cDifficulte, ligne)) {
+        cout << ligne << endl;
+    }
+}
+
+void credits() {
+    clearScreen();
+    ifstream CREDITS("../../CREDITS.txt");
+
+    string ligne;
+    while (getline(CREDITS, ligne)) {
+        cout << ligne << endl;
+    }
+}
+
+void pressEnterToContinue() {
+    cout << "\nPress ENTER to continue" << flush; // flush -> force l'ecriture immediate de ce qui est pret sans aller a la ligne
 }
 
 int main() {
     mat grid;
-    const size_t matSize = KNbCandies;
-    maPosition pos = {0, 0};
-    char direction;
-    unsigned howMany;
+    const size_t matSize = KNbCandies; // Initialement, la matrice en mode moyen
+    //maPosition pos = {0, 0};
+    //char direction;
+    //unsigned howMany;
+    unsigned choix; // Choix dans le menu
+    unsigned cHistoire; // Choix dans le mode histoire
+    unsigned cPvp;  // Choix dans le mode pvp
+    unsigned cInfini;  // Choix dans le mode infinie
+    unsigned cOptions;  // Choix dans les options
+    unsigned cCredits; // Choix dans les crédits
+    unsigned cChangeDifficulte; // Choix pour la difficulte
 
-    srand(time(0)); // initialisation du générateur de nombres aléatoires
+    menu(); // afficher l'ecran de bienvenue
+    do {
 
-    initGrid(grid, matSize);
-    displayGrid(grid);
+        cin >> choix;
+        switch (choix) {
+        case 1:
+            menuHistoire();
+            cin >> cHistoire;
+            if (cHistoire == 1) {
+                HISTOIRE();
+                pressEnterToContinue();
+                break;
+            }
+            else if (cHistoire == 2) {
+                menu();
+                continue;
+            }
+            else {
+                cout << "Erreur, entrez 1 ou 2" << endl;
+                return 1;
+            }
+            break;
+        case 2:
+            menuPVP();
+            cin >> cPvp;
+            if (cPvp == 1) {
+                //PVP(); --> lance le mode pvp
+            }
+            else if (cPvp == 2) {
+                menu();
+                continue;
+            }
+            else {
+                cout << "Erreur, entrez 1 ou 2" << endl;
+                return 1;
+            }
+            break;
+        case 3:
+            menuINFINI();
+            cin >> cInfini;
+            if (cInfini == 1) {
+                // INFINI(); --> lance le mode infini
+            }
+            else if (cInfini == 2) {
+                menu();
+                continue;
+            }
+            else {
+                cout << "Erreur, entrez 1 ou 2" << endl;
+                return 1;
+            }
+            break;
+        case 4:
+            OPTIONS();
+            cin >> cOptions;
+            if (cOptions == 1) {
+                changeDifficulte();
+                cin >> cChangeDifficulte;
+                if (cChangeDifficulte == 1) {
+                    // modeFacil(); --> init une matrice "simple" pour tout les modes
+                }
+                else if (cChangeDifficulte == 2) {
+                    // modeMoyen(); --> init une matrice "moyen" pour tout les modes
+                }
+                else if (cChangeDifficulte == 3) {
+                    // modeDifficil(); --> init une matrice "dur" pour tout les modes
+                }
+                else if (cChangeDifficulte == 4) {
+                    menu();
+                    continue;
+                }
+                else {
+                    cout << "Erreur, entrez 1, 2, 3 ou 4" << endl;
+                    return 1;
+                }
+            }
+            else if (cOptions == 2) {
+                credits();
+                cin >> cCredits;
+                if (cCredits == 1) {
+                    menu();
+                    continue;
+                }
+                else {
+                    cout << "Erreur entrez 1";
+                    return 1;
+                }
+            }
+            else if (cOptions == 3) {
+                menu();
+                continue;
+            }
+            else {
+                cout << "Erreur, entrez 1, 2 ou 3" << endl;
+                return 1;
+            }
+            break;
+        case 5:
+            clearScreen();
+            break;
+        default:
+            cout << "Erreur, entrez un choix parmis : 1, 2, 3, 4 ou 5" << endl;
+            return 1;
+        }
+    } while(choix != 5);
+    /*
 
-    cout << "Choisir une position (x, y) entre 0 et " << matSize - 1 << " : ";
-    cin >> pos.abs >> pos.ord;
+
+    initGrid(grid, matSize); // initialisation de la grille
+    displayGrid(grid); // affichage de la grille
+
+    ChoisirPosition(pos, matSize);
 
     cout << "Enter direction (z, s, q, d): ";
     cin >> direction;
     makeAMove(grid, pos, direction);
     displayGrid(grid);
     couleur(KReset);
-
-    // appel des fonctions de détection et de suppression
-    if (atLeastThreeInARow(grid, pos, howMany)) {
-        removalInRow(grid, pos, howMany);
-        displayGrid(grid);
-        couleur(KReset);
-    }
-
+    */
     return 0;
 }
