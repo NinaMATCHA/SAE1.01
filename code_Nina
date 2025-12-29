@@ -5,9 +5,11 @@ using namespace std;
 
 const unsigned KMaxTimes (5);
 const unsigned KnbCandies(4);
+const unsigned KVide(0);
 
 typedef vector <unsigned> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
+
 struct maPosition {
     unsigned abs;
     unsigned ord;
@@ -17,15 +19,10 @@ void clearScreen () {
     cout << "\033[H\033[2J";
 }
 
-// const unsigned KReset   (0);
-// const unsigned KNoir    (30);
 const unsigned KRouge   (31);
 const unsigned KVert    (32);
-// const unsigned KJaune   (33);
 const unsigned KBleu    (34);
 const unsigned KMAgenta (35);
-// const unsigned KCyan    (36);
-const unsigned KImpossible(0);
 
 void couleur (const unsigned & coul) {
     cout << "\033[" << coul <<"m";
@@ -35,7 +32,7 @@ void initGrid (mat & grid, const size_t & matSize){
     grid.resize(matSize);
     for (size_t i(0); i<matSize; ++i){
         grid[i].resize(matSize);
-        for (size_t j(0); j<matSize; j++){
+        for (size_t j(0); j<matSize; ++j){
             grid[i][j] = (rand()%KnbCandies)+1;
         }
     }
@@ -43,51 +40,52 @@ void initGrid (mat & grid, const size_t & matSize){
 
 void  displayGrid (const mat & grid){
     clearScreen();
+    // indice d'une couleur dans la liste => couleur d'un nombre de cet indice
     const vector<unsigned> color = {KRouge,KVert,KMAgenta,KBleu};
-    for(const vector<unsigned> & line: grid ){// afficher cases
-        for(unsigned candy : line){
-            if( candy <1 || candy>4 ){
-                cout << " ";
+
+    cout << "   ";
+    for(size_t j=0; j<grid.size(); ++j){
+        cout << j << " "; // affiche les indices des colonnes
+    }
+    cout << endl;
+    // sépare les indice des lignes avec '_' répétés deux fois la taille de la matrice
+    cout << "   " << string(grid.size()*2, '_') << endl;
+
+    for(size_t i=0; i<grid.size(); ++i){
+        cout << i << " |"; // pour les indices des lignes
+        for(unsigned candy : grid[i]){
+            if(candy == KVide){
+                cout << ". "; // affiche un point pour le vide
             }
             else{
-                couleur(color[candy-1]);
+                couleur(color[candy-1]); // -1 car les bonbons ne peuvent pas valoir 0 mais les indices de la liste commencent a 0
                 cout << candy << " ";
                 couleur(0);
             }
         }
         cout << endl;
     }
+    cout << endl;
 }
 
-void makeAMove (mat & grid, const maPosition & pos, const char & direction){
-    // selon la direction, j'échange
+// évite les valeurs impossibles a l'entrée des lignes/colonnes
+bool isValid(const mat& grid, const maPosition& pos) {
+    return pos.ord < grid.size() && pos.abs < grid[0].size();
+}
+
+// changer makeAMove de void en maPosition permet de garder la valeur de newPos
+maPosition makeAMove (mat & grid, const maPosition & pos, const char & direction){
     maPosition newPos = pos;
-    switch (direction) {
-    case 'z':
-        if (pos.ord > 0) {
-            newPos.ord = pos.ord - 1;
-        }
-        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-        break;
-    case 's':
-        if (pos.ord < grid.size() - 1) {
-            newPos.ord = pos.ord + 1;
-        }
-        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-        break;
-    case 'a':
-        if (pos.abs > 0) {
-            newPos.abs = pos.abs - 1;
-        }
-        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-        break;
-    case 'e':
-        if (pos.abs < grid.size() - 1) {
-            newPos.abs = pos.abs + 1;
-        }
-        swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
-        break;
-    }
+
+    // on évite les débordements en plus de changer pos
+    if (direction == 'z' && pos.ord > 0) --newPos.ord;
+    else if (direction == 's' && pos.ord < grid.size() - 1) ++newPos.ord;
+    else if (direction == 'a' && pos.abs > 0) --newPos.abs;
+    else if (direction == 'e' && pos.abs < grid.size() - 1) ++newPos.abs;
+
+    // fonction swap pour échanger directement
+    swap(grid[pos.ord][pos.abs], grid[newPos.ord][newPos.abs]);
+    return newPos;
 }
 
 bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany, unsigned & begin){
