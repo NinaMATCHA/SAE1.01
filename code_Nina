@@ -88,40 +88,50 @@ maPosition makeAMove (mat & grid, const maPosition & pos, const char & direction
     return newPos;
 }
 
-bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany, unsigned & begin){
-    howMany = 1; //on compte le bonbon présent
+// ---------------------------------------------------------
+
+bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany){
+    howMany = 1; //on compte le bonbon sur la position aussi
     unsigned nbCandy = grid[pos.ord][pos.abs];
-    unsigned line = pos.ord -1;
-    while (line > 0 && grid[line-1][pos.abs] == nbCandy ){
+    if (nbCandy == KVide) return false; // pas de points sur les cases vides
+
+    // on verifie en haut
+    unsigned li = pos.ord;
+    while (li > 0 && grid[li-1][pos.abs] == nbCandy){
         ++howMany;
-        --line;
-        begin=line;
+        --li;
     }
 
-    line = pos.ord;
-    while (grid[line+1][pos.abs] == nbCandy && line+1 < grid[0].size()){
+    // en bas
+    li = pos.ord;
+    while (li < grid.size() - 1 && grid[li+1][pos.abs] == nbCandy){
         ++howMany;
-        ++line;
+        ++li;
     }
-    return (howMany>=3);
+
+    return (howMany >= 3);
 }
 
-bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany, unsigned & begin){
-    howMany=1;
+bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany){
+    howMany = 1;
     unsigned nbCandy = grid[pos.ord][pos.abs];
-    unsigned col = pos.abs -1;
+    if (nbCandy == KVide) return false;
+
+    // on verifie a gauche
+    unsigned col = pos.abs;
     while (col > 0 && grid[pos.ord][col-1] == nbCandy){
         ++howMany;
         --col;
-        begin=col;
     }
 
+    // a droite
     col = pos.abs;
-    while (grid[pos.ord][col+1] == nbCandy && col+1 < grid[0].size()){
-        ++col;
+    while (col < grid[0].size() - 1 && grid[pos.ord][col+1] == nbCandy){
         ++howMany;
+        ++col;
     }
-    return (howMany>=3);
+
+    return (howMany >= 3);
 }
 
 void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){    // on enleve de la colonne pos.abs les nb identiques
