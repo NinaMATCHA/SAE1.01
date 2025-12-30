@@ -1,0 +1,13 @@
+------------------------------
+      CANDY CRUSH TERMINAL    
+------------------------------
+Bienvenue dans Candy Crush en terminal !
+Choisir mode de jeu :
+1. Mode Histoire
+2. Mode PVP
+3. Mode Infini
+4. Options
+5. Quitter
+Appuyez sur 1, 2, 3, 4 ou 5 pour choisir une option
+------------------------------
+------------------------------
