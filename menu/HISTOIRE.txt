@@ -1,0 +1,22 @@
+Nous somme en 2094, vous etes un explorateur
+Vous faites partie d'une organisation qui à découvert récemment,
+dans une mine abandonnée,
+un portail qui mène vers un monde ancien, très ancien. . .
+
+Vous et votre équipe avez franchit le portail pour découvrir ce monde
+Malheureusement, il était vide, très vide. . .
+Si ce n'est à l'exception de. . .
+
+Monstres errants !!
+
+Heureusement pour vous et votre équipe, vous etes munis d'arme a blaster.
+Elles sont assez puissantes pour vous permettre de tuer ces entités errantes.
+
+Votre objectif : éliminer les monstres dans votre champ de vision !
+Les monstres sont représentés par des chiffres.
+
+Ceux-ci sont très résistants mais. . .
+Vos blasters peuvent les tuer si les monstres sont alignés au minimum trois entre eux !
+
+Vous devez donc réussir a déplacer les monstres pour les éliminer !
+Bonne chance !
