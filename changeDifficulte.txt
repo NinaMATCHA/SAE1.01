@@ -2,7 +2,7 @@
        CHANGER DIFFICULTE     
 ------------------------------
 Choisir une difficulté
-(pvp, infini et histoire) :
+(Modes Infini et PVP) :
 1. Facile
 2. Moyen
 3. Difficile
