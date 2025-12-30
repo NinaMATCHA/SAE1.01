@@ -11,8 +11,8 @@ typedef vector <unsigned> line; // un type représentant une ligne de la grille
 typedef vector <line> mat; // un type représentant la grille
 
 struct maPosition {
-    unsigned abs;
-    unsigned ord;
+    unsigned abs; // colonne
+    unsigned ord; // ligne
 }; // une position dans la grille
 
 void clearScreen () {
@@ -134,69 +134,121 @@ bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany)
     return (howMany >= 3);
 }
 
-void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){    // on enleve de la colonne pos.abs les nb identiques
-    if(begin>0){ //begin est un unsigned donc on vérfie qu'il ne crée pas d'erreurs
-        for(unsigned i(begin-1); i>0; --i){//on fait tomber a partir du debut de la ligne a effacer
-            grid[i + howMany-1][pos.abs]=grid[i-1][pos.abs];
-        }
+// ---------------------------------------------------------
+
+void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany){
+
+    // on retrouve le début de la colonne de memes éléments
+    unsigned currentCandy = grid[pos.ord][pos.abs];
+    unsigned begin = pos.ord; // variable de position du debut des memes éléments
+    // on remonte tant que c'est le meme bonbon
+    while(begin > 0 && grid[begin-1][pos.abs] == currentCandy) {
+        --begin;
     }
 
-    //Mode infini ?
-     for(unsigned i(0); i < howMany; ++i){ //remet des bonbons
-         grid[i][pos.abs] = (rand() % KnbCandies) + 1;
-     }
+    // on décale vers le bas les valeurs au dessus des bonbons alignés
+    for (unsigned currentRow = begin; currentRow < begin + howMany; ++currentRow) {// parcours la colonne par lignes
+
+        // on fait descendre toute la colonne au dessus
+        for(unsigned i = currentRow; i > 0; --i){
+            grid[i][pos.abs] = grid[i-1][pos.abs];
+        }
+
+        // la case en haut n'ont plus de valeurs
+        grid[0][pos.abs] = KVide;
+    }
 }
 
-void removalInRow (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned & begin){ // on enleve de la colonne pos.abs les nb identiques
-    for (unsigned j = begin; j < begin + howMany; ++j) {
-        // On fait descendre tous les bonbons au-dessus
-        for (unsigned i = pos.ord; i > 0; --i) {
-            grid[i][j] = grid[i - 1][j];
-        }
-
-        grid[0][j] = (rand() % KnbCandies) + 1;
+void removalInRow (mat & grid, maPosition & pos, const unsigned & howMany){
+    // on retrouve le début de la ligne de memes éléments
+    unsigned currentCandy = grid[pos.ord][pos.abs];
+    unsigned begin = pos.abs; // variable de position du debut des memes éléments
+    // on remonte tant que c'est le meme bonbon
+    while(begin > 0 && grid[pos.ord][begin-1] == currentCandy) {
+        --begin;
     }
+
+    //on descends toujours en colonne les valeurs mais dans la meme ligne ici
+    for(unsigned currentCol = begin; currentCol < begin + howMany; ++currentCol){ //parcours la ligne par colonnes
+        // on fait descendre toute la colonne au dessus de la colonne courante
+        for(unsigned i = pos.ord; i > 0; --i){
+            grid[i][currentCol] = grid[i-1][currentCol];
+        }
+        // La case du haut devient vide
+        grid[0][currentCol] = KVide;
+    }
+}
+
+// calcule le score et teste les alignements sur ses différentes positions
+unsigned scoreMatch(mat & grid, maPosition & pos, unsigned & howMany){
+    unsigned score = 0;
+    unsigned valPos = grid[pos.ord][pos.abs]; // la valeur(chiffre) du bonbon
+    if(valPos != KVide) {
+        if(atLeastThreeInAColumn(grid, pos, howMany)){
+            removalInColumn(grid, pos, howMany);
+            score += valPos * howMany;
+        }
+        else if(atLeastThreeInARow(grid, pos, howMany)){
+            removalInRow(grid, pos, howMany);
+            score += valPos * howMany;
+        }
+    }
+    return score;
 }
 
 int main(){
-    //--------------TEST ------------
+    // on initialise la grille du jeu ainsi que le nombre de coup maximal;
+    srand(time(0));
     mat matrice;
     initGrid(matrice,6);
 
-    // on initialise la grille du jeu ainsi que le nombre de coup maximal;
     cout << "Nombres de coup max : " << KMaxTimes;
     unsigned coups = 0;
     char direction;
-    unsigned howMany, begin, nbPos;
+    unsigned howMany;
     unsigned score = 0;
-    // affiche un petit menu donnant les consignes de déplacement;
-    cout << "Voici vos déplacements :" << endl << "z : haut" << endl << "s : bas" << endl << "a : gauche" << endl << "e : droite" << endl;
+
     // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
-    while(coups <= KMaxTimes){
-        ++coups;
+    while(coups < KMaxTimes){
+
         displayGrid(matrice); // affiche la grille;
-        // saisit les coordonnées du nombre à deplacer ainsi que le déplacement souhaité;
+        cout << "Votre score actuel : " << score << endl;
+        cout << "Encore " << KMaxTimes - coups << " coups !" << endl;
+
+        // on saisit les coordonnées du bonbon a déplacer
         maPosition pos;
-        cout << "Entrez les coordonnées du nombre à déplacer :" << endl << "Colonne :";
+        cout << "Colonne :";
         cin >> pos.abs;
         cout << "Ligne :";
         cin >> pos.ord;
-        nbPos = matrice[pos.ord][pos.abs];
-        cout << "Ou voulez vous aller ? ( Utilisez les commandes de déplacement )" << endl;
+
+        if (!isValid(matrice, pos)) {
+            cout << "Veuillez suivre les positions indiquées"<< endl;
+            continue; // permet de recommencer du début la boucle
+        }
+        coups++;
+
+        cout << "Ou voulez vous aller ? (a/z/e/s) : ";
         cin >> direction;
 
-        // fait les tests de suppression en ligne / colonne et fait les supp si besoin;
-        makeAMove(matrice,pos,direction);
-        if(atLeastThreeInAColumn(matrice, pos, howMany, begin)){
-            removalInColumn(matrice, pos, howMany, begin);
-            score += nbPos * howMany;
+        // on récupère la nouvelle position en plus d'échanger les deux
+        maPosition newPos = makeAMove(matrice, pos, direction);
+
+        while(newPos.abs == pos.abs && newPos.ord == pos.ord){
+            cout << "Vous allez en dehors de la matrice ! Réessayez :";
+            cin >> direction;
+            newPos = makeAMove(matrice, pos, direction);
         }
-        if(atLeastThreeInARow(matrice, pos, howMany, begin)){
-            removalInRow(matrice, pos, howMany, begin);
-            score += nbPos * howMany;
+
+        //score et test sur l'ancienne position
+        score+=scoreMatch(matrice, pos, howMany);
+
+        //score et test sur la nouvelle position
+        if(isValid(matrice, newPos)) {
+            score+=scoreMatch(matrice, newPos, howMany);
         }
-        cout << "Score actuel : " << score << endl;  //affiche le score actuel
     }
-    // affiche le score final
-    cout << "Votre score final est : " << score;
+
+    displayGrid(matrice);
+    cout << "FINI ! Votre score final :" << score << endl;
 }
