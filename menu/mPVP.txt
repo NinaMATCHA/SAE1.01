@@ -4,14 +4,12 @@
 ------------------------------
 	        MODE PVP
 ------------------------------
-Bienvenu dnas le mode PVP.
+Bienvenue dnas le mode PVP.
 Dans ce mode de jeu, deux joueurs
-s'affronte avec chacuns, des touches attribue.
-Le seul moyen de gagner, le joueur qui a le plus
-de point sur son score remporte la partie.
+s'affronte avec chacuns, des touches attribuées.
+Le joueur qui a le plus haut score remporte la partie !
 
-Chaque joueur a qu'un seul coup possible avec un
-timer.
+Les joueurs jouent un à un avec un timer.
 
 Bonne chance et bon combat !
 ------------------------------
