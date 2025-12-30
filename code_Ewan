@@ -280,6 +280,50 @@ void pressEnterToContinue() {
     cout << "\nPress ENTER to continue" << flush; // flush -> force l'ecriture immediate de ce qui est pret sans aller a la ligne
 }
 
+// ------------------------------------------------------------------------------
+//                              FONCTION POUR
+//                              LE SCORE ET
+//                              L'AFFICHER
+//
+// /!\ Attention, cette partie n'est pas finis et est a completer.
+// J'ai demarrer en essayant quelque choses, si il le faut a modifier.
+// ------------------------------------------------------------------------------
+
+
+// Fonction pour compter le score et l'afficher, le minimum de points
+// que l'on peut gagner est 3 points si on elimine 3 chiffres
+// si possible, faire en sorte que si un chiffre se rajoute dans l'elimination
+// multiplier le score x2
+void SCORE(mat & grid, unsigned howMany, const size_t matSize) {
+    // TODO, pas sur que ce que j'ai fait fonctionne, il faut clairement changer des trucs
+
+    unsigned score = 0; // Le score démarre à 0 initialement
+    unsigned n; // le nombre de chiffres apres 3
+
+    if (howMany == 3) {
+
+        score = score + 3; // si trois chiffre sont supp -> le score augmente de 3
+    }
+    else if (howMany == 3 + n) {
+
+        score = score * 2; // si plus de 3 chiffres sont sup on raj + 3 et on x2
+    }
+}
+
+// Fonction pour afficher le score
+// Si il y a plus de combi possible, la partie se stop et le score s'affiche
+
+void displaySCORE(unsigned score) {
+
+    score = 10; // TEST avec 10 comme score
+
+    if () { 
+
+
+        cerr << "Le score du joueur est : " << score << endl;
+    }
+}
+
 int main() {
     mat grid;
     const size_t matSize = KNbCandies; // Initialement, la matrice en mode moyen
