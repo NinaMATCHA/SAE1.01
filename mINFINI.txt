@@ -1,0 +1,20 @@
+------------------------------
+      CANDY CRUSH TERMINAL    
+------------------------------
+------------------------------
+         MODE INFINI        
+------------------------------
+Bienvenu dans le mode infini !
+Dans ce mode de jeu, vous avez une grille
+qui contient de multiple chiffres.
+
+Lorsque vous detruisez une ligne ou une colonnes
+de nouveaux chiffres aparaissent.
+
+Votre score monte a chaque destruction de lignes
+ou de colonnes.
+
+Tentez votre meilleurs score et bonne chance !
+------------------------------
+------------------------------
+Appuyez sur 1 pour continuer ou sur 2 pour revenir au menu.
