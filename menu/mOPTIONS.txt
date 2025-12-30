@@ -4,7 +4,7 @@
 ------------------------------
 	   OPTIONS
 ------------------------------
-1.    Changer difficulte
-2.    Credits
+1.    Changer la difficulté
+2.    Crédits
 3.    Retour au menu
 ------------------------------
