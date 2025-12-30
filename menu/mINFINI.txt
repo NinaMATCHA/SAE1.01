@@ -8,10 +8,13 @@ Bienvenue dans le mode infini !
 Dans ce mode de jeu, vous avez une grille
 qui contient de multiples chiffres.
 
-Lorsque vous détruisez une ligne ou une colonnes
-de nouveaux chiffres aparaissent.
+Vous devez aligner les chiffres entre eux
+par au moins 3 en échangeant leur place.
 
-Votre score monte a chaque destruction de lignes
+Lorsque vous détruisez une ligne ou une colonne
+de nouveaux chiffres aparaissent !
+
+Votre score monte à chaque destruction de lignes
 ou de colonnes.
 
 Tentez votre meilleur score et bonne chance !
