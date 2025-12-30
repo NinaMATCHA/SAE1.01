@@ -1,0 +1,13 @@
+------------------------------
+      CANDY CRUSH TERMINAL    
+------------------------------
+------------------------------
+           CREDITS    
+------------------------------
+Le jeu a ete realise par Ewan FRANCOIS
+et Nina MATIC CHARBIT du group 1.
+En suivant les consignes sur le site web
+de Alain CASALI.
+------------------------------
+------------------------------
+Appuyez sur 1 pour revenir dans le menu.
