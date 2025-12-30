@@ -1,8 +1,8 @@
 ------------------------------
        CHANGER DIFFICULTE     
 ------------------------------
-Choisir une difficulte pour tout les modes
-de jeu (pvp, infini et histoire) :
+Choisir une difficulté
+(pvp, infini et histoire) :
 1. Facile
 2. Moyen
 3. Difficile
