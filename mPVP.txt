@@ -1,0 +1,18 @@
+------------------------------
+      CANDY CRUSH TERMINAL    
+------------------------------
+------------------------------
+	        MODE PVP
+------------------------------
+Bienvenu dnas le mode PVP.
+Dans ce mode de jeu, deux joueurs
+s'affronte avec chacuns, des touches attribue.
+Le seul moyen de gagner, le joueur qui a le plus
+de point sur son score remporte la partie.
+
+Chaque joueur a qu'un seul coup possible avec un
+timer.
+
+Bonne chance et bon combat !
+------------------------------
+Appuyer sur 1 pour lancer le mode PVP et sur 2 pour revenir au menu.
