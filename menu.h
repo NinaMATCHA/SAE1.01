@@ -8,61 +8,10 @@
 
 using namespace std;
 
-typedef vector <unsigned> line; // un type représentant une ligne de la grille
-typedef vector <line> mat; // un type représentant la grille
-
-struct maPosition {
-    unsigned abs; // une position dans la girlle
-    unsigned ord; // une position dans la grille
-};
-
 struct infoMatch {
     bool trouvee;
     maPosition pos;
 };
-
-// variables globales
-
-const unsigned KReset   (0);
-const unsigned KNoir    (30);
-const unsigned KRouge   (31);
-const unsigned KVert    (32);
-const unsigned KJaune   (33);
-const unsigned KBleu    (34);
-const unsigned KMAgenta (35);
-const unsigned KCyan    (36);
-
-const unsigned KNbCandies = 5;
-
-void couleur (const unsigned & coul) {
-    cout << "\033[" << coul <<"m";
-}
-
-void clearScreen () {
-    cout << "\033[H\033[2J";
-}
-
-void initGrid (mat & grid, const size_t & matSize) {
-    grid.resize(matSize);
-    for (size_t i = 0; i < matSize; i = i + 1) {
-        grid[i].resize(matSize);
-
-        for (size_t j = 0; j < matSize; j = j + 1) {
-            grid[i][j] = rand() % 9 + 1; // valeurs aleatoires entre 1 et 9
-        }
-    }
-}
-
-void  displayGrid (const mat & grid) {
-    const size_t matSize = grid.size();
-    for (size_t i = 0; i < matSize; ++i) {
-        for (size_t j = 0; j < matSize; j = j + 1) {
-            couleur(KRouge + grid[i][j] % 7); // couleur en fonction de la valeur
-            cout << grid[i][j] << " ";
-        }
-        cout << endl;
-    }
-}
 
 void Joueur1 (mat & grid, const maPosition & pos, const char & direction) {
     maPosition newPos = pos;
