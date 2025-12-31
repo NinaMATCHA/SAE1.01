@@ -240,7 +240,3 @@ void credits() {
         cout << ligne << endl;
     }
 }
-
-void pressEnterToContinue() {
-    cout << "\nPress ENTER to continue" << flush; // flush -> force l'ecriture immediate de ce qui est pret sans aller a la ligne
-}
