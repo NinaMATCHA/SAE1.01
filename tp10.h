@@ -196,7 +196,7 @@ unsigned scoreMatch(mat & grid, maPosition & pos, unsigned & howMany){
     return score;
 }
 
-int main(){
+void tp10(){
     // on initialise la grille du jeu ainsi que le nombre de coup maximal;
     srand(time(0));
     mat matrice;
