@@ -8,16 +8,12 @@
 #include "menu.h"
 
 int main() {
-  // maybe inclure qlq trucs directement dans leurs fonctions, qui ressortiront un int ?
-  // aussi faire un unsigned "sousChoix" pour eviter les redondances ( a l'exception de changer difficulté ou on doit enregistrer le choix ig )
-  //jme disais aussi faire un "entrée" suffit au lieu de 1 pour qlq endroits mais c des details d'opti )
+    // maybe inclure qlq trucs directement dans leurs fonctions, qui ressortiront un int ?
+    // aussi faire un unsigned "sousChoix" pour eviter les redondances ( a l'exception de changer difficulté ou on doit enregistrer le choix ig )
+    //jme disais aussi faire un "entrée" suffit au lieu de 1 pour qlq endroits mais c des details d'opti )
     unsigned choix; // Choix dans le menu
-    unsigned cHistoire; // Choix dans le mode histoire
-    unsigned cPvp;  // Choix dans le mode pvp
-    unsigned cInfini;  // Choix dans le mode infinie
-    unsigned cOptions;  // Choix dans les options
-    unsigned cCredits; // Choix dans les crédits
-    unsigned cChangeDifficulte; // Choix pour la difficulte
+    unsigned sousChoix; // Sous choix lorsqu'on est dans les differents menus
+    unsigned cChangeDifficulte;
 
     menuMain(); // affiche l'écran de bienvenue
     do {
@@ -26,12 +22,14 @@ int main() {
         switch (choix) {
         case 1:
             menuHistoire();
-            cin >> cHistoire;
-            if (cHistoire == 1) {
+            cin >> sousChoix;
+            if (sousChoix == 1) {
                 HISTOIRE();
+                cin.ignore();
+                cout << "Appuyez sur entree pour continuer.";
                 break;
             }
-            else if (cHistoire == 2) {
+            else if (sousChoix == 2) {
                 menuMain();
                 continue;
             }
@@ -42,11 +40,11 @@ int main() {
             break;
         case 2:
             menuPVP();
-            cin >> cPvp;
-            if (cPvp == 1) {
+            cin >> sousChoix;
+            if (sousChoix == 1) {
                 //PVP(); --> lance le mode pvp
             }
-            else if (cPvp == 2) {
+            else if (sousChoix == 2) {
                 menuMain();
                 continue;
             }
@@ -57,11 +55,11 @@ int main() {
             break;
         case 3:
             menuINFINI();
-            cin >> cInfini;
-            if (cInfini == 1) {
+            cin >> sousChoix;
+            if (sousChoix == 1) {
                 // INFINI(); --> lance le mode infini
             }
-            else if (cInfini == 2) {
+            else if (sousChoix == 2) {
                 menuMain();
                 continue;
             }
@@ -72,8 +70,8 @@ int main() {
             break;
         case 4:
             OPTIONS();
-            cin >> cOptions;
-            if (cOptions == 1) {
+            cin >> sousChoix;
+            if (sousChoix == 1) {
                 changeDifficulte();
                 cin >> cChangeDifficulte;
                 if (cChangeDifficulte == 1) {
@@ -94,10 +92,11 @@ int main() {
                     return 1;
                 }
             }
-            else if (cOptions == 2) {
+            else if (sousChoix == 2) {
                 credits();
-                cin >> cCredits;
-                if (cCredits == 1) {
+                cin.ignore();
+                cin >> sousChoix;
+                if (sousChoix == 1) {
                     menuMain();
                     continue;
                 }
@@ -106,7 +105,7 @@ int main() {
                     return 1;
                 }
             }
-            else if (cOptions == 3) {
+            else if (sousChoix == 3) {
                 menuMain();
                 continue;
             }
