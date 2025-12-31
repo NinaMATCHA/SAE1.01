@@ -124,49 +124,13 @@ void Joueur2 (mat & grid, const maPosition & pos, const char & direction) {
     }
 }
 
-/*
-// Cette fonction verifie s'il y a au moins 3 nombres identiques dans une colonne
-bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany) {
-    const size_t matSize = grid.size();
-    // TODO DURING VACANCE
-}
-
-
-bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany) {
-    const size_t matSize = grid.size();
-    // TODO DURING VACANCE
-}
-
-void removalInRow (mat & grid, const maPosition & pos, unsigned  howMany) {
-    const size_t matSize = grid.size();
-    // TODO DURING VACANCE
-}
-
-// supprimer des elements dans une colonne
-void removalInColumn (mat & grid, const maPosition & pos, unsigned  howMany) {
-    // On veut supprimer howMany elements dans la colonne pos.abs
-    for (size_t i = pos.ord; i < pos.ord + howMany; i = i + 1) {
-        grid[i][pos.abs] = 0; // on remplace par 0 pour symboliser la suppression
-    }
-
-}
-*/
-
-// Choisir une position
-void ChoisirPosition(maPosition & pos, const size_t & matSize) {
-    cout << "Choisir un abscisse (0-" << matSize - 1 << "): ";
-    cin >> pos.abs;
-    cout << "Choisir une ordonnee (0-" << matSize - 1 << "): ";
-    cin >> pos.ord;
-}
-
 // ===================================================================
 //           FONCTIONS POUR LES DIFFERENTS MENU DU JEU
 //                          ET LES MODES
 // ===================================================================
 
 
-void menu() {
+void menuMain() {
     clearScreen();
     ifstream menu("../../menu.txt");
 
@@ -280,12 +244,7 @@ void pressEnterToContinue() {
     cout << "\nPress ENTER to continue" << flush; // flush -> force l'ecriture immediate de ce qui est pret sans aller a la ligne
 }
 
-int main() {
-    mat grid;
-    const size_t matSize = KNbCandies; // Initialement, la matrice en mode moyen
-    //maPosition pos = {0, 0};
-    //char direction;
-    //unsigned howMany;
+void menu() {
     unsigned choix; // Choix dans le menu
     unsigned cHistoire; // Choix dans le mode histoire
     unsigned cPvp;  // Choix dans le mode pvp
@@ -294,7 +253,7 @@ int main() {
     unsigned cCredits; // Choix dans les crédits
     unsigned cChangeDifficulte; // Choix pour la difficulte
 
-    menu(); // afficher l'ecran de bienvenue
+    menuMain(); // affiche l'écran de bienvenue
     do {
 
         cin >> choix;
@@ -308,7 +267,7 @@ int main() {
                 break;
             }
             else if (cHistoire == 2) {
-                menu();
+                menuMain();
                 continue;
             }
             else {
@@ -323,7 +282,7 @@ int main() {
                 //PVP(); --> lance le mode pvp
             }
             else if (cPvp == 2) {
-                menu();
+                menuMain();
                 continue;
             }
             else {
@@ -338,7 +297,7 @@ int main() {
                 // INFINI(); --> lance le mode infini
             }
             else if (cInfini == 2) {
-                menu();
+                menuMain();
                 continue;
             }
             else {
@@ -362,7 +321,7 @@ int main() {
                     // modeDifficil(); --> init une matrice "dur" pour tout les modes
                 }
                 else if (cChangeDifficulte == 4) {
-                    menu();
+                    menuMain();
                     continue;
                 }
                 else {
@@ -374,7 +333,7 @@ int main() {
                 credits();
                 cin >> cCredits;
                 if (cCredits == 1) {
-                    menu();
+                    menuMain();
                     continue;
                 }
                 else {
@@ -383,7 +342,7 @@ int main() {
                 }
             }
             else if (cOptions == 3) {
-                menu();
+                menuMain();
                 continue;
             }
             else {
@@ -399,19 +358,5 @@ int main() {
             return 1;
         }
     } while(choix != 5);
-    /*
-
-
-    initGrid(grid, matSize); // initialisation de la grille
-    displayGrid(grid); // affichage de la grille
-
-    ChoisirPosition(pos, matSize);
-
-    cout << "Enter direction (z, s, q, d): ";
-    cin >> direction;
-    makeAMove(grid, pos, direction);
-    displayGrid(grid);
-    couleur(KReset);
-    */
     return 0;
 }
