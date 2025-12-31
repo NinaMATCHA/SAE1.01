@@ -29,7 +29,6 @@ int main() {
             cin >> cHistoire;
             if (cHistoire == 1) {
                 HISTOIRE();
-                pressEnterToContinue();
                 break;
             }
             else if (cHistoire == 2) {
