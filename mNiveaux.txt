@@ -1,0 +1,13 @@
+------------------------------
+      CANDY CRUSH TERMINAL    
+------------------------------
+------------------------------
+         NIVEAUX
+------------------------------
+Niveau 1
+Niveau 2
+Niveau 3
+Niveau 4
+------------------------------
+------------------------------
+Appuyer sur le numéro du niveau ou sur 5 pour retourner sur le menu principal.
