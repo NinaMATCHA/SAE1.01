@@ -8,12 +8,12 @@
 #include "menu.h"
 
 int main() {
-    // maybe inclure qlq trucs directement dans leurs fonctions, qui ressortiront un int ?
-    // aussi faire un unsigned "sousChoix" pour eviter les redondances ( a l'exception de changer difficulté ou on doit enregistrer le choix ig )
-    //jme disais aussi faire un "entrée" suffit au lieu de 1 pour qlq endroits mais c des details d'opti )
+    //jme disais aussi faire un "entrée" suffit au lieu de 1 pour qlq endroits mais c des details d'opti
     unsigned choix; // Choix dans le menu
-    unsigned sousChoix; // Sous choix lorsqu'on est dans les differents menus
+    unsigned sousChoix; // Sous choix lorsqu'on est dans les différents menus
     unsigned cChangeDifficulte;
+    unsigned maxTimes = 7;
+    unsigned nbCandy = 5;
 
     menuMain(); // affiche l'écran de bienvenue
     do {
@@ -25,6 +25,7 @@ int main() {
             cin >> sousChoix;
             if (sousChoix == 1) {
                 HISTOIRE();
+                menuNiveaux();
                 cin.ignore();
                 cout << "Appuyez sur entree pour continuer.";
                 break;
@@ -42,7 +43,7 @@ int main() {
             menuPVP();
             cin >> sousChoix;
             if (sousChoix == 1) {
-                //PVP(); --> lance le mode pvp
+                play(maxTimes,nbCandy,true,false);
             }
             else if (sousChoix == 2) {
                 menuMain();
@@ -57,7 +58,7 @@ int main() {
             menuINFINI();
             cin >> sousChoix;
             if (sousChoix == 1) {
-                // INFINI(); --> lance le mode infini
+                play(maxTimes,nbCandy,false,true);
             }
             else if (sousChoix == 2) {
                 menuMain();
@@ -75,13 +76,16 @@ int main() {
                 changeDifficulte();
                 cin >> cChangeDifficulte;
                 if (cChangeDifficulte == 1) {
-                    // modeFacil(); --> init une matrice "simple" pour tout les modes
+                    nbCandy = 4;
+                    cout << "Difficulté changée en facile" << endl;
                 }
                 else if (cChangeDifficulte == 2) {
-                    // modeMoyen(); --> init une matrice "moyen" pour tout les modes
+                    nbCandy = 6;
+                    cout << "Difficulté changée en moyen" << endl;
                 }
                 else if (cChangeDifficulte == 3) {
-                    // modeDifficil(); --> init une matrice "dur" pour tout les modes
+                    nbCandy = 8;
+                    cout << "Difficulté changée en difficile" << endl;
                 }
                 else if (cChangeDifficulte == 4) {
                     menuMain();
@@ -94,7 +98,6 @@ int main() {
             }
             else if (sousChoix == 2) {
                 credits();
-                cin.ignore();
                 cin >> sousChoix;
                 if (sousChoix == 1) {
                     menuMain();
