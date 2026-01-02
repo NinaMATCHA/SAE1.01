@@ -63,6 +63,62 @@ void menuNiveaux() {
     mNiveaux.close();
 }
 
+void afficherNIVEAU1() {
+    clearScreen();
+    ifstream niveau1("../../niveaux/niveau1.txt");
+
+    string ligne;
+    while (getline(niveau1, ligne)) {
+        cout << ligne << endl;
+    }
+    niveau1.close();
+    cin.ignore();
+    cout << "Appuyez sur entree pour continuer.";
+    cin.get();
+}
+
+void afficherNIVEAU2() {
+    clearScreen();
+    ifstream niveau2("../../niveaux/niveau2.txt");
+
+    string ligne;
+    while (getline(niveau2, ligne)) {
+        cout << ligne << endl;
+    }
+    niveau2.close();
+    cin.ignore();
+    cout << "Appuyez sur entree pour continuer.";
+    cin.get();
+}
+
+void afficherNIVEAU3() {
+    clearScreen();
+    ifstream niveau3("../../niveaux/niveau3.txt");
+
+    string ligne;
+    while (getline(niveau3, ligne)) {
+        cout << ligne << endl;
+    }
+    niveau3.close();
+    cin.ignore();
+    cout << "Appuyez sur entree pour continuer.";
+    cin.get();
+}
+
+void afficherNIVEAU4 () {
+    clearScreen();
+    ifstream niveau4("../../niveaux/niveau4.txt");
+
+    string ligne;
+    while (getline(niveau4, ligne)) {
+        cout << ligne << endl;
+    }
+    niveau4.close();
+    cin.ignore();
+    cout << "Appuyez sur entree pour continuer.";
+    cin.get();
+}
+
 void menuPVP() {
     clearScreen();
     ifstream mPVP("../../mPVP.txt");
