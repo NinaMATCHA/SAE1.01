@@ -1,0 +1,7 @@
+Vous vous etes fait attraper par un groupe de monstres !
+Vous etes bloquer dans une sorte de prison mais heureusement
+pour vous, votre blaster est non loin de vous.
+
+Vous parvenez a vous liberer et a prendre votre blaster !
+Cependant, les monstres vous ont remarques, tuer les avant qu'ils
+vous attrapent !
