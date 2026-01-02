@@ -1,0 +1,9 @@
+Bravo !
+
+Vous avez reussi a vous echapper de la prison. Il vous reste
+encore des munitions dans votre blaster.
+
+Vous marchez dans la foret, pensant que vous etes tranquille
+cependant vous tombez sur des betes affamees !
+
+Defendez vous avant qu'elles vous mangent !
