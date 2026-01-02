@@ -219,6 +219,277 @@ unsigned scoreMatch(mat & grid, maPosition & pos, unsigned & howMany, const unsi
     return score;
 }
 
+// ---------------------- MODE HISTOIRE ---------------------------
+
+void niveau1() {
+    mat matrice;
+    initGrid(matrice, 4);
+    displayGrid(matrice);
+
+    cout << "Nombre de coup max : " << 5;
+    unsigned coups = 2;
+    char direction;
+    unsigned howMany;
+    unsigned score = 0;
+    bool isPlayer1 = true;
+    bool infini = false;
+    unsigned nbCandy;
+
+    // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
+    while(coups < 5) {
+
+        displayGrid(matrice); // affiche la grille;
+        cout << "Votre score actuel : " << score << endl;
+        cout << "Encore " << 5 - coups << " coups !" << endl;
+
+        // on saisit les coordonnées du bonbon a déplacer
+        maPosition pos;
+        cout << "Colonne :";
+        cin >> pos.abs;
+        cout << "Ligne :";
+        cin >> pos.ord;
+
+        if (!isValid(matrice, pos)) {
+            cout << "Veuillez suivre les positions indiquées"<< endl;
+            continue; // permet de recommencer du début la boucle
+        }
+        coups++;
+
+        cout << "Ou voulez vous aller ? (a/z/e/s) : ";
+        cin >> direction;
+
+        // on récupère la nouvelle position en plus d'échanger les deux
+        maPosition newPos = makeAMove(matrice, pos, direction, isPlayer1);
+
+        while(newPos.abs == pos.abs && newPos.ord == pos.ord){
+            cout << "Vous allez en dehors de la matrice ! Réessayez :";
+            cin >> direction;
+            newPos = makeAMove(matrice, pos, direction, isPlayer1);
+        }
+
+        //score et test sur l'ancienne position
+        score += scoreMatch(matrice, pos, howMany, nbCandy, infini);
+
+        //score et test sur la nouvelle position
+        if(isValid(matrice, newPos)) {
+            score+=scoreMatch(matrice, newPos, howMany, nbCandy, infini);
+        }
+    }
+    if (score < 21) {
+        clearScreen();
+        cout << "Perdu ! Les monstres ont gagnes" << endl;
+        exit(1);
+    }
+    else if (score >= 21){
+        clearScreen();
+        cin.ignore();
+        cout << "Vous avez gagne et debloque le niveau 2 !" << endl;
+        cout << "Appuyez sur ENTREE pour continuer";
+        cin.get();
+    }
+}
+
+void niveau2() {
+    mat matrice;
+    initGrid(matrice, 6);
+    displayGrid(matrice);
+
+    cout << "Nombre de coup max : " << 5;
+    unsigned coups = 0;
+    char direction;
+    unsigned howMany;
+    unsigned score = 0;
+    bool isPlayer1 = true;
+    bool infini = false;
+    unsigned nbCandy;
+
+    // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
+    while(coups < 5) {
+
+        displayGrid(matrice); // affiche la grille;
+        cout << "Votre score actuel : " << score << endl;
+        cout << "Encore " << 5 - coups << " coups !" << endl;
+
+        // on saisit les coordonnées du bonbon a déplacer
+        maPosition pos;
+        cout << "Colonne :";
+        cin >> pos.abs;
+        cout << "Ligne :";
+        cin >> pos.ord;
+
+        if (!isValid(matrice, pos)) {
+            cout << "Veuillez suivre les positions indiquées"<< endl;
+            continue; // permet de recommencer du début la boucle
+        }
+        coups++;
+
+        cout << "Ou voulez vous aller ? (a/z/e/s) : ";
+        cin >> direction;
+
+        // on récupère la nouvelle position en plus d'échanger les deux
+        maPosition newPos = makeAMove(matrice, pos, direction, isPlayer1);
+
+        while(newPos.abs == pos.abs && newPos.ord == pos.ord){
+            cout << "Vous allez en dehors de la matrice ! Réessayez :";
+            cin >> direction;
+            newPos = makeAMove(matrice, pos, direction, isPlayer1);
+        }
+
+        //score et test sur l'ancienne position
+        score+=scoreMatch(matrice, pos, howMany, nbCandy, infini);
+
+        //score et test sur la nouvelle position
+        if(isValid(matrice, newPos)) {
+            score+=scoreMatch(matrice, newPos, howMany, nbCandy, infini);
+        }
+    }
+    if (score < 44) {
+        clearScreen();
+        cout << "Perdu ! Les betes vous ont mange(e)s" << endl;
+        exit(1);
+    }
+    else if(score >= 44) {
+        clearScreen();
+        cout << "Vous avez gagne et debloque le niveau 3 !" << endl;
+        cout << "Appuyez sur ENTREE pour continuer";
+        cin.get();
+    }
+}
+
+void niveau3() {
+    mat matrice;
+    initGrid(matrice, 7);
+    displayGrid(matrice);
+
+    cout << "Nombre de coup max : " << 5;
+    unsigned coups = 0;
+    char direction;
+    unsigned howMany;
+    unsigned score = 0;
+    bool isPlayer1 = true;
+    bool infini = false;
+    unsigned nbCandy;
+
+    // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
+    while(coups < 5) {
+
+        displayGrid(matrice); // affiche la grille;
+        cout << "Votre score actuel : " << score << endl;
+        cout << "Encore " << 5 - coups << " coups !" << endl;
+
+        // on saisit les coordonnées du bonbon a déplacer
+        maPosition pos;
+        cout << "Colonne :";
+        cin >> pos.abs;
+        cout << "Ligne :";
+        cin >> pos.ord;
+
+        if (!isValid(matrice, pos)) {
+            cout << "Veuillez suivre les positions indiquées"<< endl;
+            continue; // permet de recommencer du début la boucle
+        }
+        coups++;
+
+        cout << "Ou voulez vous aller ? (a/z/e/s) : ";
+        cin >> direction;
+
+        // on récupère la nouvelle position en plus d'échanger les deux
+        maPosition newPos = makeAMove(matrice, pos, direction, isPlayer1);
+
+        while(newPos.abs == pos.abs && newPos.ord == pos.ord){
+            cout << "Vous allez en dehors de la matrice ! Réessayez :";
+            cin >> direction;
+            newPos = makeAMove(matrice, pos, direction, isPlayer1);
+        }
+
+        //score et test sur l'ancienne position
+        score+=scoreMatch(matrice, pos, howMany, nbCandy, infini);
+
+        //score et test sur la nouvelle position
+        if(isValid(matrice, newPos)) {
+            score+=scoreMatch(matrice, newPos, howMany, nbCandy, infini);
+        }
+    }
+    if (score < 55) {
+        clearScreen();
+        cout << "Perdu ! Les cameras vous ont trouves" << endl;
+        exit(1);
+    }
+    else if(score >= 55) {
+        clearScreen();
+        cout << "Vous avez gagne et debloque le niveau 4 !" << endl;
+        cout << "Appuyez sur ENTREE pour continuer";
+        cin.get();
+    }
+}
+
+void niveau4() {
+    mat matrice;
+    initGrid(matrice, 9);
+    displayGrid(matrice);
+
+    cout << "Nombre de coup max : " << 6;
+    unsigned coups = 0;
+    char direction;
+    unsigned howMany;
+    unsigned score = 0;
+    bool isPlayer1 = true;
+    bool infini = false;
+    unsigned nbCandy;
+
+    // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
+    while(coups < 6) {
+
+        displayGrid(matrice); // affiche la grille;
+        cout << "Votre score actuel : " << score << endl;
+        cout << "Encore " << 6 - coups << " coups !" << endl;
+
+        // on saisit les coordonnées du bonbon a déplacer
+        maPosition pos;
+        cout << "Colonne :";
+        cin >> pos.abs;
+        cout << "Ligne :";
+        cin >> pos.ord;
+
+        if (!isValid(matrice, pos)) {
+            cout << "Veuillez suivre les positions indiquées"<< endl;
+            continue; // permet de recommencer du début la boucle
+        }
+        coups++;
+
+        cout << "Ou voulez vous aller ? (a/z/e/s) : ";
+        cin >> direction;
+
+        // on récupère la nouvelle position en plus d'échanger les deux
+        maPosition newPos = makeAMove(matrice, pos, direction, isPlayer1);
+
+        while(newPos.abs == pos.abs && newPos.ord == pos.ord){
+            cout << "Vous allez en dehors de la matrice ! Réessayez :";
+            cin >> direction;
+            newPos = makeAMove(matrice, pos, direction, isPlayer1);
+        }
+
+        //score et test sur l'ancienne position
+        score+=scoreMatch(matrice, pos, howMany, nbCandy, infini);
+
+        //score et test sur la nouvelle position
+        if(isValid(matrice, newPos)) {
+            score+=scoreMatch(matrice, newPos, howMany, nbCandy, infini);
+        }
+    }
+    if (score < 70) {
+        clearScreen();
+        cout << "Perdu ! Le roi des monstres vous a elimine" << endl;
+        exit(1);
+    }
+    else if(score >= 70) {
+        clearScreen();
+        cout << "Vous avez gagne ! Le monde est sauvee grace a vous !" << endl;
+        cout << "Appuyez sur ENTREE pour continuer";
+        cin.get();
+    }
+}
+
 // ----------------------------JEU-----------------------------
 
 void play( const unsigned maxTimes, const unsigned nbCandy, const bool pvp, const bool infini){ // on change la difficulté et les modes ici
