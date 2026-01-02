@@ -26,8 +26,32 @@ int main() {
             if (sousChoix == 1) {
                 HISTOIRE();
                 menuNiveaux();
-                cin.ignore();
-                cout << "Appuyez sur entree pour continuer.";
+                cin >> sousChoix;
+                if (sousChoix == 1 && estJouableNiveau1 == true) {
+                    afficherNIVEAU1();
+                    niveau1();
+                    menuNiveaux();
+                    estJouableNiveau2 = true;
+                }
+                else if (sousChoix == 2 && estJouableNiveau2 == true) {
+                    afficherNIVEAU2();
+                    niveau2();
+                    menuNiveaux();
+                    estJouableNiveau3 = true;
+                }
+                else if (sousChoix == 3 && estJouableNiveau3 == true) {
+                    afficherNIVEAU3();
+                    niveau3();
+                    menuNiveaux();
+                    estJouableNiveau4 = true;
+                }
+                else if (sousChoix == 4 && estJouableNiveau4 == true) {
+                    afficherNIVEAU4();
+                    niveau4();
+                }
+                else {
+                    cout << "Niveau pas encore debloque !" << endl;
+                }
                 break;
             }
             else if (sousChoix == 2) {
