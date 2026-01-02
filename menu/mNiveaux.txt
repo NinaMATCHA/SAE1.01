@@ -4,10 +4,11 @@
 ------------------------------
          NIVEAUX
 ------------------------------
-Niveau 1
-Niveau 2
-Niveau 3
-Niveau 4
+1. Niveau 1
+2. Niveau 2
+3. Niveau 3
+4. Niveau 4
+5. FIN
 ------------------------------
 ------------------------------
-Appuyer sur le numéro du niveau ou sur 5 pour retourner sur le menu principal.
+Appuyer sur le numéro du niveau ou sur 6 pour retourner sur le menu principal.
