@@ -21,7 +21,7 @@ struct infoMatch {
 
 void menuMain() {
     clearScreen();
-    ifstream menu("../../menu.txt");
+    ifstream menu("../../menu/menu.txt");
 
     string ligne;
     while (getline(menu, ligne)) {
@@ -32,7 +32,7 @@ void menuMain() {
 
 void menuHistoire() {
     clearScreen();
-    ifstream mHISTOIRE("../../mHISTOIRE.txt");
+    ifstream mHISTOIRE("../../menu/mHISTOIRE.txt");
 
     string ligne;
     while (getline(mHISTOIRE, ligne)) {
@@ -43,7 +43,7 @@ void menuHistoire() {
 
 void HISTOIRE() {
     clearScreen();
-    ifstream HISTOIRE("../../HISTOIRE.txt");
+    ifstream HISTOIRE("../../menu/HISTOIRE.txt");
 
     string ligne;
     while (getline(HISTOIRE, ligne)) {
@@ -54,7 +54,7 @@ void HISTOIRE() {
 
 void menuNiveaux() {
     clearScreen();
-    ifstream mNiveaux("../../mNiveaux.txt");
+    ifstream mNiveaux("../../menu/mNiveaux.txt");
 
     string ligne;
     while (getline(mNiveaux, ligne)) {
@@ -105,7 +105,7 @@ void afficherNIVEAU3() {
     cin.get();
 }
 
-void afficherNIVEAU4 () {
+void afficherNIVEAU4() {
     clearScreen();
     ifstream niveau4("../../niveaux/niveau4.txt");
 
@@ -119,9 +119,23 @@ void afficherNIVEAU4 () {
     cin.get();
 }
 
+void afficherFIN() {
+    clearScreen();
+    ifstream fin("../../niveaux/fin.txt");
+
+    string ligne;
+    while (getline(fin, ligne)) {
+        cout << ligne << endl;
+    }
+    fin.close();
+    cin.ignore();
+    cout << "Appuyez sur entree pour continuer.";
+    cin.get();
+}
+
 void menuPVP() {
     clearScreen();
-    ifstream mPVP("../../mPVP.txt");
+    ifstream mPVP("../../menu/mPVP.txt");
 
     if (!mPVP) {
         cerr << "ERROR" << endl;
@@ -131,43 +145,48 @@ void menuPVP() {
     while (getline(mPVP, ligne)) {
         cout << ligne << endl;
     }
+    mPVP.close();
 }
 
 void menuINFINI() {
     clearScreen();
-    ifstream mINFINI("../../mINFINI.txt");
+    ifstream mINFINI("../../menu/mINFINI.txt");
 
     string ligne;
     while (getline(mINFINI, ligne)) {
         cout << ligne << endl;
     }
+    mINFINI.close();
 }
 
 void OPTIONS() {
     clearScreen();
-    ifstream options("../../mOPTIONS.txt");
+    ifstream options("../../menu/mOPTIONS.txt");
     string ligne;
     while (getline(options, ligne)) {
         cout << ligne << endl;
     }
+    options.close();
 }
 
-void changeDifficulte() {
+void menuChangeDifficulte() {
     clearScreen();
-    ifstream cDifficulte("../../changeDifficulte.txt");
+    ifstream changeDifficulte("../../menu/changeDifficulte.txt");
 
     string ligne;
-    while (getline(cDifficulte, ligne)) {
+    while (getline(changeDifficulte, ligne)) {
         cout << ligne << endl;
     }
+    changeDifficulte.close();
 }
 
 void credits() {
     clearScreen();
-    ifstream CREDITS("../../CREDITS.txt");
+    ifstream credits("../../menu/CREDITS.txt");
 
     string ligne;
-    while (getline(CREDITS, ligne)) {
+    while (getline(credits, ligne)) {
         cout << ligne << endl;
     }
+    credits.close();
 }
