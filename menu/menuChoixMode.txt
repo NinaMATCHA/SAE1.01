@@ -2,13 +2,11 @@
       CANDY CRUSH TERMINAL
 ------------------------------
 ------------------------------
-         NIVEAUX
+         MODES
 ------------------------------
-1. Niveau 1
-2. Niveau 2
-3. Niveau 3
-4. Niveau 4
-5. FIN
+1. Normal
+2. Infini
+3. Meilleurs scores
 ------------------------------
 ------------------------------
-Appuyer sur le numéro du niveau ou sur 6 pour retourner sur le menu principal.
+Appuyez sur 4 pour retourner sur le menu principal.

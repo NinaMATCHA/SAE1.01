@@ -42,7 +42,7 @@ void initGrid (mat & grid, const unsigned & nbCandy){ // le changement de diffic
     for (size_t i(0); i<nbCandy; ++i){
         grid[i].resize(nbCandy);
         for (size_t j(0); j<nbCandy; ++j){
-            grid[i][j] = (rand()%nbCandy)+1;
+            grid[i][j] = (rand()%nbCandy)+1; //ajoute un bonbon aléatoire entre 0 et nbCandy
         }
     }
 }
@@ -120,7 +120,7 @@ maPosition makeAMove (mat & grid, const maPosition & pos, char & direction, bool
                 isValidKey = true;
         }
         if(!isValidKey){
-            cout << "Mauvaises touches ! Elles sont indiquées ci-dessus !" << endl;
+            cout << "Mauvaises touches ! Elles sont indiquées ci-dessus ! Réessayez :";
             cin.clear();
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             cin >> direction;
@@ -313,17 +313,18 @@ unsigned play( const unsigned maxTimes, const unsigned nbCandy, const bool pvp, 
 
     // on entre dans une boucle tant qu’on n’a pas atteint le nombre maximal de coups :
     while(coups < maxTimes && coups2 < maxTimes){
+        displayGrid(matrice); // affiche la grille;
         isPlayer1 = turn%2==0;
         if(isPlayer1){
             coups++;
-            cout << "C'est le tour du joueur 1" << endl;
+            if(pvp) cout << "C'est le tour du joueur 1" << endl;
         }
         else{
             coups2++;
             cout << "C'est le tour du joueur 2" << endl;
         }
         score = (isPlayer1) ? score1 : score2; // le tour définit qui voit son score augmenter
-        displayGrid(matrice); // affiche la grille;
+
         cout << "Votre score actuel : " << score << endl;
         cout << "Encore " << maxTimes - (isPlayer1 ? coups : coups2 ) + 1 << " coups !" << endl;
 
@@ -337,6 +338,7 @@ unsigned play( const unsigned maxTimes, const unsigned nbCandy, const bool pvp, 
 
         cout << "Ou voulez vous aller ?" << (isPlayer1 ? "(z/q/s/d) : " : "(o/k/l/m) : ");
         cin >> direction;
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
         // on récupère la nouvelle position en plus d'échanger les deux
         maPosition newPos = makeAMove(matrice, pos, direction,isPlayer1);
@@ -385,6 +387,7 @@ unsigned play( const unsigned maxTimes, const unsigned nbCandy, const bool pvp, 
         cout << "FINI ! Votre score final :" << score1 << endl;
     }
     cout << "Appuyez sur ENTREE pour retourner au menu";
+    cin.get();
 
     return score1;
 }

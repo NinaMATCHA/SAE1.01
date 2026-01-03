@@ -1,0 +1,24 @@
+------------------------------
+      CANDY CRUSH TERMINAL    
+------------------------------
+------------------------------
+         MODE FREEPLAY
+------------------------------
+Bienvenue dans le mode freeplay !
+Dans ce mode de jeu, vous avez une grille
+qui contient de multiples chiffres.
+
+Vous devez aligner les chiffres entre eux
+par au moins 3 en échangeant leur place.
+
+Si vous choisissez le mode infini,
+lorsque vous détruisez une ligne ou une colonne
+de nouveaux chiffres aparaissent !
+
+Votre score monte à chaque destruction de lignes
+ou de colonnes.
+
+Tentez votre meilleur score et bonne chance !
+------------------------------
+------------------------------
+Appuyez sur 1 pour continuer ou sur 2 pour revenir au menu.

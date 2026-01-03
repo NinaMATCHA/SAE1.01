@@ -1,9 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
-#include <algorithm>
-#include <fstream>
 #include "jeu.h"
 #include "menu.h"
 
@@ -49,30 +45,57 @@ unsigned levelUnlock (unsigned choice, unsigned estJouable){
 }
 
 // fait une sauvegarde dans un fichier
-void save(unsigned estJouable) {
+void save(unsigned estJouable, vector<unsigned>& meilleursScores) {
     ofstream save("save.txt"); // dans un fichier save
     save << estJouable << endl; // on enregistre la progression de l'histoire
+    for(unsigned score : meilleursScores){// et les meilleurs scores
+        save << score << endl;
+    }
     save.close();
 }
 
-unsigned chargeSave() {
+//charge le fichier de sauvegarde
+void chargeSave(unsigned& estJouable, vector<unsigned>& meilleursScores) {
     ifstream save("save.txt");
-    unsigned estJouable = 1;
     if (save) { // dans le cas ou le fichier existe on sort la valeur de la sauvegarde
         save >> estJouable;
+        save >> meilleursScores[0];
+        save >> meilleursScores[1];
     }
-    return estJouable; // sinon on renvoie par defaut le niveau 1 debloqué seulement
+    else{
+        estJouable = 1; // sinon on renvoie par defaut le niveau 1 debloqué seulement
+    }
 }
+
+//affiche un menu qui montre les meilleurs scores du joueur
+void menuBestScores(vector<unsigned>& meilleursScores) {
+    clearScreen();
+    ifstream menuBestScores("../../menu/menuBestScores.txt");
+
+    string ligne;
+    while (getline(menuBestScores, ligne)) {
+        cout << ligne << endl;
+    }
+    menuBestScores.close();
+
+    cout << "Meilleur score du mode normal :" << meilleursScores[0] << endl;
+    cout << "Meilleur score du mode infini :" << meilleursScores[1] << endl;
+    cout << "------------------------------" << endl;
+    cout << "------------------------------" << endl;
+    cout << "Appuyez sur ENTREE pour revenir au menu." << endl;
+}
+
 
 int main() {
     //jme disais aussi faire un "entrée" suffit au lieu de 1 pour qlq endroits mais c des details d'opti
     unsigned choix; // Choix dans le menu
     unsigned sousChoix; // Sous choix lorsqu'on est dans les différents menus
-    unsigned cDifficulte;
-    unsigned cNiveau = 0;
+    unsigned sousChoix2 = 0; // Sous choix du sous choix, a l'interieur d'un menu qui est a l'interieur d'un menu
     unsigned maxTimes = 7;
     unsigned nbCandy = 5;
-    unsigned estJouable = 1;// valeur qui permet de se souvenir de la progression
+    unsigned estJouable, score;
+    vector<unsigned> meilleursScores(2,0);
+    chargeSave(estJouable, meilleursScores);
 
     do {
         menuMain(); // affiche l'écran de bienvenue
@@ -83,16 +106,14 @@ int main() {
             sousChoix = enterInt(1,2);
             if (sousChoix == 1) {
                 HISTOIRE();
+                cin.get();
                 while(true){
                     menuNiveaux();
-                    cNiveau = enterInt(1,6);
+                    sousChoix2 = enterInt(1,6);
 
-                    if(cNiveau==6) break;//on retourne au menu
-
-                    estJouable = chargeSave();
-                    estJouable = levelUnlock(cNiveau, estJouable);
-                    save(estJouable);
-                    cin.get();
+                    if(sousChoix2==6) break;//on retourne au menu
+                    estJouable = levelUnlock(sousChoix2, estJouable);
+                    save(estJouable, meilleursScores);
                 }
             }
             break;
@@ -101,18 +122,35 @@ int main() {
             sousChoix = enterInt(1,2);
             if (sousChoix == 1) {
                 play(maxTimes,nbCandy,true,false);
-                cin.get();
             }
             else if (sousChoix == 2) {
                 continue;
             }
             break;
         case 3:
-            menuINFINI();
+            menuFREEPLAY();
             sousChoix = enterInt(1,2);
             if (sousChoix == 1) {
-                play(maxTimes,nbCandy,false,true);
-                cin.get();
+                while(true){
+                menuChoixMode();
+                sousChoix2 = enterInt(1,4);
+                    if(sousChoix2==1){
+                        score = play(maxTimes,nbCandy,false,false);
+                        if(meilleursScores[0]<score) meilleursScores[0] = score;
+                        save(estJouable, meilleursScores);
+                    }
+                    else if(sousChoix2==2) {
+                        score = play(maxTimes,nbCandy,false,true);
+                        if(meilleursScores[1]<score) meilleursScores[1] = score;
+                        save(estJouable, meilleursScores);
+                    }
+                    else if(sousChoix2==3){
+                        menuBestScores(meilleursScores);
+                        cin.get();
+                    }
+                    else if(sousChoix2==4) break;
+                }
+
             }
             else if (sousChoix == 2) {
                 menuMain();
@@ -124,12 +162,12 @@ int main() {
             sousChoix = enterInt(1,3);
             if (sousChoix == 1) {
                 menuChangeDifficulte();
-                cDifficulte = enterInt(1,4);
-                if (cDifficulte >= 1 || cDifficulte <= 3){
-                    nbCandy = changeDifficulte(cDifficulte);
+                sousChoix2 = enterInt(1,4);
+                if (sousChoix2 >= 1 || sousChoix2 <= 3){
+                    nbCandy = changeDifficulte(sousChoix2);
                     maxTimes = nbCandy + 2;
                 }
-                else if (cDifficulte == 4) {
+                else if (sousChoix2 == 4) {
                     menuMain();
                     continue;
                 }

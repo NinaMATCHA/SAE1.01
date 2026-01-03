@@ -1,7 +1,5 @@
 #include <iostream>
 #include <vector>
-#include <cstdlib>
-#include <ctime>
 #include <algorithm>
 #include <fstream>
 
@@ -148,15 +146,26 @@ void menuPVP() {
     mPVP.close();
 }
 
-void menuINFINI() {
+void menuFREEPLAY() {
     clearScreen();
-    ifstream mINFINI("../../menu/mINFINI.txt");
+    ifstream mFREEPLAY("../../menu/mFREEPLAY.txt");
 
     string ligne;
-    while (getline(mINFINI, ligne)) {
+    while (getline(mFREEPLAY, ligne)) {
         cout << ligne << endl;
     }
-    mINFINI.close();
+    mFREEPLAY.close();
+}
+
+void menuChoixMode() {
+    clearScreen();
+    ifstream menuChoixMode("../../menu/menuChoixMode.txt");
+
+    string ligne;
+    while (getline(menuChoixMode, ligne)) {
+        cout << ligne << endl;
+    }
+    menuChoixMode.close();
 }
 
 void OPTIONS() {

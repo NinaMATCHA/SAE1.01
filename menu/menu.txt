@@ -5,7 +5,7 @@ Bienvenue dans Candy Crush en terminal !
 Choisissez le mode de jeu :
 1. Mode Histoire
 2. Mode PVP
-3. Mode Infini
+3. Mode FreePlay
 4. Options
 5. Quitter
 ------------------------------
