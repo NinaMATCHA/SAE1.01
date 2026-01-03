@@ -8,4 +8,4 @@ SOURCES += \
 
 HEADERS += \
     menu.h \
-    tp10.h
+    jeu.h
