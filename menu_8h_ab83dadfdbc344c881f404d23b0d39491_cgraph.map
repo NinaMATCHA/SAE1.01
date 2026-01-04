@@ -1,0 +1,5 @@
+<map id="menuMain" name="menuMain">
+<area shape="rect" id="Node000001" title="Affiche le menu principal." alt="" coords="5,5,96,31"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Supprime tout ce qu&#39;il y a sur l&#39;ecran." alt="" coords="144,5,243,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="96,15,130,15,130,21,96,21"/>
+</map>
