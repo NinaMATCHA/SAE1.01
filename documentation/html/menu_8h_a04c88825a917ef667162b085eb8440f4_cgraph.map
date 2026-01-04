@@ -1,0 +1,8 @@
+<map id="afficherNIVEAU4" name="afficherNIVEAU4">
+<area shape="rect" id="Node000001" title="Affiche la suite de l&#39;histoire avant de lancer le niveau 4." alt="" coords="5,5,135,31"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Supprime tout ce qu&#39;il y a sur l&#39;ecran." alt="" coords="305,5,404,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="135,15,291,15,291,21,135,21"/>
+<area shape="rect" id="Node000003" href="$jeu_8h.html#af3e7b12731ba6b7f2840f998d1a36ac2" title="vérifie si le score gagné est assez haut pour passer a la fin du jeu" alt="" coords="183,31,257,56"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="135,26,170,32,169,37,134,32"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="257,34,291,27,292,32,258,39"/>
+</map>

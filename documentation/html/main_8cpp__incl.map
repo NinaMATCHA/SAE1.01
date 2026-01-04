@@ -1,0 +1,25 @@
+<map id="main.cpp" name="main.cpp">
+<area shape="rect" id="Node000001" title="Interface permettant de jouer a candy crush dans le terminal." alt="" coords="283,5,365,31"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="213,152,293,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="321,32,267,141,263,138,316,30"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="318,152,381,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="329,31,348,138,342,139,323,32"/>
+<area shape="rect" id="Node000004" href="$jeu_8h.html" title="Ensemble des fonctions qui permettent de jouer au jeu." alt="" coords="398,79,453,104"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="342,28,399,68,396,73,339,33"/>
+<area shape="rect" id="Node000008" href="$menu_8h.html" title="Ensemble de fonctions qui affichent des fichiers texte à l&#39;écran." alt="" coords="190,79,261,104"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="310,33,254,73,251,68,307,29"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="399,106,295,149,293,144,397,102"/>
+<area shape="poly" id="edge5_Node000004_Node000003" title=" " alt="" coords="415,106,374,144,370,141,411,102"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="405,152,470,177"/>
+<area shape="poly" id="edge6_Node000004_Node000005" title=" " alt="" coords="430,104,436,138,430,139,425,105"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="495,152,553,177"/>
+<area shape="poly" id="edge7_Node000004_Node000006" title=" " alt="" coords="443,102,498,142,495,146,440,106"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="577,152,636,177"/>
+<area shape="poly" id="edge8_Node000004_Node000007" title=" " alt="" coords="454,101,566,144,564,149,452,106"/>
+<area shape="poly" id="edge10_Node000008_Node000002" title=" " alt="" coords="232,103,246,138,241,140,227,105"/>
+<area shape="poly" id="edge11_Node000008_Node000003" title=" " alt="" coords="247,102,319,143,316,147,244,106"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="5,152,91,177"/>
+<area shape="poly" id="edge12_Node000008_Node000009" title=" " alt="" coords="198,106,90,149,88,144,196,102"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="115,152,189,177"/>
+<area shape="poly" id="edge13_Node000008_Node000010" title=" " alt="" coords="215,106,176,144,172,140,211,102"/>
+</map>
