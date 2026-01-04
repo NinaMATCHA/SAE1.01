@@ -1,3 +1,9 @@
+/**
+ * @file menu.h
+ * @brief Ensemble de fonctions qui affichent des fichiers texte à l'écran
+ * @author Nina MATIC CHARBIT, Ewan FRANCOIS sur la base du cours de Mr.Alain CASALI
+ * @date 4 janvier 2026
+ */
 #include <iostream>
 #include <vector>
 #include <algorithm>
