@@ -1,0 +1,6 @@
+<map id="credits" name="credits">
+<area shape="rect" id="Node000001" title="Affiche les credits." alt="" coords="5,29,72,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="16,30,12,21,14,11,23,5,39,3,57,6,65,14,61,18,54,11,39,8,25,10,18,14,17,20,21,28"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Supprime tout ce qu&#39;il y a sur l&#39;ecran." alt="" coords="120,29,219,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="72,39,106,39,106,45,72,45"/>
+</map>

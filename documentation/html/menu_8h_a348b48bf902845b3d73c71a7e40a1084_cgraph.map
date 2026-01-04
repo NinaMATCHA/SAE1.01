@@ -1,0 +1,6 @@
+<map id="menuChoixMode" name="menuChoixMode">
+<area shape="rect" id="Node000001" title="Affiche le menu pour choisir les différents modes dans le mode &quot;FreePlay&quot;." alt="" coords="5,29,137,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="44,31,38,21,41,11,53,5,71,3,94,6,103,15,100,19,91,11,71,8,54,10,45,15,44,20,49,28"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Supprime tout ce qu&#39;il y a sur l&#39;ecran." alt="" coords="185,29,284,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,39,171,39,171,45,138,45"/>
+</map>
