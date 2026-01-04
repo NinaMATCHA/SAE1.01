@@ -1,0 +1,827 @@
+\doxysection{menu.\+h File Reference}
+\hypertarget{menu_8h}{}\label{menu_8h}\index{menu.h@{menu.h}}
+
+
+Ensemble de fonctions qui affichent des fichiers texte à l\textquotesingle{}écran.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+Include dependency graph for menu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=142pt]{menu_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menu\+Main}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu principal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_ad0fd4dade5eead790a47149706290ebf}{menu\+Histoire}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu du mode histoire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}} ()
+\begin{DoxyCompactList}\small\item\em Affiche l\textquotesingle{}introduction de l\textquotesingle{}histoire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_aab15e859b8cde0467437620e0d471977}{menu\+Niveaux}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu de sélections des quatres différents niveaux. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_afa9e2fe2b6a96a943bf3c966892754be}{afficher\+NIVEAU1}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le début de l\textquotesingle{}histoire avant de lancer le niveau 1. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a7104d06f05a15293a872e456f22c8cff}{afficher\+NIVEAU2}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la suite l\textquotesingle{}histoire avant de lancer le niveau 2. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb}{afficher\+NIVEAU3}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la suite de l\textquotesingle{}histoire avant de lancer le niveau 3. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a04c88825a917ef667162b085eb8440f4}{afficher\+NIVEAU4}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la suite de l\textquotesingle{}histoire avant de lancer le niveau 4. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20}{afficher\+FIN}} ()
+\begin{DoxyCompactList}\small\item\em Affiche la fin du mode histoire. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_ade5a07084ad1158485146f7dacb66ba2}{menu\+PVP}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu dans le mode PVP. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a6a62d53de43134479376ef34dcc5bb15}{menu\+FREEPLAY}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu d\textquotesingle{}introduction du mode "{}\+Free\+Play"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menu\+Choix\+Mode}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu pour choisir les différents modes dans le mode "{}\+Free\+Play"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_aac2de8914ac387eb849b451e69904377}{OPTIONS}} ()
+\begin{DoxyCompactList}\small\item\em Affiche les options. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8}{menu\+Change\+Difficulte}} ()
+\begin{DoxyCompactList}\small\item\em Affiche le menu pour changer de difficulte. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}} ()
+\begin{DoxyCompactList}\small\item\em Affiche les credits. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Ensemble de fonctions qui affichent des fichiers texte à l\textquotesingle{}écran. 
+
+\begin{DoxyAuthor}{Author}
+Nina MATIC CHARBIT, Ewan FRANCOIS sur la base du cours de Mr.\+Alain CASALI 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4 janvier 2026 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20}\label{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20} 
+\index{menu.h@{menu.h}!afficherFIN@{afficherFIN}}
+\index{afficherFIN@{afficherFIN}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{afficherFIN()}{afficherFIN()}}
+{\footnotesize\ttfamily void afficher\+FIN (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche la fin du mode histoire. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00186}{186}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00187\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00188\ \ \ \ \ ifstream\ fin(\textcolor{stringliteral}{"{}../../niveaux/fin.txt"{}});}
+\DoxyCodeLine{00189\ \ \ \ \ }
+\DoxyCodeLine{00190\ \ \ \ \ \textcolor{keywordflow}{if}\ (!fin)\ \{}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00193\ \ \ \ \ \}}
+\DoxyCodeLine{00194\ \ \ \ \ }
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00196\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fin,\ ligne))\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00198\ \ \ \ \ \}}
+\DoxyCodeLine{00199\ \ \ \ \ fin.close();}
+\DoxyCodeLine{00200\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00201\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{00202\ \ \ \ \ cin.get();}
+\DoxyCodeLine{00203\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=260pt]{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_afa9e2fe2b6a96a943bf3c966892754be}\label{menu_8h_afa9e2fe2b6a96a943bf3c966892754be} 
+\index{menu.h@{menu.h}!afficherNIVEAU1@{afficherNIVEAU1}}
+\index{afficherNIVEAU1@{afficherNIVEAU1}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{afficherNIVEAU1()}{afficherNIVEAU1()}}
+{\footnotesize\ttfamily void afficher\+NIVEAU1 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le début de l\textquotesingle{}histoire avant de lancer le niveau 1. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00098}{98}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00100\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}}(\textcolor{stringliteral}{"{}../../niveaux/niveau1.txt"{}});}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}})\ \{}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ }
+\DoxyCodeLine{00107\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}},\ ligne))\ \{}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00110\ \ \ \ \ \}}
+\DoxyCodeLine{00111\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}}.close();}
+\DoxyCodeLine{00112\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00113\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{00114\ \ \ \ \ cin.get();}
+\DoxyCodeLine{00115\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_afa9e2fe2b6a96a943bf3c966892754be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_afa9e2fe2b6a96a943bf3c966892754be_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a7104d06f05a15293a872e456f22c8cff}\label{menu_8h_a7104d06f05a15293a872e456f22c8cff} 
+\index{menu.h@{menu.h}!afficherNIVEAU2@{afficherNIVEAU2}}
+\index{afficherNIVEAU2@{afficherNIVEAU2}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{afficherNIVEAU2()}{afficherNIVEAU2()}}
+{\footnotesize\ttfamily void afficher\+NIVEAU2 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche la suite l\textquotesingle{}histoire avant de lancer le niveau 2. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00120}{120}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00121\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00122\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}}(\textcolor{stringliteral}{"{}../../niveaux/niveau2.txt"{}});}
+\DoxyCodeLine{00123\ }
+\DoxyCodeLine{00124\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}})\ \{}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00127\ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}},\ ligne))\ \{}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00132\ \ \ \ \ \}}
+\DoxyCodeLine{00133\ \ \ \ \ \mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}}.close();}
+\DoxyCodeLine{00134\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00135\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{00136\ \ \ \ \ cin.get();}
+\DoxyCodeLine{00137\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a7104d06f05a15293a872e456f22c8cff_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a7104d06f05a15293a872e456f22c8cff_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb}\label{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb} 
+\index{menu.h@{menu.h}!afficherNIVEAU3@{afficherNIVEAU3}}
+\index{afficherNIVEAU3@{afficherNIVEAU3}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{afficherNIVEAU3()}{afficherNIVEAU3()}}
+{\footnotesize\ttfamily void afficher\+NIVEAU3 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche la suite de l\textquotesingle{}histoire avant de lancer le niveau 3. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00142}{142}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00143\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00144\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}}(\textcolor{stringliteral}{"{}../../niveaux/niveau3.txt"{}});}
+\DoxyCodeLine{00145\ }
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}})\ \{}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00149\ \ \ \ \ \}}
+\DoxyCodeLine{00150\ \ \ \ \ }
+\DoxyCodeLine{00151\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00152\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}},\ ligne))\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00154\ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}}.close();}
+\DoxyCodeLine{00156\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00157\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{00158\ \ \ \ \ cin.get();}
+\DoxyCodeLine{00159\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a04c88825a917ef667162b085eb8440f4}\label{menu_8h_a04c88825a917ef667162b085eb8440f4} 
+\index{menu.h@{menu.h}!afficherNIVEAU4@{afficherNIVEAU4}}
+\index{afficherNIVEAU4@{afficherNIVEAU4}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{afficherNIVEAU4()}{afficherNIVEAU4()}}
+{\footnotesize\ttfamily void afficher\+NIVEAU4 (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche la suite de l\textquotesingle{}histoire avant de lancer le niveau 4. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00164}{164}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00166\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}}(\textcolor{stringliteral}{"{}../../niveaux/niveau4.txt"{}});}
+\DoxyCodeLine{00167\ }
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}})\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00171\ \ \ \ \ \}}
+\DoxyCodeLine{00172\ \ \ \ \ }
+\DoxyCodeLine{00173\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00174\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}},\ ligne))\ \{}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00176\ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}}.close();}
+\DoxyCodeLine{00178\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00179\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{00180\ \ \ \ \ cin.get();}
+\DoxyCodeLine{00181\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a04c88825a917ef667162b085eb8440f4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{menu_8h_a04c88825a917ef667162b085eb8440f4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a5864f6393c74073a86a19645a5c55f24}\label{menu_8h_a5864f6393c74073a86a19645a5c55f24} 
+\index{menu.h@{menu.h}!credits@{credits}}
+\index{credits@{credits}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{credits()}{credits()}}
+{\footnotesize\ttfamily void credits (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche les credits. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00302}{302}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00303\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00304\ \ \ \ \ ifstream\ \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}}(\textcolor{stringliteral}{"{}../../menu/CREDITS.txt"{}});}
+\DoxyCodeLine{00305\ }
+\DoxyCodeLine{00306\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}})\ \{}
+\DoxyCodeLine{00307\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00309\ \ \ \ \ \}}
+\DoxyCodeLine{00310\ \ \ \ \ }
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}},\ ligne))\ \{}
+\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00314\ \ \ \ \ \}}
+\DoxyCodeLine{00315\ \ \ \ \ \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}}.close();}
+\DoxyCodeLine{00316\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{menu_8h_a5864f6393c74073a86a19645a5c55f24_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=207pt]{menu_8h_a5864f6393c74073a86a19645a5c55f24_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}\label{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d} 
+\index{menu.h@{menu.h}!HISTOIRE@{HISTOIRE}}
+\index{HISTOIRE@{HISTOIRE}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{HISTOIRE()}{HISTOIRE()}}
+{\footnotesize\ttfamily void HISTOIRE (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche l\textquotesingle{}introduction de l\textquotesingle{}histoire. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00060}{60}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00061\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00062\ \ \ \ \ ifstream\ \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}}(\textcolor{stringliteral}{"{}../../menu/HISTOIRE.txt"{}});}
+\DoxyCodeLine{00063\ }
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}})\ \{}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00067\ \ \ \ \ \}}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}},\ ligne))\ \{}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00072\ \ \ \ \ \}}
+\DoxyCodeLine{00073\ \ \ \ \ \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}}.close();}
+\DoxyCodeLine{00074\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=252pt]{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=219pt]{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8}\label{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8} 
+\index{menu.h@{menu.h}!menuChangeDifficulte@{menuChangeDifficulte}}
+\index{menuChangeDifficulte@{menuChangeDifficulte}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuChangeDifficulte()}{menuChangeDifficulte()}}
+{\footnotesize\ttfamily void menu\+Change\+Difficulte (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu pour changer de difficulte. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00283}{283}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00284\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00285\ \ \ \ \ ifstream\ \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}}(\textcolor{stringliteral}{"{}../../menu/changeDifficulte.txt"{}});}
+\DoxyCodeLine{00286\ }
+\DoxyCodeLine{00287\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}})\ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00290\ \ \ \ \ \}}
+\DoxyCodeLine{00291\ \ \ \ \ }
+\DoxyCodeLine{00292\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00293\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}},\ ligne))\ \{}
+\DoxyCodeLine{00294\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00295\ \ \ \ \ \}}
+\DoxyCodeLine{00296\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}}.close();}
+\DoxyCodeLine{00297\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=337pt]{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a348b48bf902845b3d73c71a7e40a1084}\label{menu_8h_a348b48bf902845b3d73c71a7e40a1084} 
+\index{menu.h@{menu.h}!menuChoixMode@{menuChoixMode}}
+\index{menuChoixMode@{menuChoixMode}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuChoixMode()}{menuChoixMode()}}
+{\footnotesize\ttfamily void menu\+Choix\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu pour choisir les différents modes dans le mode "{}\+Free\+Play"{}. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00245}{245}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00246\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00247\ \ \ \ \ ifstream\ \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}}(\textcolor{stringliteral}{"{}../../menu/menuChoixMode.txt"{}});}
+\DoxyCodeLine{00248\ }
+\DoxyCodeLine{00249\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}})\ \{}
+\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00251\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00252\ \ \ \ \ \}}
+\DoxyCodeLine{00253\ \ \ \ \ }
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}},\ ligne))\ \{}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00257\ \ \ \ \ \}}
+\DoxyCodeLine{00258\ \ \ \ \ \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}}.close();}
+\DoxyCodeLine{00259\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=289pt]{menu_8h_a348b48bf902845b3d73c71a7e40a1084_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{menu_8h_a348b48bf902845b3d73c71a7e40a1084_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_a6a62d53de43134479376ef34dcc5bb15}\label{menu_8h_a6a62d53de43134479376ef34dcc5bb15} 
+\index{menu.h@{menu.h}!menuFREEPLAY@{menuFREEPLAY}}
+\index{menuFREEPLAY@{menuFREEPLAY}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuFREEPLAY()}{menuFREEPLAY()}}
+{\footnotesize\ttfamily void menu\+FREEPLAY (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu d\textquotesingle{}introduction du mode "{}\+Free\+Play"{}. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00226}{226}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00227\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00228\ \ \ \ \ ifstream\ mFREEPLAY(\textcolor{stringliteral}{"{}../../menu/mFREEPLAY.txt"{}});}
+\DoxyCodeLine{00229\ \ \ \ \ }
+\DoxyCodeLine{00230\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mFREEPLAY)\ \{}
+\DoxyCodeLine{00231\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00232\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00233\ \ \ \ \ \}}
+\DoxyCodeLine{00234\ \ \ \ \ }
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mFREEPLAY,\ ligne))\ \{}
+\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00238\ \ \ \ \ \}}
+\DoxyCodeLine{00239\ \ \ \ \ mFREEPLAY.close();}
+\DoxyCodeLine{00240\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{menu_8h_a6a62d53de43134479376ef34dcc5bb15_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{menu_8h_a6a62d53de43134479376ef34dcc5bb15_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_ad0fd4dade5eead790a47149706290ebf}\label{menu_8h_ad0fd4dade5eead790a47149706290ebf} 
+\index{menu.h@{menu.h}!menuHistoire@{menuHistoire}}
+\index{menuHistoire@{menuHistoire}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuHistoire()}{menuHistoire()}}
+{\footnotesize\ttfamily void menu\+Histoire (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu du mode histoire. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00041}{41}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00042\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00043\ \ \ \ \ ifstream\ mHISTOIRE(\textcolor{stringliteral}{"{}../../menu/mHISTOIRE.txt"{}});}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mHISTOIRE)\ \{}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00048\ \ \ \ \ \}}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mHISTOIRE,\ ligne))\ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ mHISTOIRE.close();}
+\DoxyCodeLine{00055\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{menu_8h_ad0fd4dade5eead790a47149706290ebf_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=240pt]{menu_8h_ad0fd4dade5eead790a47149706290ebf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_ab83dadfdbc344c881f404d23b0d39491}\label{menu_8h_ab83dadfdbc344c881f404d23b0d39491} 
+\index{menu.h@{menu.h}!menuMain@{menuMain}}
+\index{menuMain@{menuMain}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuMain()}{menuMain()}}
+{\footnotesize\ttfamily void menu\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu principal. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00022}{22}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00024\ \ \ \ \ ifstream\ menu(\textcolor{stringliteral}{"{}../../menu/menu.txt"{}});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (!menu)\ \{}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00029\ \ \ \ \ \}}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(menu,\ ligne))\ \{}
+\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00034\ \ \ \ \ \}}
+\DoxyCodeLine{00035\ \ \ \ \ menu.close();}
+\DoxyCodeLine{00036\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{menu_8h_ab83dadfdbc344c881f404d23b0d39491_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=225pt]{menu_8h_ab83dadfdbc344c881f404d23b0d39491_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_aab15e859b8cde0467437620e0d471977}\label{menu_8h_aab15e859b8cde0467437620e0d471977} 
+\index{menu.h@{menu.h}!menuNiveaux@{menuNiveaux}}
+\index{menuNiveaux@{menuNiveaux}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuNiveaux()}{menuNiveaux()}}
+{\footnotesize\ttfamily void menu\+Niveaux (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu de sélections des quatres différents niveaux. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00079}{79}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00080\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00081\ \ \ \ \ ifstream\ mNiveaux(\textcolor{stringliteral}{"{}../../menu/mNiveaux.txt"{}});}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mNiveaux)\ \{}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00086\ \ \ \ \ \}}
+\DoxyCodeLine{00087\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mNiveaux,\ ligne))\ \{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \ \ \ \ mNiveaux.close();}
+\DoxyCodeLine{00093\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=275pt]{menu_8h_aab15e859b8cde0467437620e0d471977_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=242pt]{menu_8h_aab15e859b8cde0467437620e0d471977_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_ade5a07084ad1158485146f7dacb66ba2}\label{menu_8h_ade5a07084ad1158485146f7dacb66ba2} 
+\index{menu.h@{menu.h}!menuPVP@{menuPVP}}
+\index{menuPVP@{menuPVP}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{menuPVP()}{menuPVP()}}
+{\footnotesize\ttfamily void menu\+PVP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche le menu dans le mode PVP. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00208}{208}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00209\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00210\ \ \ \ \ ifstream\ mPVP(\textcolor{stringliteral}{"{}../../menu/mPVP.txt"{}});}
+\DoxyCodeLine{00211\ }
+\DoxyCodeLine{00212\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mPVP)\ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00215\ \ \ \ \ \}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mPVP,\ ligne))\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ \ \ \ \ mPVP.close();}
+\DoxyCodeLine{00221\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=253pt]{menu_8h_ade5a07084ad1158485146f7dacb66ba2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=220pt]{menu_8h_ade5a07084ad1158485146f7dacb66ba2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{menu_8h_aac2de8914ac387eb849b451e69904377}\label{menu_8h_aac2de8914ac387eb849b451e69904377} 
+\index{menu.h@{menu.h}!OPTIONS@{OPTIONS}}
+\index{OPTIONS@{OPTIONS}!menu.h@{menu.h}}
+\doxysubsubsection{\texorpdfstring{OPTIONS()}{OPTIONS()}}
+{\footnotesize\ttfamily void OPTIONS (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche les options. 
+
+
+
+Definition at line \mbox{\hyperlink{menu_8h_source_l00264}{264}} of file \mbox{\hyperlink{menu_8h_source}{menu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00264\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00265\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00266\ \ \ \ \ ifstream\ options(\textcolor{stringliteral}{"{}../../menu/mOPTIONS.txt"{}});}
+\DoxyCodeLine{00267\ \ \ \ \ }
+\DoxyCodeLine{00268\ \ \ \ \ \textcolor{keywordflow}{if}\ (!options)\ \{}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{00271\ \ \ \ \ \}}
+\DoxyCodeLine{00272\ \ \ \ \ }
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00274\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(options,\ ligne))\ \{}
+\DoxyCodeLine{00275\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00276\ \ \ \ \ \}}
+\DoxyCodeLine{00277\ \ \ \ \ options.close();}
+\DoxyCodeLine{00278\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=250pt]{menu_8h_aac2de8914ac387eb849b451e69904377_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=217pt]{menu_8h_aac2de8914ac387eb849b451e69904377_icgraph}
+\end{center}
+\end{figure}

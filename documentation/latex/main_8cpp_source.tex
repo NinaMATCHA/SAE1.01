@@ -1,0 +1,191 @@
+\doxysection{main.\+cpp}
+\hypertarget{main_8cpp_source}{}\label{main_8cpp_source}\mbox{\hyperlink{main_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{jeu_8h}{jeu.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{menu_8h}{menu.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00018}\mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{00018}}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}}(\textcolor{keywordtype}{unsigned}\ choice)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (choice\ ==\ 1)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Difficulté\ changée\ en\ facile"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 5;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00022}00022\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Difficulté\ changée\ en\ moyen"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 7;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00026}00026\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00027}00027\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Difficulté\ changée\ en\ difficile"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ 9;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00037}\mbox{\hyperlink{main_8cpp_a3d37ce7203887b02651b437f9f9de77d}{00037}}\ \textcolor{keywordtype}{unsigned}\ \mbox{\hyperlink{main_8cpp_a3d37ce7203887b02651b437f9f9de77d}{levelUnlock}}\ (\textcolor{keywordtype}{unsigned}\ choice,\ \textcolor{keywordtype}{unsigned}\ estJouable)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (choice\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_afa9e2fe2b6a96a943bf3c966892754be}{afficherNIVEAU1}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(6,4,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00041}00041\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 2\ \&\&\ estJouable\ >=\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a7104d06f05a15293a872e456f22c8cff}{afficherNIVEAU2}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(8,6,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 3\ \&\&\ estJouable\ >=\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb}{afficherNIVEAU3}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(9,7,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00050}00050\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 4\ \&\&\ estJouable\ ==\ 4)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a04c88825a917ef667162b085eb8440f4}{afficherNIVEAU4}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(11,9,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 5\ \&\&\ estJouable\ ==\ 5)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20}{afficherFIN}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Niveau\ pas\ encore\ debloqué\ !"{}}\ <<\ endl\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ ENTREE\ pour\ choisir\ un\ autre\ niveau."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00059}00059\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00060}00060\ \ \ \ \ \textcolor{keywordflow}{return}\ estJouable;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00068}\mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{00068}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(\textcolor{keywordtype}{unsigned}\ estJouable,\ vector<unsigned>\&\ meilleursScores)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00069}00069\ \ \ \ \ ofstream\ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(\textcolor{stringliteral}{"{}save.txt"{}});\ \textcolor{comment}{//\ dans\ un\ fichier\ save}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ <<\ estJouable\ <<\ endl;\ \textcolor{comment}{//\ on\ enregistre\ la\ progression\ de\ l'histoire}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00071}00071\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ score\ :\ meilleursScores)\{\textcolor{comment}{//\ et\ les\ meilleurs\ scores}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ <<\ score\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}.close();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00075}00075\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00082}\mbox{\hyperlink{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79}{00082}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79}{chargeSave}}(\textcolor{keywordtype}{unsigned}\&\ estJouable,\ vector<unsigned>\&\ meilleursScores)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00083}00083\ \ \ \ \ ifstream\ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(\textcolor{stringliteral}{"{}save.txt"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}})\ \{\ \textcolor{comment}{//\ dans\ le\ cas\ ou\ le\ fichier\ existe\ on\ sort\ la\ valeur\ de\ la\ sauvegarde}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ >>\ estJouable;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ >>\ meilleursScores[0];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ >>\ meilleursScores[1];}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00088}00088\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ estJouable\ =\ 1;\ \textcolor{comment}{//\ sinon\ on\ renvoie\ par\ defaut\ le\ niveau\ 1\ debloqué\ seulement}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00092}00092\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00098}\mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{00098}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}}(vector<unsigned>\&\ meilleursScores)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00100}00100\ \ \ \ \ ifstream\ \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}}(\textcolor{stringliteral}{"{}../../menu/menuBestScores.txt"{}});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00102}00102\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00103}00103\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00106}00106\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}}.close();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00108}00108\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Meilleur\ score\ du\ mode\ normal\ :"{}}\ <<\ meilleursScores[0]\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00109}00109\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Meilleur\ score\ du\ mode\ infini\ :"{}}\ <<\ meilleursScores[1]\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00110}00110\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00111}00111\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00112}00112\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ ENTREE\ pour\ revenir\ au\ menu."{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00113}00113\ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00116}\mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{00116}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00117}00117\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ choix;\ \textcolor{comment}{//\ Choix\ dans\ le\ menu}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00118}00118\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ sousChoix;\ \textcolor{comment}{//\ Sous\ choix\ lorsqu'on\ est\ dans\ les\ différents\ menus}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00119}00119\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ sousChoix2\ =\ 0;\ \textcolor{comment}{//\ Sous\ choix\ du\ sous\ choix,\ a\ l'interieur\ d'un\ menu\ qui\ est\ a\ l'interieur\ d'un\ menu}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00120}00120\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ maxTimes\ =\ 7;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00121}00121\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ nbCandy\ =\ 5;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00122}00122\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ estJouable,\ score;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00123}00123\ \ \ \ \ vector<unsigned>\ meilleursScores(2,0);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00124}00124\ \ \ \ \ \mbox{\hyperlink{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79}{chargeSave}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00126}00126\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00127}00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();\ \textcolor{comment}{//\ affiche\ l'écran\ de\ bienvenue}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00128}00128\ \ \ \ \ \ \ \ \ choix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,5);\ \textcolor{comment}{//\ entree\ sécurisee}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choix)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ad0fd4dade5eead790a47149706290ebf}{menuHistoire}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_aab15e859b8cde0467437620e0d471977}{menuNiveaux}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix2\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,6);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00139}00139\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(sousChoix2==6)\ \textcolor{keywordflow}{break};\textcolor{comment}{//on\ retourne\ au\ menu}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{main_8cpp_a3d37ce7203887b02651b437f9f9de77d}{levelUnlock}}(sousChoix2,\ estJouable);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ade5a07084ad1158485146f7dacb66ba2}{menuPVP}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(maxTimes,nbCandy,\textcolor{keyword}{true},\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a6a62d53de43134479376ef34dcc5bb15}{menuFREEPLAY}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix2\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,4);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(sousChoix2==1)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ score\ =\ \mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(maxTimes,nbCandy,\textcolor{keyword}{false},\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(meilleursScores[0]<score)\ meilleursScores[0]\ =\ score;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(sousChoix2==2)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ score\ =\ \mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(maxTimes,nbCandy,\textcolor{keyword}{false},\textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(meilleursScores[1]<score)\ meilleursScores[1]\ =\ score;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(sousChoix2==3)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}}(meilleursScores);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(sousChoix2==4)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00186}00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00187}00187\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_aac2de8914ac387eb849b451e69904377}{OPTIONS}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,3);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8}{menuChangeDifficulte}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix2\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,4);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix2\ >=\ 1\ ||\ sousChoix2\ <=\ 3)\{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nbCandy\ =\ \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}}(sousChoix2);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxTimes\ =\ nbCandy\ +\ 2;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix2\ ==\ 4)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 3)\ \{}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00214}00214\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(choix\ !=\ 5);}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00215}00215\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{main_8cpp_source_l00216}00216\ \}}
+
+\end{DoxyCode}
