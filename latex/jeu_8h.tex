@@ -1,0 +1,1014 @@
+\doxysection{jeu.\+h File Reference}
+\hypertarget{jeu_8h}{}\label{jeu_8h}\index{jeu.h@{jeu.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
+Include dependency graph for jeu.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structmaPosition}{ma\+Position}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef vector$<$ unsigned $>$ \mbox{\hyperlink{jeu_8h_a4933e286520b3b8b86b2b7f27fd1959c}{line}}
+\item 
+typedef vector$<$ \mbox{\hyperlink{jeu_8h_a4933e286520b3b8b86b2b7f27fd1959c}{line}} $>$ \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen}} ()
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_a88665c45b47838f7bf85650096b758bf}{KVide}} (0)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_a87aab004c1c22814beb8db1ddaa9f628}{KRouge}} (31)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_a72260f87613d24d0cd1e7c8f646ca5f5}{KVert}} (32)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_a587a099b5228e39c74a525cb4ac5d786}{KBleu}} (34)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_a1295d80e3fdb251b7969f86740392db4}{KMAgenta}} (35)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_a1b010b9694f3acc35b02b0a667d99094}{KJaune}} (33)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_aed31d4db92c112edda1291acad69dd00}{KCyan}} (36)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_af3a5b11738a37931f0fdacaae8639409}{KGris}} (90)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_adfc3f071a0faf642634ec3955a03ff58}{KOrange}} (91)
+\item 
+const unsigned \mbox{\hyperlink{jeu_8h_a0c847b772c4aef69f42b1f1f000a40ab}{KRose}} (95)
+\item 
+void \mbox{\hyperlink{jeu_8h_ae241cf89d39423f89bb8e65688e4c031}{couleur}} (const unsigned \&coul)
+\item 
+void \mbox{\hyperlink{jeu_8h_aa901a53fb8ce3447eaa607efea575654}{init\+Grid}} (\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid, const unsigned \&nb\+Candy)
+\item 
+void \mbox{\hyperlink{jeu_8h_ac0aacda61353cef121ada8614de65a16}{display\+Grid}} (const \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid)
+\item 
+unsigned \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enter\+Int}} (unsigned min, unsigned max)
+\item 
+\mbox{\hyperlink{structmaPosition}{ma\+Position}} \mbox{\hyperlink{jeu_8h_a277c6208110e176546c3731da00d95b0}{make\+AMove}} (\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid, const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&pos, char \&direction, bool is\+Player1)
+\item 
+bool \mbox{\hyperlink{jeu_8h_aee7483c5715afce5b8d044329f2d9fdb}{at\+Least\+Three\+In\+AColumn}} (const \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&pos, unsigned \&how\+Many)
+\item 
+bool \mbox{\hyperlink{jeu_8h_a592d3742cedb5bd0462cc8ebe9e79131}{at\+Least\+Three\+In\+ARow}} (const \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&pos, unsigned \&how\+Many)
+\item 
+void \mbox{\hyperlink{jeu_8h_a068db2b939ecfe33f633ab058269580c}{removal\+In\+Column}} (\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&pos, const unsigned \&how\+Many, const unsigned nb\+Candy, const bool infini)
+\item 
+void \mbox{\hyperlink{jeu_8h_a6973cd2e621b6642c456090db69f66dd}{removal\+In\+Row}} (\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&pos, const unsigned \&how\+Many, const unsigned nb\+Candy, const bool infini)
+\item 
+unsigned \mbox{\hyperlink{jeu_8h_af4d25fce4fd30b46af979b0b476d902f}{score\+Match}} (\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&grid, \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&pos, unsigned \&how\+Many, const unsigned nb\+Candy, const bool infini)
+\item 
+unsigned \mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}} (unsigned score)
+\item 
+unsigned \mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}} (unsigned score)
+\item 
+unsigned \mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}} (unsigned score)
+\item 
+unsigned \mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}} (unsigned score)
+\item 
+unsigned \mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}} (const unsigned max\+Times, const unsigned nb\+Candy, const bool pvp, const bool infini)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\Hypertarget{jeu_8h_a4933e286520b3b8b86b2b7f27fd1959c}\label{jeu_8h_a4933e286520b3b8b86b2b7f27fd1959c} 
+\index{jeu.h@{jeu.h}!line@{line}}
+\index{line@{line}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{line}{line}}
+{\footnotesize\ttfamily typedef vector$<$unsigned$>$ \mbox{\hyperlink{jeu_8h_a4933e286520b3b8b86b2b7f27fd1959c}{line}}}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00010}{10}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+\Hypertarget{jeu_8h_aee710f500ed8d179390ae3862af69d24}\label{jeu_8h_aee710f500ed8d179390ae3862af69d24} 
+\index{jeu.h@{jeu.h}!mat@{mat}}
+\index{mat@{mat}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{mat}{mat}}
+{\footnotesize\ttfamily typedef vector$<$\mbox{\hyperlink{jeu_8h_a4933e286520b3b8b86b2b7f27fd1959c}{line}}$>$ \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}}}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00011}{11}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{jeu_8h_aee7483c5715afce5b8d044329f2d9fdb}\label{jeu_8h_aee7483c5715afce5b8d044329f2d9fdb} 
+\index{jeu.h@{jeu.h}!atLeastThreeInAColumn@{atLeastThreeInAColumn}}
+\index{atLeastThreeInAColumn@{atLeastThreeInAColumn}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{atLeastThreeInAColumn()}{atLeastThreeInAColumn()}}
+{\footnotesize\ttfamily bool at\+Least\+Three\+In\+AColumn (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{pos,  }\item[{unsigned \&}]{how\+Many }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00143}{143}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00144\ \ \ \ \ howMany\ =\ 1;\ \textcolor{comment}{//on\ compte\ le\ bonbon\ sur\ la\ position\ aussi}}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ valCandy\ =\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}];}
+\DoxyCodeLine{00146\ \ \ \ \ \textcolor{keywordflow}{if}\ (valCandy\ ==\ \mbox{\hyperlink{jeu_8h_a88665c45b47838f7bf85650096b758bf}{KVide}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ pas\ de\ points\ sur\ les\ cases\ vides}}
+\DoxyCodeLine{00147\ }
+\DoxyCodeLine{00148\ \ \ \ \ \textcolor{comment}{//\ on\ verifie\ en\ haut}}
+\DoxyCodeLine{00149\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ li\ =\ pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}};}
+\DoxyCodeLine{00150\ \ \ \ \ \textcolor{keywordflow}{while}\ (li\ >\ 0\ \&\&\ grid[li-\/1][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}]\ ==\ valCandy)\{}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ ++howMany;}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ -\/-\/li;}
+\DoxyCodeLine{00153\ \ \ \ \ \}}
+\DoxyCodeLine{00154\ }
+\DoxyCodeLine{00155\ \ \ \ \ \textcolor{comment}{//\ en\ bas}}
+\DoxyCodeLine{00156\ \ \ \ \ li\ =\ pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}};}
+\DoxyCodeLine{00157\ \ \ \ \ \textcolor{keywordflow}{while}\ (li\ <\ grid.size()\ -\/\ 1\ \&\&\ grid[li+1][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}]\ ==\ valCandy)\{}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ ++howMany;}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ ++li;}
+\DoxyCodeLine{00160\ \ \ \ \ \}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00162\ \ \ \ \ \textcolor{keywordflow}{return}\ (howMany\ >=\ 3);}
+\DoxyCodeLine{00163\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{jeu_8h_aee7483c5715afce5b8d044329f2d9fdb_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_aee7483c5715afce5b8d044329f2d9fdb_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a592d3742cedb5bd0462cc8ebe9e79131}\label{jeu_8h_a592d3742cedb5bd0462cc8ebe9e79131} 
+\index{jeu.h@{jeu.h}!atLeastThreeInARow@{atLeastThreeInARow}}
+\index{atLeastThreeInARow@{atLeastThreeInARow}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{atLeastThreeInARow()}{atLeastThreeInARow()}}
+{\footnotesize\ttfamily bool at\+Least\+Three\+In\+ARow (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{pos,  }\item[{unsigned \&}]{how\+Many }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00165}{165}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00166\ \ \ \ \ howMany\ =\ 1;}
+\DoxyCodeLine{00167\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ valCandy\ =\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}];}
+\DoxyCodeLine{00168\ \ \ \ \ \textcolor{keywordflow}{if}\ (valCandy\ ==\ \mbox{\hyperlink{jeu_8h_a88665c45b47838f7bf85650096b758bf}{KVide}})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00170\ \ \ \ \ \textcolor{comment}{//\ on\ verifie\ a\ gauche}}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ col\ =\ pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}};}
+\DoxyCodeLine{00172\ \ \ \ \ \textcolor{keywordflow}{while}\ (col\ >\ 0\ \&\&\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][col-\/1]\ ==\ valCandy)\{}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ ++howMany;}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ -\/-\/col;}
+\DoxyCodeLine{00175\ \ \ \ \ \}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00177\ \ \ \ \ \textcolor{comment}{//\ a\ droite}}
+\DoxyCodeLine{00178\ \ \ \ \ col\ =\ pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}};}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordflow}{while}\ (col\ <\ grid[0].size()\ -\/\ 1\ \&\&\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][col+1]\ ==\ valCandy)\{}
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ ++howMany;}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ ++col;}
+\DoxyCodeLine{00182\ \ \ \ \ \}}
+\DoxyCodeLine{00183\ }
+\DoxyCodeLine{00184\ \ \ \ \ \textcolor{keywordflow}{return}\ (howMany\ >=\ 3);}
+\DoxyCodeLine{00185\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{jeu_8h_a592d3742cedb5bd0462cc8ebe9e79131_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a592d3742cedb5bd0462cc8ebe9e79131_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}\label{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f} 
+\index{jeu.h@{jeu.h}!clearScreen@{clearScreen}}
+\index{clearScreen@{clearScreen}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{clearScreen()}{clearScreen()}}
+{\footnotesize\ttfamily void clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00020}{20}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00021\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[H\(\backslash\)033[2J"{}};}
+\DoxyCodeLine{00022\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_ae241cf89d39423f89bb8e65688e4c031}\label{jeu_8h_ae241cf89d39423f89bb8e65688e4c031} 
+\index{jeu.h@{jeu.h}!couleur@{couleur}}
+\index{couleur@{couleur}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{couleur()}{couleur()}}
+{\footnotesize\ttfamily void couleur (\begin{DoxyParamCaption}\item[{const unsigned \&}]{coul }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00036}{36}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00037\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033["{}}\ <<\ coul\ <<\textcolor{stringliteral}{"{}m"{}};}
+\DoxyCodeLine{00038\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_ae241cf89d39423f89bb8e65688e4c031_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_ac0aacda61353cef121ada8614de65a16}\label{jeu_8h_ac0aacda61353cef121ada8614de65a16} 
+\index{jeu.h@{jeu.h}!displayGrid@{displayGrid}}
+\index{displayGrid@{displayGrid}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{displayGrid()}{displayGrid()}}
+{\footnotesize\ttfamily void display\+Grid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00050}{50}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{comment}{//\ indice\ d'une\ couleur\ dans\ la\ liste\ =>\ couleur\ d'un\ nombre\ de\ cet\ indice}}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keyword}{const}\ vector<unsigned>\ color\ =\ \{\mbox{\hyperlink{jeu_8h_a87aab004c1c22814beb8db1ddaa9f628}{KRouge}},\mbox{\hyperlink{jeu_8h_a72260f87613d24d0cd1e7c8f646ca5f5}{KVert}},\mbox{\hyperlink{jeu_8h_a1295d80e3fdb251b7969f86740392db4}{KMAgenta}},\mbox{\hyperlink{jeu_8h_a587a099b5228e39c74a525cb4ac5d786}{KBleu}},\mbox{\hyperlink{jeu_8h_adfc3f071a0faf642634ec3955a03ff58}{KOrange}},\mbox{\hyperlink{jeu_8h_a0c847b772c4aef69f42b1f1f000a40ab}{KRose}},\mbox{\hyperlink{jeu_8h_a1b010b9694f3acc35b02b0a667d99094}{KJaune}},\mbox{\hyperlink{jeu_8h_aed31d4db92c112edda1291acad69dd00}{KCyan}},\mbox{\hyperlink{jeu_8h_af3a5b11738a37931f0fdacaae8639409}{KGris}}\};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}};}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ j=0;\ j<grid.size();\ ++j)\{}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ cout\ <<\ j\ <<\ \textcolor{stringliteral}{"{}\ "{}};\ \textcolor{comment}{//\ affiche\ les\ indices\ des\ colonnes}}
+\DoxyCodeLine{00058\ \ \ \ \ \}}
+\DoxyCodeLine{00059\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{comment}{//\ sépare\ les\ indice\ des\ lignes\ avec\ '\_'\ répétés\ deux\ fois\ la\ taille\ de\ la\ matrice}}
+\DoxyCodeLine{00061\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}}\ <<\ string(grid.size()*2,\ \textcolor{charliteral}{'\_'})\ <<\ endl;}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{size\_t}\ i=0;\ i<grid.size();\ ++i)\{}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ cout\ <<\ i\ <<\ \textcolor{stringliteral}{"{}\ |"{}};\ \textcolor{comment}{//\ pour\ les\ indices\ des\ lignes}}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ candy\ :\ grid[i])\{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(candy\ ==\ \mbox{\hyperlink{jeu_8h_a88665c45b47838f7bf85650096b758bf}{KVide}})\{}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}.\ "{}};\ \textcolor{comment}{//\ affiche\ un\ point\ pour\ le\ vide}}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_ae241cf89d39423f89bb8e65688e4c031}{couleur}}(color[candy-\/1]);\ \textcolor{comment}{//\ -\/1\ car\ les\ bonbons\ ne\ peuvent\ pas\ valoir\ 0\ mais\ les\ indices\ de\ la\ liste\ commencent\ a\ 0}}
+\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ candy\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_ae241cf89d39423f89bb8e65688e4c031}{couleur}}(0);}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00076\ \ \ \ \ \}}
+\DoxyCodeLine{00077\ \ \ \ \ cout\ <<\ endl;}
+\DoxyCodeLine{00078\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=262pt]{jeu_8h_ac0aacda61353cef121ada8614de65a16_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_ac0aacda61353cef121ada8614de65a16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}\label{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c} 
+\index{jeu.h@{jeu.h}!enterInt@{enterInt}}
+\index{enterInt@{enterInt}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{enterInt()}{enterInt()}}
+{\footnotesize\ttfamily unsigned enter\+Int (\begin{DoxyParamCaption}\item[{unsigned}]{min,  }\item[{unsigned}]{max }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00084}{84}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ choix;}
+\DoxyCodeLine{00086\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})\ \{}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cin\ >>\ choix)\ \{\ \textcolor{comment}{//\ si\ il\ n'y\ a\ pas\ de\ pb,\ cin\ >>\ choix\ renverra\ vrai}}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (choix\ >=\ min\ \&\&\ choix\ <=\ max)\ \{}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});\ \textcolor{comment}{//\ on\ vide\ dans\ le\ cas\ ou\ l'utilisateur\ a\ ecrit\ des\ lettres}}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ choix;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Erreur\ :\ Le\ nombre\ doit\ être\ entre\ "{}}\ <<\ min\ <<\ \textcolor{stringliteral}{"{}\ et\ "{}}\ <<\ max\ <<\ \textcolor{stringliteral}{"{}\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Erreur\ :\ Ce\ n'est\ pas\ un\ nombre\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ cin.clear();}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Réessayez\ :\ "{}};}
+\DoxyCodeLine{00101\ \ \ \ \ \}}
+\DoxyCodeLine{00102\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_aa901a53fb8ce3447eaa607efea575654}\label{jeu_8h_aa901a53fb8ce3447eaa607efea575654} 
+\index{jeu.h@{jeu.h}!initGrid@{initGrid}}
+\index{initGrid@{initGrid}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{initGrid()}{initGrid()}}
+{\footnotesize\ttfamily void init\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid,  }\item[{const unsigned \&}]{nb\+Candy }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00040}{40}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ le\ changement\ de\ difficulté,\ nbCandy\ n'est\ plus\ une\ val\ globale,\ et\ définit\ la\ taille}}
+\DoxyCodeLine{00041\ \ \ \ \ grid.resize(nbCandy);}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ i(0);\ i<nbCandy;\ ++i)\{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ grid[i].resize(nbCandy);}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{size\_t}\ j(0);\ j<nbCandy;\ ++j)\{}
+\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ grid[i][j]\ =\ (rand()\%nbCandy)+1;}
+\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00047\ \ \ \ \ \}}
+\DoxyCodeLine{00048\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_aa901a53fb8ce3447eaa607efea575654_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a587a099b5228e39c74a525cb4ac5d786}\label{jeu_8h_a587a099b5228e39c74a525cb4ac5d786} 
+\index{jeu.h@{jeu.h}!KBleu@{KBleu}}
+\index{KBleu@{KBleu}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KBleu()}{KBleu()}}
+{\footnotesize\ttfamily const unsigned KBleu (\begin{DoxyParamCaption}\item[{34}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a587a099b5228e39c74a525cb4ac5d786_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_aed31d4db92c112edda1291acad69dd00}\label{jeu_8h_aed31d4db92c112edda1291acad69dd00} 
+\index{jeu.h@{jeu.h}!KCyan@{KCyan}}
+\index{KCyan@{KCyan}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KCyan()}{KCyan()}}
+{\footnotesize\ttfamily const unsigned KCyan (\begin{DoxyParamCaption}\item[{36}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_aed31d4db92c112edda1291acad69dd00_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_af3a5b11738a37931f0fdacaae8639409}\label{jeu_8h_af3a5b11738a37931f0fdacaae8639409} 
+\index{jeu.h@{jeu.h}!KGris@{KGris}}
+\index{KGris@{KGris}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KGris()}{KGris()}}
+{\footnotesize\ttfamily const unsigned KGris (\begin{DoxyParamCaption}\item[{90}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_af3a5b11738a37931f0fdacaae8639409_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a1b010b9694f3acc35b02b0a667d99094}\label{jeu_8h_a1b010b9694f3acc35b02b0a667d99094} 
+\index{jeu.h@{jeu.h}!KJaune@{KJaune}}
+\index{KJaune@{KJaune}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KJaune()}{KJaune()}}
+{\footnotesize\ttfamily const unsigned KJaune (\begin{DoxyParamCaption}\item[{33}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a1b010b9694f3acc35b02b0a667d99094_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a1295d80e3fdb251b7969f86740392db4}\label{jeu_8h_a1295d80e3fdb251b7969f86740392db4} 
+\index{jeu.h@{jeu.h}!KMAgenta@{KMAgenta}}
+\index{KMAgenta@{KMAgenta}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KMAgenta()}{KMAgenta()}}
+{\footnotesize\ttfamily const unsigned KMAgenta (\begin{DoxyParamCaption}\item[{35}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a1295d80e3fdb251b7969f86740392db4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_adfc3f071a0faf642634ec3955a03ff58}\label{jeu_8h_adfc3f071a0faf642634ec3955a03ff58} 
+\index{jeu.h@{jeu.h}!KOrange@{KOrange}}
+\index{KOrange@{KOrange}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KOrange()}{KOrange()}}
+{\footnotesize\ttfamily const unsigned KOrange (\begin{DoxyParamCaption}\item[{91}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_adfc3f071a0faf642634ec3955a03ff58_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a0c847b772c4aef69f42b1f1f000a40ab}\label{jeu_8h_a0c847b772c4aef69f42b1f1f000a40ab} 
+\index{jeu.h@{jeu.h}!KRose@{KRose}}
+\index{KRose@{KRose}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KRose()}{KRose()}}
+{\footnotesize\ttfamily const unsigned KRose (\begin{DoxyParamCaption}\item[{95}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a0c847b772c4aef69f42b1f1f000a40ab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a87aab004c1c22814beb8db1ddaa9f628}\label{jeu_8h_a87aab004c1c22814beb8db1ddaa9f628} 
+\index{jeu.h@{jeu.h}!KRouge@{KRouge}}
+\index{KRouge@{KRouge}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KRouge()}{KRouge()}}
+{\footnotesize\ttfamily const unsigned KRouge (\begin{DoxyParamCaption}\item[{31}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a87aab004c1c22814beb8db1ddaa9f628_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a72260f87613d24d0cd1e7c8f646ca5f5}\label{jeu_8h_a72260f87613d24d0cd1e7c8f646ca5f5} 
+\index{jeu.h@{jeu.h}!KVert@{KVert}}
+\index{KVert@{KVert}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KVert()}{KVert()}}
+{\footnotesize\ttfamily const unsigned KVert (\begin{DoxyParamCaption}\item[{32}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a72260f87613d24d0cd1e7c8f646ca5f5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a88665c45b47838f7bf85650096b758bf}\label{jeu_8h_a88665c45b47838f7bf85650096b758bf} 
+\index{jeu.h@{jeu.h}!KVide@{KVide}}
+\index{KVide@{KVide}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{KVide()}{KVide()}}
+{\footnotesize\ttfamily const unsigned KVide (\begin{DoxyParamCaption}\item[{0}]{ }\end{DoxyParamCaption})}
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a88665c45b47838f7bf85650096b758bf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a277c6208110e176546c3731da00d95b0}\label{jeu_8h_a277c6208110e176546c3731da00d95b0} 
+\index{jeu.h@{jeu.h}!makeAMove@{makeAMove}}
+\index{makeAMove@{makeAMove}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{makeAMove()}{makeAMove()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmaPosition}{ma\+Position}} make\+AMove (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid,  }\item[{const \mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{pos,  }\item[{char \&}]{direction,  }\item[{bool}]{is\+Player1 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00106}{106}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00107\ \ \ \ \ \mbox{\hyperlink{structmaPosition}{maPosition}}\ newPos\ =\ pos;}
+\DoxyCodeLine{00108\ }
+\DoxyCodeLine{00109\ \ \ \ \ \textcolor{comment}{//selon\ le\ tour\ en\ pvp,\ change\ les\ touches\ valides}}
+\DoxyCodeLine{00110\ \ \ \ \ vector<char>\ keys;}
+\DoxyCodeLine{00111\ \ \ \ \ \textcolor{keywordflow}{if}\ (isPlayer1)}
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ keys\ =\ \{\textcolor{charliteral}{'z'},\textcolor{charliteral}{'s'},\textcolor{charliteral}{'q'},\textcolor{charliteral}{'d'}\};}
+\DoxyCodeLine{00113\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ keys\ =\ \{\textcolor{charliteral}{'o'},\textcolor{charliteral}{'l'},\textcolor{charliteral}{'k'},\textcolor{charliteral}{'m'}\};}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \textcolor{keywordtype}{bool}\ isValidKey\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{char}\ key\ :\ keys)\{}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(key\ ==\ direction)}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ isValidKey\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(!isValidKey)\{}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Mauvaises\ touches\ !\ Elles\ sont\ indiquées\ ci-\/dessus\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ cin.clear();}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ cin.ignore(numeric\_limits<streamsize>::max(),\ \textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ direction;}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00128\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(!isValidKey);}
+\DoxyCodeLine{00129\ }
+\DoxyCodeLine{00130\ \ \ \ \ \textcolor{comment}{//\ on\ évite\ les\ débordements\ en\ plus\ de\ changer\ pos}}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordflow}{if}\ (\ direction\ ==\ keys[0]\ \&\&\ pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}\ >\ 0)\ -\/-\/newPos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}};}
+\DoxyCodeLine{00132\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\ direction\ ==\ keys[1]\ \ \&\&\ pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}\ <\ grid.size()\ -\/\ 1)\ ++newPos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}};}
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\ direction\ ==\ keys[2]\ \&\&\ pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}\ >\ 0)\ -\/-\/newPos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}};}
+\DoxyCodeLine{00134\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\ direction\ ==\ keys[3]\ \&\&\ pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}\ <\ grid.size()\ -\/\ 1)\ ++newPos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}};}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00136\ \ \ \ \ \textcolor{comment}{//\ fonction\ swap\ pour\ échanger\ directement}}
+\DoxyCodeLine{00137\ \ \ \ \ swap(grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}],\ grid[newPos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][newPos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}]);}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordflow}{return}\ newPos;}
+\DoxyCodeLine{00139\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a277c6208110e176546c3731da00d95b0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a2fb8d117cf2de5314a90984d430328db}\label{jeu_8h_a2fb8d117cf2de5314a90984d430328db} 
+\index{jeu.h@{jeu.h}!niveau1@{niveau1}}
+\index{niveau1@{niveau1}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{niveau1()}{niveau1()}}
+{\footnotesize\ttfamily unsigned niveau1 (\begin{DoxyParamCaption}\item[{unsigned}]{score }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00253}{253}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00254\ \ \ \ \ \textcolor{keywordflow}{if}\ (score\ <\ 15)\ \{}
+\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00256\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Perdu\ !\ Les\ monstres\ ont\ gagnes"{}}\ <<\ endl;}
+\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 1;}
+\DoxyCodeLine{00258\ \ \ \ \ \}}
+\DoxyCodeLine{00259\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00260\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{00261\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Vous\ avez\ gagne\ et\ debloque\ le\ niveau\ 2\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00262\ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00263\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{jeu_8h_a2fb8d117cf2de5314a90984d430328db_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a2fb8d117cf2de5314a90984d430328db_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}\label{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df} 
+\index{jeu.h@{jeu.h}!niveau2@{niveau2}}
+\index{niveau2@{niveau2}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{niveau2()}{niveau2()}}
+{\footnotesize\ttfamily unsigned niveau2 (\begin{DoxyParamCaption}\item[{unsigned}]{score }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00265}{265}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00266\ \ \ \ \ \textcolor{keywordflow}{if}\ (score\ <\ 40)\ \{}
+\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Perdu\ !\ Les\ betes\ vous\ ont\ mange(e)s"{}}\ <<\ endl;}
+\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 2;}
+\DoxyCodeLine{00270\ \ \ \ \ \}}
+\DoxyCodeLine{00271\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00272\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Vous\ avez\ gagne\ et\ debloque\ le\ niveau\ 3\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00274\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}\label{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d} 
+\index{jeu.h@{jeu.h}!niveau3@{niveau3}}
+\index{niveau3@{niveau3}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{niveau3()}{niveau3()}}
+{\footnotesize\ttfamily unsigned niveau3 (\begin{DoxyParamCaption}\item[{unsigned}]{score }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00276}{276}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00277\ \ \ \ \ \textcolor{keywordflow}{if}\ (score\ <\ 60)\ \{}
+\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Perdu\ !\ Les\ cameras\ vous\ ont\ trouves"{}}\ <<\ endl;}
+\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 3;}
+\DoxyCodeLine{00281\ \ \ \ \ \}}
+\DoxyCodeLine{00282\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00283\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Vous\ avez\ gagne\ et\ debloque\ le\ niveau\ 4\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00284\ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00285\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}\label{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2} 
+\index{jeu.h@{jeu.h}!niveau4@{niveau4}}
+\index{niveau4@{niveau4}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{niveau4()}{niveau4()}}
+{\footnotesize\ttfamily unsigned niveau4 (\begin{DoxyParamCaption}\item[{unsigned}]{score }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00287}{287}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00288\ \ \ \ \ \textcolor{keywordflow}{if}\ (score\ <\ 80)\ \{}
+\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Perdu\ !\ Le\ roi\ des\ monstres\ vous\ a\ elimine"{}}\ <<\ endl;}
+\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 4;}
+\DoxyCodeLine{00292\ \ \ \ \ \}}
+\DoxyCodeLine{00293\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00294\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Vous\ avez\ gagne\ !\ Le\ monde\ est\ sauve\ grace\ a\ vous\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00295\ \ \ \ \ \textcolor{keywordflow}{return}\ 5;}
+\DoxyCodeLine{00296\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}\label{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8} 
+\index{jeu.h@{jeu.h}!play@{play}}
+\index{play@{play}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{play()}{play()}}
+{\footnotesize\ttfamily unsigned play (\begin{DoxyParamCaption}\item[{const unsigned}]{max\+Times,  }\item[{const unsigned}]{nb\+Candy,  }\item[{const bool}]{pvp,  }\item[{const bool}]{infini }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00301}{301}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ on\ change\ la\ difficulté\ et\ les\ modes\ ici}}
+\DoxyCodeLine{00302\ \ \ \ \ \textcolor{comment}{//\ on\ initialise\ la\ grille\ du\ jeu\ ainsi\ que\ le\ nombre\ de\ coup\ maximal;}}
+\DoxyCodeLine{00303\ \ \ \ \ srand(time(0));\ \textcolor{comment}{//\ permet\ de\ pouvoir\ rendre\ réellement\ aléatoire\ la\ matrice}}
+\DoxyCodeLine{00304\ \ \ \ \ \mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}}\ matrice;}
+\DoxyCodeLine{00305\ \ \ \ \ \mbox{\hyperlink{jeu_8h_aa901a53fb8ce3447eaa607efea575654}{initGrid}}(matrice,\ nbCandy);}
+\DoxyCodeLine{00306\ }
+\DoxyCodeLine{00307\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Nombres\ de\ coup\ max\ :\ "{}}\ <<\ maxTimes;}
+\DoxyCodeLine{00308\ \ \ \ \ \textcolor{keywordtype}{char}\ direction;}
+\DoxyCodeLine{00309\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ howMany,\ score;}
+\DoxyCodeLine{00310\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ score1\ =\ 0,\ score2\ =\ 0,\ coups\ =\ 0,\ coups2\ =\ 0;\ \textcolor{comment}{//\ score\ et\ coups\ pour\ différents\ joueurs}}
+\DoxyCodeLine{00311\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPlayer1;\ \textcolor{comment}{//\ bool\ qui\ définit\ si\ c'est\ le\ joueur\ 1\ qui\ joue\ ou\ non}}
+\DoxyCodeLine{00312\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ turn\ =\ (pvp)\ ?\ rand()\%2\ :\ 0;\ \textcolor{comment}{//\ if\ else\ en\ une\ seule\ ligne,\ rand\ définit\ qui\ joue\ en\ premier\ en\ pvp,\ en\ dehors\ du\ pvp\ le\ j1\ joue\ toujours}}
+\DoxyCodeLine{00313\ }
+\DoxyCodeLine{00314\ \ \ \ \ \textcolor{comment}{//\ on\ entre\ dans\ une\ boucle\ tant\ qu’on\ n’a\ pas\ atteint\ le\ nombre\ maximal\ de\ coups\ :}}
+\DoxyCodeLine{00315\ \ \ \ \ \textcolor{keywordflow}{while}(coups\ <\ maxTimes\ \&\&\ coups2\ <\ maxTimes)\{}
+\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ isPlayer1\ =\ turn\%2==0;}
+\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isPlayer1)\{}
+\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ coups++;}
+\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}C'est\ le\ tour\ du\ joueur\ 1"{}}\ <<\ endl;}
+\DoxyCodeLine{00320\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ coups2++;}
+\DoxyCodeLine{00323\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}C'est\ le\ tour\ du\ joueur\ 2"{}}\ <<\ endl;}
+\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ score\ =\ (isPlayer1)\ ?\ score1\ :\ score2;\ \textcolor{comment}{//\ le\ tour\ définit\ qui\ voit\ son\ score\ augmenter}}
+\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_ac0aacda61353cef121ada8614de65a16}{displayGrid}}(matrice);\ \textcolor{comment}{//\ affiche\ la\ grille;}}
+\DoxyCodeLine{00327\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Votre\ score\ actuel\ :\ "{}}\ <<\ score\ <<\ endl;}
+\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Encore\ "{}}\ <<\ maxTimes\ -\/\ (isPlayer1\ ?\ coups\ :\ coups2\ )\ +\ 1\ <<\ \textcolor{stringliteral}{"{}\ coups\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00329\ }
+\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ on\ saisit\ les\ coordonnées\ du\ bonbon\ a\ déplacer}}
+\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmaPosition}{maPosition}}\ pos;}
+\DoxyCodeLine{00332\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Colonne\ :"{}};}
+\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(0,\ nbCandy\ -\/\ 1);\textcolor{comment}{//\ vérifie\ aussi\ si\ la\ position\ est\ dans\ la\ matrice}}
+\DoxyCodeLine{00334\ }
+\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Ligne\ :"{}};}
+\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ pos.ord\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(0,\ nbCandy\ -\/\ 1);}
+\DoxyCodeLine{00337\ }
+\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Ou\ voulez\ vous\ aller\ ?"{}}\ <<\ (isPlayer1\ ?\ \textcolor{stringliteral}{"{}(z/q/s/d)\ :\ "{}}\ :\ \textcolor{stringliteral}{"{}(o/k/l/m)\ :\ "{}});}
+\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ cin\ >>\ direction;}
+\DoxyCodeLine{00340\ }
+\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ on\ récupère\ la\ nouvelle\ position\ en\ plus\ d'échanger\ les\ deux}}
+\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{structmaPosition}{maPosition}}\ newPos\ =\ \mbox{\hyperlink{jeu_8h_a277c6208110e176546c3731da00d95b0}{makeAMove}}(matrice,\ pos,\ direction,isPlayer1);}
+\DoxyCodeLine{00343\ }
+\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(newPos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}\ ==\ pos.abs\ \&\&\ newPos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}\ ==\ pos.ord)\{}
+\DoxyCodeLine{00345\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Vous\ allez\ en\ dehors\ de\ la\ matrice\ !\ Réessayez\ :"{}};}
+\DoxyCodeLine{00346\ \ \ \ \ \ \ \ \ \ \ \ \ cin\ >>\ direction;}
+\DoxyCodeLine{00347\ \ \ \ \ \ \ \ \ \ \ \ \ newPos\ =\ \mbox{\hyperlink{jeu_8h_a277c6208110e176546c3731da00d95b0}{makeAMove}}(matrice,\ pos,\ direction,isPlayer1);}
+\DoxyCodeLine{00348\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00349\ }
+\DoxyCodeLine{00350\ \ \ \ \ \ \ \ \ \textcolor{comment}{//score\ et\ test\ sur\ l'ancienne\ position}}
+\DoxyCodeLine{00351\ \ \ \ \ \ \ \ \ score+=\mbox{\hyperlink{jeu_8h_af4d25fce4fd30b46af979b0b476d902f}{scoreMatch}}(matrice,\ pos,\ howMany,\ nbCandy,\ infini);}
+\DoxyCodeLine{00352\ }
+\DoxyCodeLine{00353\ \ \ \ \ \ \ \ \ \textcolor{comment}{//score\ et\ test\ sur\ la\ nouvelle\ position}}
+\DoxyCodeLine{00354\ \ \ \ \ \ \ \ \ score+=\mbox{\hyperlink{jeu_8h_af4d25fce4fd30b46af979b0b476d902f}{scoreMatch}}(matrice,\ newPos,\ howMany,\ nbCandy,\ infini);}
+\DoxyCodeLine{00355\ }
+\DoxyCodeLine{00356\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(isPlayer1)}
+\DoxyCodeLine{00357\ \ \ \ \ \ \ \ \ \ \ \ \ score1\ =\ score;}
+\DoxyCodeLine{00358\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00359\ \ \ \ \ \ \ \ \ \ \ \ \ score2\ =\ score;}
+\DoxyCodeLine{00360\ }
+\DoxyCodeLine{00361\ \ \ \ \ \ \ \ \ \textcolor{comment}{//si\ c'est\ le\ mode\ pvp,\ on\ definit\ a\ qui\ sera\ le\ tour\ de\ jouer\ la\ prochaine\ fois}}
+\DoxyCodeLine{00362\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(pvp)}
+\DoxyCodeLine{00363\ \ \ \ \ \ \ \ \ \ \ \ \ ++turn;}
+\DoxyCodeLine{00364\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00365\ \ \ \ \ \ \ \ \ \ \ \ \ coups2\ =\ coups;\ \textcolor{comment}{//\ permet\ de\ pouvoir\ sortir\ du\ while\ a\ la\ fin\ du\ jeu}}
+\DoxyCodeLine{00366\ }
+\DoxyCodeLine{00367\ \ \ \ \ \}}
+\DoxyCodeLine{00368\ }
+\DoxyCodeLine{00369\ \ \ \ \ \mbox{\hyperlink{jeu_8h_ac0aacda61353cef121ada8614de65a16}{displayGrid}}(matrice);}
+\DoxyCodeLine{00370\ \ \ \ \ \textcolor{keywordflow}{if}(pvp)\{}
+\DoxyCodeLine{00371\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}FINI\ !\ Vos\ scores\ finaux\ :"{}}\ <<\ endl;}
+\DoxyCodeLine{00372\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Joueur\ 1\ :\ "{}}\ <<\ score1\ <<\ endl;}
+\DoxyCodeLine{00373\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Joueur\ 2\ :\ "{}}\ <<\ score2\ <<\ endl;}
+\DoxyCodeLine{00374\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(score1>score2)\{}
+\DoxyCodeLine{00375\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}C'est\ le\ Joueur\ 1\ qui\ a\ gagné\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00376\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00377\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(score2>score1)\{}
+\DoxyCodeLine{00378\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}C'est\ le\ Joueur\ 2\ qui\ a\ gagné\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00379\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00380\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00381\ \ \ \ \ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Egalité\ entre\ les\ deux\ joueurs\ !"{}}\ <<\ endl;}
+\DoxyCodeLine{00382\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00383\ \ \ \ \ \}}
+\DoxyCodeLine{00384\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00385\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}FINI\ !\ Votre\ score\ final\ :"{}}\ <<\ score1\ <<\ endl;}
+\DoxyCodeLine{00386\ \ \ \ \ \}}
+\DoxyCodeLine{00387\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ ENTREE\ pour\ retourner\ au\ menu"{}};}
+\DoxyCodeLine{00388\ }
+\DoxyCodeLine{00389\ \ \ \ \ \textcolor{keywordflow}{return}\ score1;}
+\DoxyCodeLine{00390\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a068db2b939ecfe33f633ab058269580c}\label{jeu_8h_a068db2b939ecfe33f633ab058269580c} 
+\index{jeu.h@{jeu.h}!removalInColumn@{removalInColumn}}
+\index{removalInColumn@{removalInColumn}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{removalInColumn()}{removalInColumn()}}
+{\footnotesize\ttfamily void removal\+In\+Column (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{pos,  }\item[{const unsigned \&}]{how\+Many,  }\item[{const unsigned}]{nb\+Candy,  }\item[{const bool}]{infini }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00189}{189}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00190\ }
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{comment}{//\ on\ retrouve\ le\ début\ de\ la\ colonne\ de\ memes\ éléments}}
+\DoxyCodeLine{00192\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ currentCandy\ =\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}];}
+\DoxyCodeLine{00193\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ begin\ =\ pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}};\ \textcolor{comment}{//\ variable\ de\ position\ du\ debut\ des\ memes\ éléments}}
+\DoxyCodeLine{00194\ \ \ \ \ \textcolor{comment}{//\ on\ remonte\ tant\ que\ c'est\ le\ meme\ bonbon}}
+\DoxyCodeLine{00195\ \ \ \ \ \textcolor{keywordflow}{while}(begin\ >\ 0\ \&\&\ grid[begin-\/1][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}]\ ==\ currentCandy)\ \{}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ -\/-\/begin;}
+\DoxyCodeLine{00197\ \ \ \ \ \}}
+\DoxyCodeLine{00198\ }
+\DoxyCodeLine{00199\ \ \ \ \ \textcolor{comment}{//\ on\ décale\ vers\ le\ bas\ les\ valeurs\ au\ dessus\ des\ bonbons\ alignés}}
+\DoxyCodeLine{00200\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{unsigned}\ currentRow\ =\ begin;\ currentRow\ <\ begin\ +\ howMany;\ ++currentRow)\ \{\textcolor{comment}{//\ parcours\ la\ colonne\ par\ lignes}}
+\DoxyCodeLine{00201\ }
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ on\ fait\ descendre\ toute\ la\ colonne\ au\ dessus}}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ i\ =\ currentRow;\ i\ >\ 0;\ -\/-\/i)\{}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ grid[i][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}]\ =\ grid[i-\/1][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}];}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00206\ }
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ la\ case\ en\ haut\ n'ont\ plus\ de\ valeurs\ ou\ est\ remplacée\ selon\ si\ c'est\ le\ mode\ infini\ ou\ pas}}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ grid[0][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}]\ =\ (infini)\ ?\ \ (rand()\%nbCandy)+1\ :\ \mbox{\hyperlink{jeu_8h_a88665c45b47838f7bf85650096b758bf}{KVide}};}
+\DoxyCodeLine{00209\ \ \ \ \ \}}
+\DoxyCodeLine{00210\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{jeu_8h_a068db2b939ecfe33f633ab058269580c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a068db2b939ecfe33f633ab058269580c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_a6973cd2e621b6642c456090db69f66dd}\label{jeu_8h_a6973cd2e621b6642c456090db69f66dd} 
+\index{jeu.h@{jeu.h}!removalInRow@{removalInRow}}
+\index{removalInRow@{removalInRow}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{removalInRow()}{removalInRow()}}
+{\footnotesize\ttfamily void removal\+In\+Row (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{pos,  }\item[{const unsigned \&}]{how\+Many,  }\item[{const unsigned}]{nb\+Candy,  }\item[{const bool}]{infini }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00212}{212}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00213\ \ \ \ \ \textcolor{comment}{//\ on\ retrouve\ le\ début\ de\ la\ ligne\ de\ memes\ éléments}}
+\DoxyCodeLine{00214\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ currentCandy\ =\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}];}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ begin\ =\ pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}};\ \textcolor{comment}{//\ variable\ de\ position\ du\ debut\ des\ memes\ éléments}}
+\DoxyCodeLine{00216\ \ \ \ \ \textcolor{comment}{//\ on\ remonte\ tant\ que\ c'est\ le\ meme\ bonbon}}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordflow}{while}(begin\ >\ 0\ \&\&\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][begin-\/1]\ ==\ currentCandy)\ \{}
+\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ -\/-\/begin;}
+\DoxyCodeLine{00219\ \ \ \ \ \}}
+\DoxyCodeLine{00220\ }
+\DoxyCodeLine{00221\ \ \ \ \ \textcolor{comment}{//on\ descends\ toujours\ en\ colonne\ les\ valeurs\ mais\ dans\ la\ meme\ ligne\ ici}}
+\DoxyCodeLine{00222\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ currentCol\ =\ begin;\ currentCol\ <\ begin\ +\ howMany;\ ++currentCol)\{\ \textcolor{comment}{//parcours\ la\ ligne\ par\ colonnes}}
+\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ on\ fait\ descendre\ toute\ la\ colonne\ au\ dessus\ de\ la\ colonne\ courante}}
+\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ i\ =\ pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}};\ i\ >\ 0;\ -\/-\/i)\{}
+\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ grid[i][currentCol]\ =\ grid[i-\/1][currentCol];}
+\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00227\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ La\ case\ du\ haut\ devient\ vide\ ou\ est\ remplacée\ selon\ si\ c'est\ le\ mode\ infini\ ou\ pas}}
+\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ grid[0][currentCol]\ =\ (infini)\ ?\ \ (rand()\%nbCandy)+1\ :\ \mbox{\hyperlink{jeu_8h_a88665c45b47838f7bf85650096b758bf}{KVide}};}
+\DoxyCodeLine{00229\ \ \ \ \ \}}
+\DoxyCodeLine{00230\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{jeu_8h_a6973cd2e621b6642c456090db69f66dd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_a6973cd2e621b6642c456090db69f66dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{jeu_8h_af4d25fce4fd30b46af979b0b476d902f}\label{jeu_8h_af4d25fce4fd30b46af979b0b476d902f} 
+\index{jeu.h@{jeu.h}!scoreMatch@{scoreMatch}}
+\index{scoreMatch@{scoreMatch}!jeu.h@{jeu.h}}
+\doxysubsubsection{\texorpdfstring{scoreMatch()}{scoreMatch()}}
+{\footnotesize\ttfamily unsigned score\+Match (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{jeu_8h_aee710f500ed8d179390ae3862af69d24}{mat}} \&}]{grid,  }\item[{\mbox{\hyperlink{structmaPosition}{ma\+Position}} \&}]{pos,  }\item[{unsigned \&}]{how\+Many,  }\item[{const unsigned}]{nb\+Candy,  }\item[{const bool}]{infini }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{jeu_8h_source_l00235}{235}} of file \mbox{\hyperlink{jeu_8h_source}{jeu.\+h}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00235\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00236\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ score\ =\ 0;}
+\DoxyCodeLine{00237\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ valPos\ =\ grid[pos.\mbox{\hyperlink{structmaPosition_aaad1e041af6f40c349fe42b854ae28d8}{ord}}][pos.\mbox{\hyperlink{structmaPosition_ac4b111f78b8dec96d06bab1de1d6e03b}{abs}}];\ \textcolor{comment}{//\ la\ valeur(chiffre)\ du\ bonbon}}
+\DoxyCodeLine{00238\ \ \ \ \ \textcolor{keywordflow}{if}(valPos\ !=\ \mbox{\hyperlink{jeu_8h_a88665c45b47838f7bf85650096b758bf}{KVide}})\ \{}
+\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(\mbox{\hyperlink{jeu_8h_aee7483c5715afce5b8d044329f2d9fdb}{atLeastThreeInAColumn}}(grid,\ pos,\ howMany))\{}
+\DoxyCodeLine{00240\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a068db2b939ecfe33f633ab058269580c}{removalInColumn}}(grid,\ pos,\ howMany,\ nbCandy,\ infini);}
+\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ score\ +=\ valPos\ *\ howMany;}
+\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(\mbox{\hyperlink{jeu_8h_a592d3742cedb5bd0462cc8ebe9e79131}{atLeastThreeInARow}}(grid,\ pos,\ howMany))\{}
+\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a6973cd2e621b6642c456090db69f66dd}{removalInRow}}(grid,\ pos,\ howMany,\ nbCandy,\ infini);}
+\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ score\ +=\ valPos\ *\ howMany;}
+\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00247\ \ \ \ \ \}}
+\DoxyCodeLine{00248\ \ \ \ \ \textcolor{keywordflow}{return}\ score;}
+\DoxyCodeLine{00249\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_af4d25fce4fd30b46af979b0b476d902f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{jeu_8h_af4d25fce4fd30b46af979b0b476d902f_icgraph}
+\end{center}
+\end{figure}
