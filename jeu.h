@@ -17,6 +17,9 @@ struct maPosition {
 
 // ----------------------------AFFICHAGE-----------------------------
 
+/**
+ * @brief Supprime tout ce qu'il y a sur l'ecran
+ */
 void clearScreen () {
     cout << "\033[H\033[2J";
 }
@@ -33,10 +36,18 @@ const unsigned KGris    (90);
 const unsigned KOrange  (91);
 const unsigned KRose    (95);
 
+/**
+ * @brief Change la couleur du texte
+ * @param coul la couleur dans laquelle on veut mettre le texte
+ */
 void couleur (const unsigned & coul) {
     cout << "\033[" << coul <<"m";
 }
 
+/**
+ * @brief Initialise la matrice en la remplissant par des nombres aléatoires
+ * @param grid La matrice à remplir
+ */
 void initGrid (mat & grid, const unsigned & nbCandy){ // le changement de difficulté, nbCandy n'est plus une val globale, et définit la taille
     grid.resize(nbCandy);
     for (size_t i(0); i<nbCandy; ++i){
@@ -47,6 +58,10 @@ void initGrid (mat & grid, const unsigned & nbCandy){ // le changement de diffic
     }
 }
 
+/**
+ * @brief Affiche la grille avec des couleurs différentes pour chaque bonbons
+ * @param grid La matrice à afficher.
+ */
 void  displayGrid (const mat & grid){
     clearScreen();
     // indice d'une couleur dans la liste => couleur d'un nombre de cet indice
@@ -80,7 +95,12 @@ void  displayGrid (const mat & grid){
 
 // ----------------------------ENTREES-----------------------------
 
-//prends les entrees et verifie qu'il n'y a aucun problemes, utilisee aussi dans le main
+/**
+ * @brief Demande une entrée et la sécurise
+ * @param min la valeur minimum de l'entrée
+ * @param min la valeur maximum de l'entrée
+ * @return L'entrée saisie
+ */
 unsigned enterInt(unsigned min, unsigned max){
     unsigned choix;
     while (true) {
@@ -102,7 +122,13 @@ unsigned enterInt(unsigned min, unsigned max){
 }
 
 
-// changer makeAMove de void en maPosition permet de garder la valeur de newPos
+/**
+ * @brief Echange les valeurs de deux positions selon la direction donnée par l'utilisateur
+ * @param pos La position de l'utilisateur dans la matrice
+ * @param direction La direction de l'échange selon le caractère entré
+ * @param isPlayer1 Booléen qui vérifie si on prends en compte les touches du joueur 1 ou celles du joueur 2
+ * @return Nouvelle position après l'échange
+ */
 maPosition makeAMove (mat & grid, const maPosition & pos, char & direction, bool isPlayer1){
     maPosition newPos = pos;
 
@@ -140,6 +166,13 @@ maPosition makeAMove (mat & grid, const maPosition & pos, char & direction, bool
 
 // ----------------------------ALIGNEMENTS-----------------------------
 
+/**
+ * @brief Regarde si il y a des alignements autour de la position
+ * @param grid La matrice ou regarder les alignements
+ * @param pos La position ou regarder les alignements autour ( en haut/ en bas )
+ * @param howMany Le nombre de bonbon alignés qui servira a augmenter le score aussi
+ * @return Retourne le nombre de bonbons alignés si il y en a au moins 3
+ */
 bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMany){
     howMany = 1; //on compte le bonbon sur la position aussi
     unsigned valCandy = grid[pos.ord][pos.abs];
@@ -162,6 +195,13 @@ bool atLeastThreeInAColumn (const mat & grid, maPosition & pos, unsigned & howMa
     return (howMany >= 3);
 }
 
+/**
+ * @brief Regarde si il y a des alignements autour de la position
+ * @param grid La matrice ou regarder les alignements
+ * @param pos La position ou regarder les alignements autour ( a gauche/ a droite )
+ * @param howMany Le nombre de bonbons alignés qui servira a augmenter le score aussi
+ * @return Retourne le nombre de bonbons alignés si il y en a au moins 3
+ */
 bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany){
     howMany = 1;
     unsigned valCandy = grid[pos.ord][pos.abs];
@@ -186,6 +226,14 @@ bool atLeastThreeInARow (const mat & grid, maPosition & pos, unsigned & howMany)
 
 // ------------------------------------------------
 
+/**
+ * @brief Supprime les bonbons alignés et fait tomber les bonbons au dessus
+ * @param grid La matrice ou supprimer les elements
+ * @param pos La position ou supprimer les elements
+ * @param howMany Le nombre de bonbons alignés
+ * @param nbCandy Les differents nombres disponibles a mettre pour remplacer les cases vides
+ * @param infini Booléen qui vérifie si on doit remplacer les cases vides
+ */
 void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned nbCandy, const bool infini){
 
     // on retrouve le début de la colonne de memes éléments
@@ -209,6 +257,14 @@ void removalInColumn (mat & grid, maPosition & pos, const unsigned & howMany, co
     }
 }
 
+/**
+ * @brief Supprime les bonbons alignés et fait tomber les bonbons au dessus
+ * @param grid La matrice ou supprimer les elements
+ * @param pos La position ou supprimer les elements
+ * @param howMany Le nombre de bonbons alignés
+ * @param nbCandy Les differents nombres disponibles a mettre pour remplacer les cases vides
+ * @param infini Booléen qui vérifie si on doit remplacer les cases vides
+ */
 void removalInRow (mat & grid, maPosition & pos, const unsigned & howMany, const unsigned nbCandy, const bool infini){
     // on retrouve le début de la ligne de memes éléments
     unsigned currentCandy = grid[pos.ord][pos.abs];
@@ -231,7 +287,15 @@ void removalInRow (mat & grid, maPosition & pos, const unsigned & howMany, const
 
 // -------------------------------------------------
 
-// calcule le score et teste les alignements sur ses différentes positions
+/**
+ * @brief Calcule le score et teste les alignements sur ses différentes positions
+ * @param grid La matrice ou regarder et supprimer les alignements
+ * @param pos La position ou regarder et supprimer les alignements
+ * @param howMany Le nombre de bonbons alignés qui sert a augmenter le score
+ * @param nbCandy Les differents nombres disponibles a mettre pour remplacer les cases vides
+ * @param infini Booléen qui vérifie si on doit remplacer les cases vides
+ * @return Retourne le nombre de points gagnés
+ */
 unsigned scoreMatch(mat & grid, maPosition & pos, unsigned & howMany, const unsigned nbCandy, const bool infini){
     unsigned score = 0;
     unsigned valPos = grid[pos.ord][pos.abs]; // la valeur(chiffre) du bonbon
@@ -250,6 +314,11 @@ unsigned scoreMatch(mat & grid, maPosition & pos, unsigned & howMany, const unsi
 
 // ---------------------- MODE HISTOIRE ---------------------------
 
+/**
+ * @brief vérifie si le score gagné est assez haut pour passer au niveau 2
+ * @param score le score gagné
+ * @return La valeur qui indique si le niveau suivant est débloqué ou non
+ */
 unsigned niveau1(unsigned score){
     if (score < 15) {
         clearScreen();
@@ -262,6 +331,11 @@ unsigned niveau1(unsigned score){
     return 2;
 }
 
+/**
+ * @brief vérifie si le score gagné est assez haut pour passer au niveau 3
+ * @param score le score gagné
+ * @return La valeur qui indique si le niveau suivant est débloqué ou non
+ */
 unsigned niveau2(unsigned score){
     if (score < 40) {
         clearScreen();
@@ -273,6 +347,11 @@ unsigned niveau2(unsigned score){
     return 3;
 }
 
+/**
+ * @brief vérifie si le score gagné est assez haut pour passer au niveau 4
+ * @param score le score gagné
+ * @return La valeur qui indique si le niveau suivant est débloqué ou non
+ */
 unsigned niveau3(unsigned score){
     if (score < 60) {
         clearScreen();
@@ -284,6 +363,11 @@ unsigned niveau3(unsigned score){
     return 4;
 }
 
+/**
+ * @brief vérifie si le score gagné est assez haut pour passer a la fin du jeu
+ * @param score le score gagné
+ * @return La valeur qui indique si la fin du jeu est débloquée ou non
+ */
 unsigned niveau4(unsigned score){
     if (score < 80) {
         clearScreen();
@@ -297,7 +381,14 @@ unsigned niveau4(unsigned score){
 
 // ----------------------------JEU-----------------------------
 
-//ancienne fonction main du tp 10 adaptee pour les fonctions ajoutees
+/**
+ * @brief Ancienne fonction main du tp 10 adaptee pour les fonctions ajoutees. Elle permet de realiser l'ensemble du gameplay de tout les modes
+ * @param maxTimes le nombre de coups maximal
+ * @param nbCandy le nombre de bonbons différents entre eux dans la matrice
+ * @param pvp Le bool qui indique si le mode pvp est activé
+ * @param infini Le bool qui indique si le mode infini est activé
+ * @return Renvoie le score total de la partie
+ */
 unsigned play( const unsigned maxTimes, const unsigned nbCandy, const bool pvp, const bool infini){ // on change la difficulté et les modes ici
     // on initialise la grille du jeu ainsi que le nombre de coup maximal;
     srand(time(0)); // permet de pouvoir rendre réellement aléatoire la matrice
