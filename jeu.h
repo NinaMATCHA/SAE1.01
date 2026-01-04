@@ -1,3 +1,10 @@
+/**
+ * @file jeu.h
+ * @brief Ensemble des fonctions qui permettent de jouer au jeu
+ * @author Nina MATIC CHARBIT, Ewan FRANCOIS sur la base du cours de Mr.Alain CASALI
+ * @date 4 janvier 2026
+ */
+
 #include <iostream>
 #include <vector> // vectors
 #include <cstdlib> // rand()
