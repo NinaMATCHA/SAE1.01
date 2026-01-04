@@ -1,0 +1,26 @@
+--------------------------------------------
+--- REGLES DE NOTRE JEU ET COMMENT JOUER ---
+--------------------------------------------
+
+---------------
+-- LES MODES --
+---------------
+
+Notre jeu comporte trois modes différents :
+- Un mode Histoire avec une histoire très intriguante !
+- Un mode PVP si vous voulez savoir qui aura la dernière part de gâteau !
+- Un mode Infini pour vous entrainer ou bien savoir vos meilleurs scores !
+
+Notre jeu comporte également des options si vous souhaitez voir les crédits ou même changer
+de difficulté pour le mode de jeu PVP ou Infini avec trois difficulté différente.
+
+------------
+-- REGLES --
+------------
+
+Les règles de notre jeu est très simple !
+Une grille contient plusieurs bonbons qui sont chacuns représentés pas des nombres
+dans de couleurs variés. Votre unique but est donc de détruire ses bonbons en réalisant des
+colonnes ou bien des lignes de minimum trois bonbons identique !
+
+Plus vous détruisez de bonbons identique et plus vous allez gagner de points.
