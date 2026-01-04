@@ -1,0 +1,6 @@
+<map id="menuBestScores" name="menuBestScores">
+<area shape="rect" id="Node000001" title="affiche un menu qui montre les meilleurs scores du joueur" alt="" coords="5,29,136,55"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="43,31,38,21,41,11,52,5,71,3,93,6,103,15,99,19,91,11,71,8,54,10,45,15,43,20,48,28"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Supprime tout ce qu&#39;il y a sur l&#39;ecran." alt="" coords="184,29,283,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,39,170,39,170,45,136,45"/>
+</map>

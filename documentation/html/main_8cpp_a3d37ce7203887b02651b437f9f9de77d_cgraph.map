@@ -1,0 +1,83 @@
+<map id="levelUnlock" name="levelUnlock">
+<area shape="rect" id="Node000001" title="Gère les niveaux qui doivent se débloquer un par un." alt="" coords="5,232,104,257"/>
+<area shape="rect" id="Node000002" href="$menu_8h.html#a60cc4d2d201565f9ed60ef4c0dd9fe20" title="Affiche la fin du mode histoire." alt="" coords="170,5,263,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,231,66,194,83,143,111,88,129,63,150,40,157,35,160,39,154,44,133,66,116,91,88,145,71,196,61,232"/>
+<area shape="rect" id="Node000004" href="$menu_8h.html#afa9e2fe2b6a96a943bf3c966892754be" title="Affiche le début de l&#39;histoire avant de lancer le niveau 1." alt="" coords="152,55,281,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="59,231,93,169,119,131,150,97,168,85,171,89,154,101,123,135,97,172,64,233"/>
+<area shape="rect" id="Node000005" href="$jeu_8h.html#a2fb8d117cf2de5314a90984d430328db" title="vérifie si le score gagné est assez haut pour passer au niveau 2" alt="" coords="343,105,418,131"/>
+<area shape="poly" id="edge19_Node000001_Node000005" title=" " alt="" coords="62,230,96,185,121,161,151,141,196,124,243,115,289,111,330,111,330,117,290,117,244,120,197,129,153,146,125,165,100,189,66,233"/>
+<area shape="rect" id="Node000006" href="$menu_8h.html#a7104d06f05a15293a872e456f22c8cff" title="Affiche la suite l&#39;histoire avant de lancer le niveau 2." alt="" coords="152,156,281,181"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="82,230,175,185,178,190,84,234"/>
+<area shape="rect" id="Node000007" href="$jeu_8h.html#aa12059b179cc7f3021c6598f1a41d5df" title="vérifie si le score gagné est assez haut pour passer au niveau 3" alt="" coords="343,207,418,232"/>
+<area shape="poly" id="edge20_Node000001_Node000007" title=" " alt="" coords="104,238,329,221,330,226,104,244"/>
+<area shape="rect" id="Node000008" href="$menu_8h.html#a4ccdbb85f4f2db0e11f85a66a2a30ddb" title="Affiche la suite de l&#39;histoire avant de lancer le niveau 3." alt="" coords="152,257,281,283"/>
+<area shape="poly" id="edge11_Node000001_Node000008" title=" " alt="" coords="105,250,139,255,138,260,104,255"/>
+<area shape="rect" id="Node000009" href="$jeu_8h.html#a22c704313dbf7af0d5dc9ee23dd9403d" title="vérifie si le score gagné est assez haut pour passer au niveau 4" alt="" coords="343,308,418,333"/>
+<area shape="poly" id="edge21_Node000001_Node000009" title=" " alt="" coords="77,255,112,274,153,291,199,303,246,310,330,317,329,323,245,316,198,308,151,297,109,279,74,260"/>
+<area shape="rect" id="Node000010" href="$menu_8h.html#a04c88825a917ef667162b085eb8440f4" title="Affiche la suite de l&#39;histoire avant de lancer le niveau 4." alt="" coords="152,359,281,384"/>
+<area shape="poly" id="edge15_Node000001_Node000010" title=" " alt="" coords="69,256,105,295,154,337,175,350,172,355,150,341,101,298,65,259"/>
+<area shape="rect" id="Node000011" href="$jeu_8h.html#af3e7b12731ba6b7f2840f998d1a36ac2" title="vérifie si le score gagné est assez haut pour passer a la fin du jeu" alt="" coords="343,409,418,435"/>
+<area shape="poly" id="edge22_Node000001_Node000011" title=" " alt="" coords="62,257,73,286,92,324,119,362,153,393,196,413,243,423,289,426,329,425,330,431,289,432,242,428,195,418,151,398,115,366,87,327,69,288,57,258"/>
+<area shape="rect" id="Node000012" href="$jeu_8h.html#a54ab0caec68db1ad9fbb5e12f5f279b8" title="Ancienne fonction main du tp 10 adaptee pour les fonctions ajoutees. Elle permet de realiser l&#39;ensemb..." alt="" coords="191,553,242,579"/>
+<area shape="poly" id="edge23_Node000001_Node000012" title=" " alt="" coords="65,256,154,439,205,540,200,542,150,442,60,259"/>
+<area shape="rect" id="Node000003" href="$jeu_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Supprime tout ce qu&#39;il y a sur l&#39;ecran." alt="" coords="520,195,619,220"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="264,17,345,28,391,41,433,60,472,87,506,120,555,181,550,185,502,123,469,91,431,64,389,46,344,33,263,22"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="282,63,356,69,395,77,433,90,469,110,501,134,551,183,547,186,498,138,466,114,431,95,394,82,355,74,281,68"/>
+<area shape="poly" id="edge5_Node000004_Node000005" title=" " alt="" coords="260,78,331,100,329,105,258,83"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="410,128,530,186,528,191,407,133"/>
+<area shape="poly" id="edge8_Node000006_Node000003" title=" " alt="" coords="282,173,507,198,506,203,281,178"/>
+<area shape="poly" id="edge9_Node000006_Node000007" title=" " alt="" coords="260,179,331,201,329,206,258,184"/>
+<area shape="poly" id="edge10_Node000007_Node000003" title=" " alt="" coords="418,214,506,209,507,214,418,220"/>
+<area shape="poly" id="edge12_Node000008_Node000003" title=" " alt="" coords="281,262,354,253,431,241,507,221,509,226,433,246,354,258,282,267"/>
+<area shape="poly" id="edge13_Node000008_Node000009" title=" " alt="" coords="260,280,331,303,329,308,258,285"/>
+<area shape="poly" id="edge14_Node000009_Node000003" title=" " alt="" coords="404,306,430,287,444,271,453,257,462,243,479,229,506,216,508,221,481,234,466,247,457,260,448,275,434,291,407,310"/>
+<area shape="poly" id="edge16_Node000010_Node000003" title=" " alt="" coords="282,377,319,377,358,372,396,361,430,343,443,330,450,317,454,289,459,259,466,244,478,229,505,214,508,219,482,233,470,247,464,260,460,290,455,319,447,333,434,347,398,366,359,377,319,382,282,382"/>
+<area shape="poly" id="edge17_Node000010_Node000011" title=" " alt="" coords="260,382,331,404,329,409,258,387"/>
+<area shape="poly" id="edge18_Node000011_Node000003" title=" " alt="" coords="408,407,430,388,442,367,448,347,450,308,454,269,462,249,478,229,505,213,508,218,482,233,467,252,459,270,456,308,453,348,447,369,434,392,411,411"/>
+<area shape="rect" id="Node000013" href="$jeu_8h.html#ac0aacda61353cef121ada8614de65a16" title="Affiche la grille avec des couleurs différentes pour chaque bonbons." alt="" coords="333,480,429,505"/>
+<area shape="poly" id="edge24_Node000012_Node000013" title=" " alt="" coords="241,553,338,509,340,513,243,557"/>
+<area shape="rect" id="Node000025" href="$jeu_8h.html#a057491d4cdfcee18419fd7c87c0ad64c" title="Demande une entrée et la sécurise." alt="" coords="344,529,417,555"/>
+<area shape="poly" id="edge37_Node000012_Node000025" title=" " alt="" coords="242,560,330,547,331,552,243,565"/>
+<area shape="rect" id="Node000026" href="$jeu_8h.html#aa901a53fb8ce3447eaa607efea575654" title="Initialise la matrice en la remplissant par des nombres aléatoires." alt="" coords="345,579,416,604"/>
+<area shape="poly" id="edge38_Node000012_Node000026" title=" " alt="" coords="243,567,332,581,331,586,242,572"/>
+<area shape="rect" id="Node000027" href="$jeu_8h.html#a277c6208110e176546c3731da00d95b0" title="Echange les valeurs de deux positions selon la direction donnée par l&#39;utilisateur." alt="" coords="329,628,432,653"/>
+<area shape="poly" id="edge39_Node000012_Node000027" title=" " alt="" coords="243,575,341,620,338,625,241,580"/>
+<area shape="rect" id="Node000028" href="$jeu_8h.html#af4d25fce4fd30b46af979b0b476d902f" title="Calcule le score et teste les alignements sur ses différentes positions." alt="" coords="332,864,429,889"/>
+<area shape="poly" id="edge40_Node000012_Node000028" title=" " alt="" coords="227,578,369,850,364,853,222,580"/>
+<area shape="poly" id="edge25_Node000013_Node000003" title=" " alt="" coords="399,478,416,463,430,445,443,415,448,386,446,333,445,308,448,282,458,256,478,229,505,212,508,217,482,233,463,259,453,283,451,308,452,333,453,387,448,416,434,447,420,467,403,482"/>
+<area shape="rect" id="Node000014" href="$jeu_8h.html#ae241cf89d39423f89bb8e65688e4c031" title="Change la couleur du texte." alt="" coords="534,244,605,269"/>
+<area shape="poly" id="edge26_Node000013_Node000014" title=" " alt="" coords="398,478,415,463,430,445,441,421,446,400,448,359,453,319,462,299,478,279,498,265,520,258,522,263,500,270,482,283,466,302,458,321,453,359,451,401,446,423,434,447,419,467,402,482"/>
+<area shape="rect" id="Node000015" href="$jeu_8h.html#a587a099b5228e39c74a525cb4ac5d786" title=" " alt="" coords="539,293,599,319"/>
+<area shape="poly" id="edge27_Node000013_Node000015" title=" " alt="" coords="397,478,430,444,444,413,450,384,457,356,465,342,478,328,501,314,525,307,526,312,503,319,482,332,469,345,462,358,455,385,450,415,434,448,401,482"/>
+<area shape="rect" id="Node000016" href="$jeu_8h.html#aed31d4db92c112edda1291acad69dd00" title=" " alt="" coords="538,343,601,368"/>
+<area shape="poly" id="edge28_Node000013_Node000016" title=" " alt="" coords="395,478,430,444,443,426,451,409,461,393,478,377,500,366,524,359,525,364,502,371,482,382,465,396,456,411,448,428,434,448,399,482"/>
+<area shape="rect" id="Node000017" href="$jeu_8h.html#af3a5b11738a37931f0fdacaae8639409" title=" " alt="" coords="541,392,598,417"/>
+<area shape="poly" id="edge29_Node000013_Node000017" title=" " alt="" coords="397,478,433,452,479,426,526,410,528,416,481,431,436,456,400,482"/>
+<area shape="rect" id="Node000018" href="$jeu_8h.html#a1b010b9694f3acc35b02b0a667d99094" title=" " alt="" coords="536,441,603,467"/>
+<area shape="poly" id="edge30_Node000013_Node000018" title=" " alt="" coords="428,480,522,461,523,466,429,486"/>
+<area shape="rect" id="Node000019" href="$jeu_8h.html#a1295d80e3fdb251b7969f86740392db4" title=" " alt="" coords="525,491,614,516"/>
+<area shape="poly" id="edge31_Node000013_Node000019" title=" " alt="" coords="429,493,511,497,510,503,429,498"/>
+<area shape="rect" id="Node000020" href="$jeu_8h.html#adfc3f071a0faf642634ec3955a03ff58" title=" " alt="" coords="531,540,608,565"/>
+<area shape="poly" id="edge32_Node000013_Node000020" title=" " alt="" coords="417,503,481,525,518,536,517,541,479,530,415,508"/>
+<area shape="rect" id="Node000021" href="$jeu_8h.html#a0c847b772c4aef69f42b1f1f000a40ab" title=" " alt="" coords="538,589,601,615"/>
+<area shape="poly" id="edge33_Node000013_Node000021" title=" " alt="" coords="415,503,434,515,449,531,458,546,466,561,482,574,503,585,525,593,524,598,501,590,478,579,462,564,453,549,445,534,430,519,413,508"/>
+<area shape="rect" id="Node000022" href="$jeu_8h.html#a87aab004c1c22814beb8db1ddaa9f628" title=" " alt="" coords="533,639,605,664"/>
+<area shape="poly" id="edge34_Node000013_Node000022" title=" " alt="" coords="419,503,434,515,445,530,452,544,457,572,463,599,470,611,482,624,500,636,521,643,519,648,498,640,478,628,466,614,458,600,452,573,447,546,441,532,430,519,415,508"/>
+<area shape="rect" id="Node000023" href="$jeu_8h.html#a72260f87613d24d0cd1e7c8f646ca5f5" title=" " alt="" coords="541,688,598,713"/>
+<area shape="poly" id="edge35_Node000013_Node000023" title=" " alt="" coords="420,504,434,515,448,536,455,557,457,597,460,636,467,655,482,673,503,687,528,695,526,700,501,692,478,677,463,657,455,637,452,598,450,558,443,539,430,518,417,508"/>
+<area shape="rect" id="Node000024" href="$jeu_8h.html#a88665c45b47838f7bf85650096b758bf" title=" " alt="" coords="707,865,767,891"/>
+<area shape="poly" id="edge36_Node000013_Node000024" title=" " alt="" coords="420,503,434,515,451,543,459,570,460,596,458,622,456,647,458,672,465,698,482,724,502,744,522,757,564,768,609,777,634,785,660,800,692,826,718,853,714,857,688,830,657,804,632,790,608,782,563,773,520,761,499,748,478,728,460,700,452,673,451,647,453,622,455,596,453,571,446,545,430,518,417,507"/>
+<area shape="poly" id="edge45_Node000028_Node000024" title=" " alt="" coords="400,862,436,842,479,826,529,815,570,811,610,814,660,826,687,838,711,854,709,859,685,843,658,831,609,819,570,816,530,821,481,831,438,847,403,866"/>
+<area shape="rect" id="Node000029" href="$jeu_8h.html#aee7483c5715afce5b8d044329f2d9fdb" title="Regarde si il y a des alignements autour de la position." alt="" coords="480,840,659,865"/>
+<area shape="poly" id="edge41_Node000028_Node000029" title=" " alt="" coords="429,868,466,863,467,868,430,873"/>
+<area shape="rect" id="Node000030" href="$jeu_8h.html#a592d3742cedb5bd0462cc8ebe9e79131" title="Regarde si il y a des alignements autour de la position." alt="" coords="491,889,647,915"/>
+<area shape="poly" id="edge43_Node000028_Node000030" title=" " alt="" coords="430,880,478,887,477,892,429,886"/>
+<area shape="rect" id="Node000031" href="$jeu_8h.html#a068db2b939ecfe33f633ab058269580c" title="Supprime les bonbons alignés et fait tomber les bonbons au dessus." alt="" coords="500,939,639,964"/>
+<area shape="poly" id="edge46_Node000028_Node000031" title=" " alt="" coords="405,887,481,925,502,932,500,937,479,930,402,892"/>
+<area shape="rect" id="Node000032" href="$jeu_8h.html#a6973cd2e621b6642c456090db69f66dd" title="Supprime les bonbons alignés et fait tomber les bonbons au dessus." alt="" coords="511,988,627,1013"/>
+<area shape="poly" id="edge48_Node000028_Node000032" title=" " alt="" coords="393,888,429,931,453,954,481,974,500,983,498,988,479,979,450,958,425,934,389,891"/>
+<area shape="poly" id="edge42_Node000029_Node000024" title=" " alt="" coords="654,863,693,869,693,874,653,868"/>
+<area shape="poly" id="edge44_Node000030_Node000024" title=" " alt="" coords="647,888,692,882,693,887,648,893"/>
+<area shape="poly" id="edge47_Node000031_Node000024" title=" " alt="" coords="627,936,658,925,706,896,709,901,660,930,628,941"/>
+<area shape="poly" id="edge49_Node000032_Node000024" title=" " alt="" coords="626,989,657,974,677,958,694,939,720,901,725,904,698,943,681,962,660,979,629,993"/>
+</map>
