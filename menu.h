@@ -10,7 +10,9 @@ using namespace std;
 //                          ET LES MODES
 // ===================================================================
 
-
+/**
+ * @brief Affiche le menu principal
+ */
 void menuMain() {
     clearScreen();
     ifstream menu("../../menu/menu.txt");
