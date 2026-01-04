@@ -1,6 +1,0 @@
-<map id="HISTOIRE" name="HISTOIRE">
-<area shape="rect" id="Node000001" title="Affiche l&#39;introduction de l&#39;histoire." alt="" coords="108,29,191,55"/>
-<area shape="poly" id="edge1_Node000001_Node000001" title=" " alt="" coords="168,18,163,11,149,8,138,10,132,14,131,20,134,28,129,30,125,21,127,12,136,5,149,3,165,6,172,14"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,29,60,55"/>
-<area shape="poly" id="edge2_Node000001_Node000002" title=" " alt="" coords="94,45,60,45,60,39,94,39"/>
-</map>
