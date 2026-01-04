@@ -3,7 +3,10 @@
 #include "jeu.h"
 #include "menu.h"
 
-//change a difficulté du jeu
+
+/**
+ * @brief change a difficulté du jeu.
+ */
 unsigned changeDifficulte(unsigned choice){
     if (choice == 1){
         cout << "Difficulté changée en facile" << endl;
@@ -17,7 +20,9 @@ unsigned changeDifficulte(unsigned choice){
     return 9;
 }
 
-//gère les niveaux qui doivent se débloquer un par un
+/**
+ * @brief gère les niveaux qui doivent se débloquer un par un.
+ */
 unsigned levelUnlock (unsigned choice, unsigned estJouable){
     if (choice == 1) {
         afficherNIVEAU1();
@@ -44,7 +49,9 @@ unsigned levelUnlock (unsigned choice, unsigned estJouable){
     return estJouable;
 }
 
-// fait une sauvegarde dans un fichier
+/**
+ * @brief fait une sauvegarde dans un fichier.
+ */
 void save(unsigned estJouable, vector<unsigned>& meilleursScores) {
     ofstream save("save.txt"); // dans un fichier save
     save << estJouable << endl; // on enregistre la progression de l'histoire
@@ -54,7 +61,9 @@ void save(unsigned estJouable, vector<unsigned>& meilleursScores) {
     save.close();
 }
 
-//charge le fichier de sauvegarde
+/**
+ * @brief charge le fichier de sauvegarde.
+ */
 void chargeSave(unsigned& estJouable, vector<unsigned>& meilleursScores) {
     ifstream save("save.txt");
     if (save) { // dans le cas ou le fichier existe on sort la valeur de la sauvegarde
@@ -67,7 +76,9 @@ void chargeSave(unsigned& estJouable, vector<unsigned>& meilleursScores) {
     }
 }
 
-//affiche un menu qui montre les meilleurs scores du joueur
+/**
+ * @brief affiche un menu qui montre les meilleurs scores du joueur.
+ */
 void menuBestScores(vector<unsigned>& meilleursScores) {
     clearScreen();
     ifstream menuBestScores("../../menu/menuBestScores.txt");
@@ -87,7 +98,6 @@ void menuBestScores(vector<unsigned>& meilleursScores) {
 
 
 int main() {
-    //jme disais aussi faire un "entrée" suffit au lieu de 1 pour qlq endroits mais c des details d'opti
     unsigned choix; // Choix dans le menu
     unsigned sousChoix; // Sous choix lorsqu'on est dans les différents menus
     unsigned sousChoix2 = 0; // Sous choix du sous choix, a l'interieur d'un menu qui est a l'interieur d'un menu
