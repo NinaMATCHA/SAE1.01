@@ -1,0 +1,271 @@
+\doxysection{menu.\+h}
+\hypertarget{menu_8h_source}{}\label{menu_8h_source}\mbox{\hyperlink{menu_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00001}00001\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00007}00007\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00008}00008\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00009}00009\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00010}00010\ \textcolor{preprocessor}{\#include\ <fstream>}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00012}00012\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00014}00014\ \textcolor{comment}{//\ ===================================================================}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00015}00015\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ FONCTIONS\ POUR\ LES\ DIFFERENTS\ MENU\ DU\ JEU}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00016}00016\ \textcolor{comment}{//\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ET\ LES\ MODES}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00017}00017\ \textcolor{comment}{//\ ===================================================================}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00022}\mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{00022}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00023}00023\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00024}00024\ \ \ \ \ ifstream\ menu(\textcolor{stringliteral}{"{}../../menu/menu.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{if}\ (!menu)\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00027}00027\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00028}00028\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00029}00029\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00030}00030\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00031}00031\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(menu,\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00033}00033\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00035}00035\ \ \ \ \ menu.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00041}\mbox{\hyperlink{menu_8h_ad0fd4dade5eead790a47149706290ebf}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ad0fd4dade5eead790a47149706290ebf}{menuHistoire}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00042}00042\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00043}00043\ \ \ \ \ ifstream\ mHISTOIRE(\textcolor{stringliteral}{"{}../../menu/mHISTOIRE.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mHISTOIRE)\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00046}00046\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00047}00047\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00049}00049\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00050}00050\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mHISTOIRE,\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00052}00052\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00054}00054\ \ \ \ \ mHISTOIRE.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00060}\mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{00060}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00062}00062\ \ \ \ \ ifstream\ \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}}(\textcolor{stringliteral}{"{}../../menu/HISTOIRE.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00064}00064\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00065}00065\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00066}00066\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00071}00071\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00074}00074\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00079}\mbox{\hyperlink{menu_8h_aab15e859b8cde0467437620e0d471977}{00079}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_aab15e859b8cde0467437620e0d471977}{menuNiveaux}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00080}00080\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00081}00081\ \ \ \ \ ifstream\ mNiveaux(\textcolor{stringliteral}{"{}../../menu/mNiveaux.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00082}00082\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mNiveaux)\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00084}00084\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00085}00085\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00086}00086\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00087}00087\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00089}00089\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mNiveaux,\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00090}00090\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00091}00091\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00092}00092\ \ \ \ \ mNiveaux.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00093}00093\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00098}\mbox{\hyperlink{menu_8h_afa9e2fe2b6a96a943bf3c966892754be}{00098}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_afa9e2fe2b6a96a943bf3c966892754be}{afficherNIVEAU1}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00099}00099\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00100}00100\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}}(\textcolor{stringliteral}{"{}../../niveaux/niveau1.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00102}00102\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00103}00103\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00104}00104\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00106}00106\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00107}00107\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00108}00108\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00109}00109\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00110}00110\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00111}00111\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00112}00112\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00113}00113\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00114}00114\ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00115}00115\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00120}\mbox{\hyperlink{menu_8h_a7104d06f05a15293a872e456f22c8cff}{00120}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a7104d06f05a15293a872e456f22c8cff}{afficherNIVEAU2}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00121}00121\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00122}00122\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}}(\textcolor{stringliteral}{"{}../../niveaux/niveau2.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00124}00124\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00125}00125\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00126}00126\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00128}00128\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00129}00129\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00130}00130\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00131}00131\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00132}00132\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00133}00133\ \ \ \ \ \mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00134}00134\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00135}00135\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00136}00136\ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00137}00137\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00138}00138\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00142}\mbox{\hyperlink{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb}{00142}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb}{afficherNIVEAU3}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00143}00143\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00144}00144\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}}(\textcolor{stringliteral}{"{}../../niveaux/niveau3.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00146}00146\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00147}00147\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00148}00148\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00150}00150\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00151}00151\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00152}00152\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00153}00153\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00154}00154\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00155}00155\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00156}00156\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00157}00157\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00158}00158\ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00159}00159\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00164}\mbox{\hyperlink{menu_8h_a04c88825a917ef667162b085eb8440f4}{00164}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a04c88825a917ef667162b085eb8440f4}{afficherNIVEAU4}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00165}00165\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00166}00166\ \ \ \ \ ifstream\ \mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}}(\textcolor{stringliteral}{"{}../../niveaux/niveau4.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00168}00168\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00169}00169\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00170}00170\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00171}00171\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00172}00172\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00173}00173\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00174}00174\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00175}00175\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00176}00176\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00177}00177\ \ \ \ \ \mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00178}00178\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00179}00179\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00180}00180\ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00181}00181\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00182}00182\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00186}\mbox{\hyperlink{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20}{00186}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20}{afficherFIN}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00187}00187\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00188}00188\ \ \ \ \ ifstream\ fin(\textcolor{stringliteral}{"{}../../niveaux/fin.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00189}00189\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00190}00190\ \ \ \ \ \textcolor{keywordflow}{if}\ (!fin)\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00191}00191\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00192}00192\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00193}00193\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00194}00194\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00195}00195\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00196}00196\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(fin,\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00197}00197\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00198}00198\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00199}00199\ \ \ \ \ fin.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00200}00200\ \ \ \ \ cin.ignore();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00201}00201\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ entree\ pour\ continuer."{}};}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00202}00202\ \ \ \ \ cin.get();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00203}00203\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00204}00204\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00208}\mbox{\hyperlink{menu_8h_ade5a07084ad1158485146f7dacb66ba2}{00208}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_ade5a07084ad1158485146f7dacb66ba2}{menuPVP}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00209}00209\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00210}00210\ \ \ \ \ ifstream\ mPVP(\textcolor{stringliteral}{"{}../../menu/mPVP.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00212}00212\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mPVP)\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00213}00213\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00214}00214\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00215}00215\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00216}00216\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00217}00217\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mPVP,\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00218}00218\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00219}00219\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00220}00220\ \ \ \ \ mPVP.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00221}00221\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00222}00222\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00226}\mbox{\hyperlink{menu_8h_a6a62d53de43134479376ef34dcc5bb15}{00226}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a6a62d53de43134479376ef34dcc5bb15}{menuFREEPLAY}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00227}00227\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00228}00228\ \ \ \ \ ifstream\ mFREEPLAY(\textcolor{stringliteral}{"{}../../menu/mFREEPLAY.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00229}00229\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00230}00230\ \ \ \ \ \textcolor{keywordflow}{if}\ (!mFREEPLAY)\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00231}00231\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00232}00232\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00233}00233\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00234}00234\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00235}00235\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00236}00236\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(mFREEPLAY,\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00237}00237\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00238}00238\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00239}00239\ \ \ \ \ mFREEPLAY.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00240}00240\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00241}00241\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00245}\mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{00245}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00246}00246\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00247}00247\ \ \ \ \ ifstream\ \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}}(\textcolor{stringliteral}{"{}../../menu/menuChoixMode.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00249}00249\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00250}00250\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00251}00251\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00252}00252\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00253}00253\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00254}00254\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00255}00255\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00256}00256\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00257}00257\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00258}00258\ \ \ \ \ \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00259}00259\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00260}00260\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00264}\mbox{\hyperlink{menu_8h_aac2de8914ac387eb849b451e69904377}{00264}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_aac2de8914ac387eb849b451e69904377}{OPTIONS}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00265}00265\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00266}00266\ \ \ \ \ ifstream\ options(\textcolor{stringliteral}{"{}../../menu/mOPTIONS.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00267}00267\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00268}00268\ \ \ \ \ \textcolor{keywordflow}{if}\ (!options)\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00269}00269\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00270}00270\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00271}00271\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00272}00272\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00273}00273\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00274}00274\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(options,\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00275}00275\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00276}00276\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00277}00277\ \ \ \ \ options.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00278}00278\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00279}00279\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00283}\mbox{\hyperlink{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8}{00283}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8}{menuChangeDifficulte}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00284}00284\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00285}00285\ \ \ \ \ ifstream\ \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}}(\textcolor{stringliteral}{"{}../../menu/changeDifficulte.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00286}00286\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00287}00287\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00288}00288\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00289}00289\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00290}00290\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00291}00291\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00292}00292\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00293}00293\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00294}00294\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00295}00295\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00296}00296\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00297}00297\ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00302}\mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{00302}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}}()\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00303}00303\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00304}00304\ \ \ \ \ ifstream\ \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}}(\textcolor{stringliteral}{"{}../../menu/CREDITS.txt"{}});}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00306}00306\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}})\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00307}00307\ \ \ \ \ \ \ \ \ cerr\ <<\ \textcolor{stringliteral}{"{}erreur,\ le\ fichier\ n'a\ pas\ été\ trouvé"{}}\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00308}00308\ \ \ \ \ \ \ \ \ exit\ (1);}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00309}00309\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00310}00310\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00311}00311\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00312}00312\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}},\ ligne))\ \{}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00313}00313\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00314}00314\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00315}00315\ \ \ \ \ \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}}.close();}
+\DoxyCodeLine{\Hypertarget{menu_8h_source_l00316}00316\ \}}
+
+\end{DoxyCode}
