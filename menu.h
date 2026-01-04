@@ -24,6 +24,9 @@ void menuMain() {
     menu.close();
 }
 
+/**
+ * @brief Affiche le menu du mode histoire.
+ */
 void menuHistoire() {
     clearScreen();
     ifstream mHISTOIRE("../../menu/mHISTOIRE.txt");
@@ -35,6 +38,9 @@ void menuHistoire() {
     mHISTOIRE.close();
 }
 
+/**
+ * @brief Affiche l'introduction de l'histoire.
+ */
 void HISTOIRE() {
     clearScreen();
     ifstream HISTOIRE("../../menu/HISTOIRE.txt");
@@ -46,6 +52,9 @@ void HISTOIRE() {
     HISTOIRE.close();
 }
 
+/**
+ * @brief Affiche le menu de sélections des quatres différents niveaux.
+ */
 void menuNiveaux() {
     clearScreen();
     ifstream mNiveaux("../../menu/mNiveaux.txt");
@@ -57,6 +66,9 @@ void menuNiveaux() {
     mNiveaux.close();
 }
 
+/**
+ * @brief Affiche le début de l'histoire avant de lancer le niveau 1.
+ */
 void afficherNIVEAU1() {
     clearScreen();
     ifstream niveau1("../../niveaux/niveau1.txt");
@@ -71,6 +83,9 @@ void afficherNIVEAU1() {
     cin.get();
 }
 
+/**
+ * @brief Affiche la suite l'histoire avant de lancer le niveau 2.
+ */
 void afficherNIVEAU2() {
     clearScreen();
     ifstream niveau2("../../niveaux/niveau2.txt");
@@ -85,6 +100,9 @@ void afficherNIVEAU2() {
     cin.get();
 }
 
+/**
+ * @brief Affiche la suite de l'histoire avant de lancer le niveau 3.
+ */
 void afficherNIVEAU3() {
     clearScreen();
     ifstream niveau3("../../niveaux/niveau3.txt");
@@ -99,6 +117,9 @@ void afficherNIVEAU3() {
     cin.get();
 }
 
+/**
+ * @brief Affiche la suite de l'histoire avant de lancer le niveau 4.
+ */
 void afficherNIVEAU4() {
     clearScreen();
     ifstream niveau4("../../niveaux/niveau4.txt");
@@ -113,6 +134,9 @@ void afficherNIVEAU4() {
     cin.get();
 }
 
+/**
+ * @brief Affiche la fin du mode histoire.
+ */
 void afficherFIN() {
     clearScreen();
     ifstream fin("../../niveaux/fin.txt");
@@ -127,6 +151,9 @@ void afficherFIN() {
     cin.get();
 }
 
+/**
+ * @brief Affiche le menu dans le mode PVP.
+ */
 void menuPVP() {
     clearScreen();
     ifstream mPVP("../../menu/mPVP.txt");
@@ -142,6 +169,9 @@ void menuPVP() {
     mPVP.close();
 }
 
+/**
+ * @brief Affiche le menu d'introduction du mode "FreePlay".
+ */
 void menuFREEPLAY() {
     clearScreen();
     ifstream mFREEPLAY("../../menu/mFREEPLAY.txt");
@@ -153,6 +183,9 @@ void menuFREEPLAY() {
     mFREEPLAY.close();
 }
 
+/**
+ * @brief Affiche le menu pour choisir les différents modes dans le mode "FreePlay".
+ */
 void menuChoixMode() {
     clearScreen();
     ifstream menuChoixMode("../../menu/menuChoixMode.txt");
@@ -164,6 +197,9 @@ void menuChoixMode() {
     menuChoixMode.close();
 }
 
+/**
+ * @brief Affiche les options.
+ */
 void OPTIONS() {
     clearScreen();
     ifstream options("../../menu/mOPTIONS.txt");
@@ -174,6 +210,9 @@ void OPTIONS() {
     options.close();
 }
 
+/**
+ * @brief Affiche le menu pour changer de difficulte.
+ */
 void menuChangeDifficulte() {
     clearScreen();
     ifstream changeDifficulte("../../menu/changeDifficulte.txt");
@@ -185,6 +224,9 @@ void menuChangeDifficulte() {
     changeDifficulte.close();
 }
 
+/**
+ * @brief Affiche les credits.
+ */
 void credits() {
     clearScreen();
     ifstream credits("../../menu/CREDITS.txt");
