@@ -5,7 +5,9 @@
 
 
 /**
- * @brief change a difficulté du jeu.
+ * @brief change la difficulté du jeu.
+ * @param choice le choix de l'utilisateur pour changer la difficulté du jeu.
+ * @return nouvelle valeur du nombre de bonbons dans la grille.
  */
 unsigned changeDifficulte(unsigned choice){
     if (choice == 1){
@@ -22,6 +24,8 @@ unsigned changeDifficulte(unsigned choice){
 
 /**
  * @brief gère les niveaux qui doivent se débloquer un par un.
+ * @param choice, estJouable le choix de l'utilisateur pour changer la difficulté du jeu et rend le niveau jouable (le débloque) quand le niveau précédent est fini.
+ * @return Si le niveau est débloqué ou non selon les conditions remplies.
  */
 unsigned levelUnlock (unsigned choice, unsigned estJouable){
     if (choice == 1) {
@@ -51,6 +55,7 @@ unsigned levelUnlock (unsigned choice, unsigned estJouable){
 
 /**
  * @brief fait une sauvegarde dans un fichier.
+ * @param estJouable, meilleursScores rend le niveau jouable (le débloque) quand le niveau précédent est fini et enregistre le meilleurs score fait dans la partie.
  */
 void save(unsigned estJouable, vector<unsigned>& meilleursScores) {
     ofstream save("save.txt"); // dans un fichier save
@@ -62,7 +67,8 @@ void save(unsigned estJouable, vector<unsigned>& meilleursScores) {
 }
 
 /**
- * @brief charge le fichier de sauvegarde.
+ * @brief fait une sauvegarde dans un fichier.
+ * @param estJouable, meilleursScores rend le niveau jouable (le débloque) quand le niveau précédent est fini et enregistre le meilleurs score fait dans la partie.
  */
 void chargeSave(unsigned& estJouable, vector<unsigned>& meilleursScores) {
     ifstream save("save.txt");
@@ -78,6 +84,7 @@ void chargeSave(unsigned& estJouable, vector<unsigned>& meilleursScores) {
 
 /**
  * @brief affiche un menu qui montre les meilleurs scores du joueur.
+ * @param meilleursScores enregistre le meilleurs score fait dans la partie
  */
 void menuBestScores(vector<unsigned>& meilleursScores) {
     clearScreen();
