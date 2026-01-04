@@ -5,12 +5,6 @@
 
 using namespace std;
 
-struct infoMatch {
-    bool trouvee;
-    maPosition pos;
-};
-
-
 // ===================================================================
 //           FONCTIONS POUR LES DIFFERENTS MENU DU JEU
 //                          ET LES MODES
