@@ -1,0 +1,17 @@
+<map id="scoreMatch" name="scoreMatch">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,107,103,132"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#aee7483c5715afce5b8d044329f2d9fdb" title=" " alt="" coords="151,5,329,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="68,105,104,77,149,48,182,33,184,38,152,52,107,81,72,109"/>
+<area shape="rect" id="Node000003" href="$jeu_8h.html#a88665c45b47838f7bf85650096b758bf" title=" " alt="" coords="377,107,437,132"/>
+<area shape="poly" id="edge5_Node000001_Node000003" title=" " alt="" coords="93,104,150,91,240,83,280,85,330,91,365,100,364,106,329,97,279,90,240,88,151,97,94,109"/>
+<area shape="rect" id="Node000004" href="$jeu_8h.html#a592d3742cedb5bd0462cc8ebe9e79131" title=" " alt="" coords="162,107,318,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="103,117,148,117,148,122,103,122"/>
+<area shape="rect" id="Node000005" href="$jeu_8h.html#a068db2b939ecfe33f633ab058269580c" title=" " alt="" coords="171,156,309,181"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="103,129,178,150,177,155,102,135"/>
+<area shape="rect" id="Node000006" href="$jeu_8h.html#a6973cd2e621b6642c456090db69f66dd" title=" " alt="" coords="182,205,298,231"/>
+<area shape="poly" id="edge8_Node000001_Node000006" title=" " alt="" coords="70,130,106,160,152,190,171,198,169,203,149,195,102,164,67,134"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="288,28,331,48,361,70,387,95,383,98,358,74,328,52,286,33"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="318,117,363,117,363,122,318,122"/>
+<area shape="poly" id="edge7_Node000005_Node000003" title=" " alt="" coords="285,153,329,141,364,130,365,135,330,146,287,159"/>
+<area shape="poly" id="edge9_Node000006_Node000003" title=" " alt="" coords="297,203,328,190,360,167,385,141,389,144,363,171,331,195,299,208"/>
+</map>
