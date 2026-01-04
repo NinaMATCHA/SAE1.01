@@ -1,3 +1,9 @@
+/**
+ * @file main.cpp
+ * @brief Interface permettant de jouer a candy crush dans le terminal
+ * @author Nina MATIC CHARBIT, Ewan FRANCOIS sur la base du cours de Mr.Alain CASALI
+ * @date 4 janvier 2026
+ */
 #include <iostream>
 #include <vector>
 #include "jeu.h"
@@ -23,9 +29,10 @@ unsigned changeDifficulte(unsigned choice){
 }
 
 /**
- * @brief gère les niveaux qui doivent se débloquer un par un.
- * @param choice, estJouable le choix de l'utilisateur pour changer la difficulté du jeu et rend le niveau jouable (le débloque) quand le niveau précédent est fini.
- * @return Si le niveau est débloqué ou non selon les conditions remplies.
+ * @brief Gère les niveaux qui doivent se débloquer un par un
+ * @param choice le choix de l'utilisateur pour changer la difficulté du jeu
+ * @param estJouable entier qui rend le niveau jouable (le débloque) quand le niveau précédent est fini
+ * @return entier qui rend le niveau jouable mis a jour si les conditions de progressions sont remplises
  */
 unsigned levelUnlock (unsigned choice, unsigned estJouable){
     if (choice == 1) {
@@ -54,8 +61,9 @@ unsigned levelUnlock (unsigned choice, unsigned estJouable){
 }
 
 /**
- * @brief fait une sauvegarde dans un fichier.
- * @param estJouable, meilleursScores rend le niveau jouable (le débloque) quand le niveau précédent est fini et enregistre le meilleurs score fait dans la partie.
+ * @brief Fait une sauvegarde dans un fichier
+ * @param estJouable rend le niveau jouable (le débloque) quand le niveau précédent est fini
+ * @param meilleursScores enregistre le meilleurs scores faits dans une partie pour différents modes
  */
 void save(unsigned estJouable, vector<unsigned>& meilleursScores) {
     ofstream save("save.txt"); // dans un fichier save
@@ -67,8 +75,9 @@ void save(unsigned estJouable, vector<unsigned>& meilleursScores) {
 }
 
 /**
- * @brief fait une sauvegarde dans un fichier.
- * @param estJouable, meilleursScores rend le niveau jouable (le débloque) quand le niveau précédent est fini et enregistre le meilleurs score fait dans la partie.
+ * @brief Charge une sauvegarde à partir d'un fichier
+ * @param estJouable rend le niveau jouable (le débloque) quand le niveau précédent est fini
+ * @param meilleursScores enregistre les meilleurs scores faits dans une partie pour différents modes
  */
 void chargeSave(unsigned& estJouable, vector<unsigned>& meilleursScores) {
     ifstream save("save.txt");
@@ -83,8 +92,8 @@ void chargeSave(unsigned& estJouable, vector<unsigned>& meilleursScores) {
 }
 
 /**
- * @brief affiche un menu qui montre les meilleurs scores du joueur.
- * @param meilleursScores enregistre le meilleurs score fait dans la partie
+ * @brief affiche un menu qui montre les meilleurs scores du joueur
+ * @param meilleursScores enregistre les meilleurs scores faits dans une partie pour différents modes
  */
 void menuBestScores(vector<unsigned>& meilleursScores) {
     clearScreen();
