@@ -1,8 +1,0 @@
-<map id="changeDifficulte" name="changeDifficulte">
-<area shape="rect" id="Node000001" title=" " alt="" coords="323,5,451,31"/>
-<area shape="rect" id="Node000002" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="309,21,60,21,60,15,309,15"/>
-<area shape="rect" id="Node000003" href="$menu_8h.html#a7daf2ea193bcfe36e5799b0e5b416ad8" title=" " alt="" coords="108,31,275,56"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="309,31,275,35,274,30,308,25"/>
-<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="98,31,60,25,61,20,99,26"/>
-</map>
