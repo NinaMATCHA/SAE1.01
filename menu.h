@@ -17,6 +17,11 @@ void menuMain() {
     clearScreen();
     ifstream menu("../../menu/menu.txt");
 
+    if (!menu) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(menu, ligne)) {
         cout << ligne << endl;
@@ -31,6 +36,11 @@ void menuHistoire() {
     clearScreen();
     ifstream mHISTOIRE("../../menu/mHISTOIRE.txt");
 
+    if (!mHISTOIRE) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(mHISTOIRE, ligne)) {
         cout << ligne << endl;
@@ -45,6 +55,11 @@ void HISTOIRE() {
     clearScreen();
     ifstream HISTOIRE("../../menu/HISTOIRE.txt");
 
+    if (!HISTOIRE) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(HISTOIRE, ligne)) {
         cout << ligne << endl;
@@ -59,6 +74,11 @@ void menuNiveaux() {
     clearScreen();
     ifstream mNiveaux("../../menu/mNiveaux.txt");
 
+    if (!mNiveaux) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(mNiveaux, ligne)) {
         cout << ligne << endl;
@@ -73,6 +93,11 @@ void afficherNIVEAU1() {
     clearScreen();
     ifstream niveau1("../../niveaux/niveau1.txt");
 
+    if (!niveau1) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(niveau1, ligne)) {
         cout << ligne << endl;
@@ -90,6 +115,11 @@ void afficherNIVEAU2() {
     clearScreen();
     ifstream niveau2("../../niveaux/niveau2.txt");
 
+    if (!niveau2) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(niveau2, ligne)) {
         cout << ligne << endl;
@@ -107,6 +137,11 @@ void afficherNIVEAU3() {
     clearScreen();
     ifstream niveau3("../../niveaux/niveau3.txt");
 
+    if (!niveau3) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(niveau3, ligne)) {
         cout << ligne << endl;
@@ -124,6 +159,11 @@ void afficherNIVEAU4() {
     clearScreen();
     ifstream niveau4("../../niveaux/niveau4.txt");
 
+    if (!niveau4) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(niveau4, ligne)) {
         cout << ligne << endl;
@@ -140,7 +180,12 @@ void afficherNIVEAU4() {
 void afficherFIN() {
     clearScreen();
     ifstream fin("../../niveaux/fin.txt");
-
+    
+    if (!fin) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(fin, ligne)) {
         cout << ligne << endl;
@@ -159,7 +204,7 @@ void menuPVP() {
     ifstream mPVP("../../menu/mPVP.txt");
 
     if (!mPVP) {
-        cerr << "ERROR" << endl;
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
         exit (1);
     }
     string ligne;
@@ -175,7 +220,12 @@ void menuPVP() {
 void menuFREEPLAY() {
     clearScreen();
     ifstream mFREEPLAY("../../menu/mFREEPLAY.txt");
-
+    
+    if (!mFREEPLAY) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(mFREEPLAY, ligne)) {
         cout << ligne << endl;
@@ -190,6 +240,11 @@ void menuChoixMode() {
     clearScreen();
     ifstream menuChoixMode("../../menu/menuChoixMode.txt");
 
+    if (!menuChoixMode) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(menuChoixMode, ligne)) {
         cout << ligne << endl;
@@ -203,6 +258,12 @@ void menuChoixMode() {
 void OPTIONS() {
     clearScreen();
     ifstream options("../../menu/mOPTIONS.txt");
+    
+    if (!options) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(options, ligne)) {
         cout << ligne << endl;
@@ -217,6 +278,11 @@ void menuChangeDifficulte() {
     clearScreen();
     ifstream changeDifficulte("../../menu/changeDifficulte.txt");
 
+    if (!changeDifficulte) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(changeDifficulte, ligne)) {
         cout << ligne << endl;
@@ -231,6 +297,11 @@ void credits() {
     clearScreen();
     ifstream credits("../../menu/CREDITS.txt");
 
+    if (!credits) {
+        cerr << "erreur, le fichier n'a pas été trouvé" << endl;
+        exit (1);
+    }
+    
     string ligne;
     while (getline(credits, ligne)) {
         cout << ligne << endl;
