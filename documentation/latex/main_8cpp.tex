@@ -1,0 +1,446 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+
+
+Interface permettant de jouer a candy crush dans le terminal.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include "{}jeu.\+h"{}}\newline
+{\ttfamily \#include "{}menu.\+h"{}}\newline
+Include dependency graph for main.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{change\+Difficulte}} (unsigned choice)
+\begin{DoxyCompactList}\small\item\em change la difficulté du jeu. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{main_8cpp_a3d37ce7203887b02651b437f9f9de77d}{level\+Unlock}} (unsigned choice, unsigned est\+Jouable)
+\begin{DoxyCompactList}\small\item\em Gère les niveaux qui doivent se débloquer un par un. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}} (unsigned est\+Jouable, vector$<$ unsigned $>$ \&meilleurs\+Scores)
+\begin{DoxyCompactList}\small\item\em Fait une sauvegarde dans un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79}{charge\+Save}} (unsigned \&est\+Jouable, vector$<$ unsigned $>$ \&meilleurs\+Scores)
+\begin{DoxyCompactList}\small\item\em Charge une sauvegarde à partir d\textquotesingle{}un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menu\+Best\+Scores}} (vector$<$ unsigned $>$ \&meilleurs\+Scores)
+\begin{DoxyCompactList}\small\item\em affiche un menu qui montre les meilleurs scores du joueur \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface permettant de jouer a candy crush dans le terminal. 
+
+\begin{DoxyAuthor}{Author}
+Nina MATIC CHARBIT, Ewan FRANCOIS sur la base du cours de Mr.\+Alain CASALI 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+4 janvier 2026 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}\label{main_8cpp_a8afd2cb616113313acaf9e1427d321a8} 
+\index{main.cpp@{main.cpp}!changeDifficulte@{changeDifficulte}}
+\index{changeDifficulte@{changeDifficulte}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{changeDifficulte()}{changeDifficulte()}}
+{\footnotesize\ttfamily unsigned change\+Difficulte (\begin{DoxyParamCaption}\item[{unsigned}]{choice }\end{DoxyParamCaption})}
+
+
+
+change la difficulté du jeu. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & le choix de l\textquotesingle{}utilisateur pour changer la difficulté du jeu. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nouvelle valeur du nombre de bonbons dans la grille. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (choice\ ==\ 1)\{}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Difficulté\ changée\ en\ facile"{}}\ <<\ endl;}
+\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 5;}
+\DoxyCodeLine{00022\ \ \ \ \ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 2)\ \{}
+\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Difficulté\ changée\ en\ moyen"{}}\ <<\ endl;}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 7;}
+\DoxyCodeLine{00026\ \ \ \ \ \}}
+\DoxyCodeLine{00027\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Difficulté\ changée\ en\ difficile"{}}\ <<\ endl;}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordflow}{return}\ 9;}
+\DoxyCodeLine{00029\ \}}
+
+\end{DoxyCode}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a8afd2cb616113313acaf9e1427d321a8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79}\label{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79} 
+\index{main.cpp@{main.cpp}!chargeSave@{chargeSave}}
+\index{chargeSave@{chargeSave}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{chargeSave()}{chargeSave()}}
+{\footnotesize\ttfamily void charge\+Save (\begin{DoxyParamCaption}\item[{unsigned \&}]{est\+Jouable,  }\item[{vector$<$ unsigned $>$ \&}]{meilleurs\+Scores }\end{DoxyParamCaption})}
+
+
+
+Charge une sauvegarde à partir d\textquotesingle{}un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est\+Jouable} & rend le niveau jouable (le débloque) quand le niveau précédent est fini \\
+\hline
+{\em meilleurs\+Scores} & enregistre les meilleurs scores faits dans une partie pour différents modes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00082}{82}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00083\ \ \ \ \ ifstream\ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(\textcolor{stringliteral}{"{}save.txt"{}});}
+\DoxyCodeLine{00084\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}})\ \{\ \textcolor{comment}{//\ dans\ le\ cas\ ou\ le\ fichier\ existe\ on\ sort\ la\ valeur\ de\ la\ sauvegarde}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ >>\ estJouable;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ >>\ meilleursScores[0];}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ >>\ meilleursScores[1];}
+\DoxyCodeLine{00088\ \ \ \ \ \}}
+\DoxyCodeLine{00089\ \ \ \ \ \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ estJouable\ =\ 1;\ \textcolor{comment}{//\ sinon\ on\ renvoie\ par\ defaut\ le\ niveau\ 1\ debloqué\ seulement}}
+\DoxyCodeLine{00091\ \ \ \ \ \}}
+\DoxyCodeLine{00092\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_a3d37ce7203887b02651b437f9f9de77d}\label{main_8cpp_a3d37ce7203887b02651b437f9f9de77d} 
+\index{main.cpp@{main.cpp}!levelUnlock@{levelUnlock}}
+\index{levelUnlock@{levelUnlock}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{levelUnlock()}{levelUnlock()}}
+{\footnotesize\ttfamily unsigned level\+Unlock (\begin{DoxyParamCaption}\item[{unsigned}]{choice,  }\item[{unsigned}]{est\+Jouable }\end{DoxyParamCaption})}
+
+
+
+Gère les niveaux qui doivent se débloquer un par un. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em choice} & le choix de l\textquotesingle{}utilisateur pour changer la difficulté du jeu \\
+\hline
+{\em est\+Jouable} & entier qui rend le niveau jouable (le débloque) quand le niveau précédent est fini \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+entier qui rend le niveau jouable mis a jour si les conditions de progressions sont remplises 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordflow}{if}\ (choice\ ==\ 1)\ \{}
+\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_afa9e2fe2b6a96a943bf3c966892754be}{afficherNIVEAU1}}();}
+\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_a2fb8d117cf2de5314a90984d430328db}{niveau1}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(6,4,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{00041\ \ \ \ \ \}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 2\ \&\&\ estJouable\ >=\ 2)\ \{}
+\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a7104d06f05a15293a872e456f22c8cff}{afficherNIVEAU2}}();}
+\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_aa12059b179cc7f3021c6598f1a41d5df}{niveau2}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(8,6,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{00045\ \ \ \ \ \}}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 3\ \&\&\ estJouable\ >=\ 3)\ \{}
+\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a4ccdbb85f4f2db0e11f85a66a2a30ddb}{afficherNIVEAU3}}();}
+\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_a22c704313dbf7af0d5dc9ee23dd9403d}{niveau3}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(9,7,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{00049\ \ \ \ \ \}}
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 4\ \&\&\ estJouable\ ==\ 4)\ \{}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a04c88825a917ef667162b085eb8440f4}{afficherNIVEAU4}}();}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{jeu_8h_af3e7b12731ba6b7f2840f998d1a36ac2}{niveau4}}(\mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(11,9,\textcolor{keyword}{false},\textcolor{keyword}{false}));}
+\DoxyCodeLine{00053\ \ \ \ \ \}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (choice\ ==\ 5\ \&\&\ estJouable\ ==\ 5)\{}
+\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a60cc4d2d201565f9ed60ef4c0dd9fe20}{afficherFIN}}();}
+\DoxyCodeLine{00056\ \ \ \ \ \}}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Niveau\ pas\ encore\ debloqué\ !"{}}\ <<\ endl\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ ENTREE\ pour\ choisir\ un\ autre\ niveau."{}}\ <<\ endl;}
+\DoxyCodeLine{00059\ \ \ \ \ \}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordflow}{return}\ estJouable;}
+\DoxyCodeLine{00061\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main_8cpp_a3d37ce7203887b02651b437f9f9de77d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=231pt]{main_8cpp_a3d37ce7203887b02651b437f9f9de77d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ choix;\ \textcolor{comment}{//\ Choix\ dans\ le\ menu}}
+\DoxyCodeLine{00118\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ sousChoix;\ \textcolor{comment}{//\ Sous\ choix\ lorsqu'on\ est\ dans\ les\ différents\ menus}}
+\DoxyCodeLine{00119\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ sousChoix2\ =\ 0;\ \textcolor{comment}{//\ Sous\ choix\ du\ sous\ choix,\ a\ l'interieur\ d'un\ menu\ qui\ est\ a\ l'interieur\ d'un\ menu}}
+\DoxyCodeLine{00120\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ maxTimes\ =\ 7;}
+\DoxyCodeLine{00121\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ nbCandy\ =\ 5;}
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ estJouable,\ score;}
+\DoxyCodeLine{00123\ \ \ \ \ vector<unsigned>\ meilleursScores(2,0);}
+\DoxyCodeLine{00124\ \ \ \ \ \mbox{\hyperlink{main_8cpp_ab3e0936f86f81b4db72c49c8db140d79}{chargeSave}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{00125\ }
+\DoxyCodeLine{00126\ \ \ \ \ \textcolor{keywordflow}{do}\ \{}
+\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();\ \textcolor{comment}{//\ affiche\ l'écran\ de\ bienvenue}}
+\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ choix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,5);\ \textcolor{comment}{//\ entree\ sécurisee}}
+\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (choix)\ \{}
+\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 1:}
+\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ad0fd4dade5eead790a47149706290ebf}{menuHistoire}}();}
+\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,2);}
+\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab95eae804df38e6dd6f4c5f3d60f9d8d}{HISTOIRE}}();}
+\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.get();}
+\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_aab15e859b8cde0467437620e0d471977}{menuNiveaux}}();}
+\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix2\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,6);}
+\DoxyCodeLine{00139\ }
+\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(sousChoix2==6)\ \textcolor{keywordflow}{break};\textcolor{comment}{//on\ retourne\ au\ menu}}
+\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ estJouable\ =\ \mbox{\hyperlink{main_8cpp_a3d37ce7203887b02651b437f9f9de77d}{levelUnlock}}(sousChoix2,\ estJouable);}
+\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 2:}
+\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ade5a07084ad1158485146f7dacb66ba2}{menuPVP}}();}
+\DoxyCodeLine{00148\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,2);}
+\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(maxTimes,nbCandy,\textcolor{keyword}{true},\textcolor{keyword}{false});}
+\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 2)\ \{}
+\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00155\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00156\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 3:}
+\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a6a62d53de43134479376ef34dcc5bb15}{menuFREEPLAY}}();}
+\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,2);}
+\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{while}(\textcolor{keyword}{true})\{}
+\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a348b48bf902845b3d73c71a7e40a1084}{menuChoixMode}}();}
+\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix2\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,4);}
+\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(sousChoix2==1)\{}
+\DoxyCodeLine{00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ score\ =\ \mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(maxTimes,nbCandy,\textcolor{keyword}{false},\textcolor{keyword}{false});}
+\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(meilleursScores[0]<score)\ meilleursScores[0]\ =\ score;}
+\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(sousChoix2==2)\ \{}
+\DoxyCodeLine{00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ score\ =\ \mbox{\hyperlink{jeu_8h_a54ab0caec68db1ad9fbb5e12f5f279b8}{play}}(maxTimes,nbCandy,\textcolor{keyword}{false},\textcolor{keyword}{true});}
+\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}(meilleursScores[1]<score)\ meilleursScores[1]\ =\ score;}
+\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(estJouable,\ meilleursScores);}
+\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(sousChoix2==3)\{}
+\DoxyCodeLine{00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}}(meilleursScores);}
+\DoxyCodeLine{00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.get();}
+\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}(sousChoix2==4)\ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00179\ }
+\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 2)\ \{}
+\DoxyCodeLine{00182\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();}
+\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00186\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 4:}
+\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_aac2de8914ac387eb849b451e69904377}{OPTIONS}}();}
+\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,3);}
+\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 1)\ \{}
+\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a7daf2ea193bcfe36e5799b0e5b416ad8}{menuChangeDifficulte}}();}
+\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sousChoix2\ =\ \mbox{\hyperlink{jeu_8h_a057491d4cdfcee18419fd7c87c0ad64c}{enterInt}}(1,4);}
+\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sousChoix2\ >=\ 1\ ||\ sousChoix2\ <=\ 3)\{}
+\DoxyCodeLine{00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ nbCandy\ =\ \mbox{\hyperlink{main_8cpp_a8afd2cb616113313acaf9e1427d321a8}{changeDifficulte}}(sousChoix2);}
+\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ maxTimes\ =\ nbCandy\ +\ 2;}
+\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix2\ ==\ 4)\ \{}
+\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();}
+\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 2)\ \{}
+\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_a5864f6393c74073a86a19645a5c55f24}{credits}}();}
+\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cin.get();}
+\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (sousChoix\ ==\ 3)\ \{}
+\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{menu_8h_ab83dadfdbc344c881f404d23b0d39491}{menuMain}}();}
+\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ 5:}
+\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00214\ \ \ \ \ \}\ \textcolor{keywordflow}{while}(choix\ !=\ 5);}
+\DoxyCodeLine{00215\ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00216\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}\label{main_8cpp_a4edc852d363e6776122e2dfb84f12af2} 
+\index{main.cpp@{main.cpp}!menuBestScores@{menuBestScores}}
+\index{menuBestScores@{menuBestScores}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{menuBestScores()}{menuBestScores()}}
+{\footnotesize\ttfamily void menu\+Best\+Scores (\begin{DoxyParamCaption}\item[{vector$<$ unsigned $>$ \&}]{meilleurs\+Scores }\end{DoxyParamCaption})}
+
+
+
+affiche un menu qui montre les meilleurs scores du joueur 
+
+
+\begin{DoxyParams}{Parameters}
+{\em meilleurs\+Scores} & enregistre les meilleurs scores faits dans une partie pour différents modes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00098}{98}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00099\ \ \ \ \ \mbox{\hyperlink{jeu_8h_a9d7e8af417b6d543da691e9c0e2f6f9f}{clearScreen}}();}
+\DoxyCodeLine{00100\ \ \ \ \ ifstream\ \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}}(\textcolor{stringliteral}{"{}../../menu/menuBestScores.txt"{}});}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{string}\ ligne;}
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordflow}{while}\ (getline(\mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}},\ ligne))\ \{}
+\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ cout\ <<\ ligne\ <<\ endl;}
+\DoxyCodeLine{00105\ \ \ \ \ \}}
+\DoxyCodeLine{00106\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a4edc852d363e6776122e2dfb84f12af2}{menuBestScores}}.close();}
+\DoxyCodeLine{00107\ }
+\DoxyCodeLine{00108\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Meilleur\ score\ du\ mode\ normal\ :"{}}\ <<\ meilleursScores[0]\ <<\ endl;}
+\DoxyCodeLine{00109\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Meilleur\ score\ du\ mode\ infini\ :"{}}\ <<\ meilleursScores[1]\ <<\ endl;}
+\DoxyCodeLine{00110\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00111\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/"{}}\ <<\ endl;}
+\DoxyCodeLine{00112\ \ \ \ \ cout\ <<\ \textcolor{stringliteral}{"{}Appuyez\ sur\ ENTREE\ pour\ revenir\ au\ menu."{}}\ <<\ endl;}
+\DoxyCodeLine{00113\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{main_8cpp_a4edc852d363e6776122e2dfb84f12af2_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{main_8cpp_a4edc852d363e6776122e2dfb84f12af2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}\label{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b} 
+\index{main.cpp@{main.cpp}!save@{save}}
+\index{save@{save}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{unsigned}]{est\+Jouable,  }\item[{vector$<$ unsigned $>$ \&}]{meilleurs\+Scores }\end{DoxyParamCaption})}
+
+
+
+Fait une sauvegarde dans un fichier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em est\+Jouable} & rend le niveau jouable (le débloque) quand le niveau précédent est fini \\
+\hline
+{\em meilleurs\+Scores} & enregistre le meilleurs scores faits dans une partie pour différents modes \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ ofstream\ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}(\textcolor{stringliteral}{"{}save.txt"{}});\ \textcolor{comment}{//\ dans\ un\ fichier\ save}}
+\DoxyCodeLine{00070\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ <<\ estJouable\ <<\ endl;\ \textcolor{comment}{//\ on\ enregistre\ la\ progression\ de\ l'histoire}}
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordflow}{for}(\textcolor{keywordtype}{unsigned}\ score\ :\ meilleursScores)\{\textcolor{comment}{//\ et\ les\ meilleurs\ scores}}
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}\ <<\ score\ <<\ endl;}
+\DoxyCodeLine{00073\ \ \ \ \ \}}
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b}{save}}.close();}
+\DoxyCodeLine{00075\ \}}
+
+\end{DoxyCode}
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=120pt]{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{main_8cpp_a8cb69afeff541b2817c9615ad8c86c0b_icgraph}
+\end{center}
+\end{figure}
