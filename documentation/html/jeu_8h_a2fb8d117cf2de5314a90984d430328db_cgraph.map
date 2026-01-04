@@ -1,0 +1,5 @@
+<map id="niveau1" name="niveau1">
+<area shape="rect" id="Node000001" title="vérifie si le score gagné est assez haut pour passer au niveau 2" alt="" coords="5,5,80,31"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#a9d7e8af417b6d543da691e9c0e2f6f9f" title="Supprime tout ce qu&#39;il y a sur l&#39;ecran." alt="" coords="128,5,227,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="80,15,114,15,114,21,80,21"/>
+</map>

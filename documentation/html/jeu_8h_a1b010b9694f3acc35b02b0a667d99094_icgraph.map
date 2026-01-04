@@ -1,0 +1,12 @@
+<map id="KJaune" name="KJaune">
+<area shape="rect" id="Node000001" title=" " alt="" coords="497,31,564,56"/>
+<area shape="rect" id="Node000002" href="$jeu_8h.html#ac0aacda61353cef121ada8614de65a16" title="Affiche la grille avec des couleurs différentes pour chaque bonbons." alt="" coords="353,31,449,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="483,46,450,46,450,41,483,41"/>
+<area shape="rect" id="Node000003" href="$jeu_8h.html#a54ab0caec68db1ad9fbb5e12f5f279b8" title="Ancienne fonction main du tp 10 adaptee pour les fonctions ajoutees. Elle permet de realiser l&#39;ensemb..." alt="" coords="255,31,305,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="340,46,305,46,305,41,340,41"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a3d37ce7203887b02651b437f9f9de77d" title="Gère les niveaux qui doivent se débloquer un par un." alt="" coords="108,5,207,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="241,38,206,31,207,26,242,33"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,31,60,56"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="241,46,60,46,60,41,241,41"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="95,33,61,41,60,35,94,28"/>
+</map>
